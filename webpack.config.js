@@ -34,6 +34,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "js/[name].js",
+    assetModuleFilename: "images/[name][ext]",
     clean: true
   },
   devtool: devMode ? "inline-source-map" : false,
@@ -57,7 +58,7 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              // publicPath: "../"
+              //publicPath: "../"
             }
           },
 
@@ -73,13 +74,13 @@ module.exports = {
               sourceMap: true
             }
           },
-          // {
-          //   loader: "resolve-url-loader", // améliore la résolution des chemins relatifs
-          //   // (utile par exemple quand une librairie tierce fait référence à des images ou des fonts situés dans son propre dossier)
-          //   options: {
-          //     publicPath: "../images"
-          //   }
-          // },
+          {
+            loader: "resolve-url-loader", // améliore la résolution des chemins relatifs
+            // (utile par exemple quand une librairie tierce fait référence à des images ou des fonts situés dans son propre dossier)
+            options: {
+              publicPath: "../images"
+            }
+          },
           {
             loader: "sass-loader",
             options: {
@@ -92,6 +93,7 @@ module.exports = {
       //règles de compilations pour les fonts
       {
         test: /\.(eot|ttf|woff|woff2)$/,
+
         loader: "file-loader",
         options: {
           name: "fonts/[name].[ext]"
@@ -109,43 +111,23 @@ module.exports = {
           }
         ],
         exclude: path.resolve(__dirname, "./src/index.html")
-      },
-      //règles de compilations pour les images
-      {
-        test: /\.(gif|png|jpe?g)$/i,
-        use: [
-          {
-            // Using file-loader for these files
-            loader: "file-loader",
-            options: {
-              name: "images/[name].[ext]"
-            }
-
-            // In options we can set different things like format
-            // and directory to save
-            // options: {
-            //     outputPath: (__dirname, '../images')
-            // }
-          }
-          // { loader: "image-webpack-loader" }
-        ]
-      },
-      {
-        test: /\.svg$/i,
-        use: [
-          {
-            // Using file-loader for these files
-            loader: "file-loader?name=[name].[ext]&outputPath=./icons/"
-
-            // In options we can set different things like format
-            // and directory to save
-            // options: {
-            //     outputPath: (__dirname, '../images')
-            // }
-          },
-          { loader: "image-webpack-loader" }
-        ]
       }
+      //règles de compilations pour les images
+      // {
+      //   test: /\.(gif|png|jpe?g)$/i,
+      //   dependency: { not: ["url"] },
+      //   use: [
+      //     {
+      //       // Using file-loader for these files
+      //       loader: "file-loader",
+      //       options: {
+      //         name: "images/[name].[ext]"
+      //       }
+      //     }
+      //     // { loader: "image-webpack-loader" }
+      //   ],
+      //   type: "javascript/auto"
+      // }
     ]
   },
   devServer: {
