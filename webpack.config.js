@@ -112,22 +112,6 @@ module.exports = {
         ],
         exclude: path.resolve(__dirname, "./src/index.html")
       }
-      //règles de compilations pour les images
-      // {
-      //   test: /\.(gif|png|jpe?g)$/i,
-      //   dependency: { not: ["url"] },
-      //   use: [
-      //     {
-      //       // Using file-loader for these files
-      //       loader: "file-loader",
-      //       options: {
-      //         name: "images/[name].[ext]"
-      //       }
-      //     }
-      //     // { loader: "image-webpack-loader" }
-      //   ],
-      //   type: "javascript/auto"
-      // }
     ]
   },
   devServer: {
