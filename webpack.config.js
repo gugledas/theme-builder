@@ -12,6 +12,7 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 const htmlDatas = [""];
+const CurrentThemeName = "gp";
 
 plugins.push(
   new MiniCssExtractPlugin({
@@ -31,8 +32,8 @@ plugins.push(
       return html;
       // return htmlDatas.join("");
     },
-    filename: "flexor.html ",
-    title: " Template flexor ",
+    filename: CurrentThemeName + ".html ",
+    title: " Template  " + CurrentThemeName,
   })
 );
 
@@ -41,10 +42,10 @@ module.exports = {
   plugins,
   mode: env || "development", // on définit le mode en fonction de la valeur de NODE_ENV
   entry: {
-    flexor: "./src/flexor/flexor.js",
+    script: "./src/" + CurrentThemeName + "/" + CurrentThemeName + ".js",
   },
   output: {
-    path: path.resolve(__dirname, "dist/flexor"),
+    path: path.resolve(__dirname, "dist/" + CurrentThemeName),
     filename: "js/[name].js",
     assetModuleFilename: "images/[name][ext]",
   },
@@ -139,11 +140,7 @@ module.exports = {
             options: {
               sources: false,
               preprocessor: (content, loaderContext) => {
-                let result;
                 try {
-                  // console.log(content);
-                  // console.log(loaderContext);
-                  // plugins.push(new HtmlWebpackPlugin());
                   htmlDatas.push(content);
                 } catch (error) {
                   loaderContext.emitError(error);
