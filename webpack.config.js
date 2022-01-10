@@ -11,7 +11,7 @@ const env = process.env.NODE_ENV;
 const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
-const htmlDatas = ["<h1>text1</h1>", "<p>Description de plus</p>"];
+const htmlDatas = [""];
 
 plugins.push(
   new MiniCssExtractPlugin({
@@ -22,8 +22,17 @@ plugins.push(
 plugins.push(
   new HtmlWebpackPlugin({
     templateContent: () => {
-      return htmlDatas.join("");
+      let html = "<html>";
+      //html += "<head>  </head>";
+      html += "<body>";
+      html += htmlDatas.join("\n");
+      html += "</body>";
+      html += "</html>";
+      return html;
+      // return htmlDatas.join("");
     },
+    filename: "flexor.html ",
+    title: " Template flexor ",
   })
 );
 
@@ -134,7 +143,7 @@ module.exports = {
                 try {
                   // console.log(content);
                   // console.log(loaderContext);
-                  //plugins.push(new HtmlWebpackPlugin());
+                  // plugins.push(new HtmlWebpackPlugin());
                   htmlDatas.push(content);
                 } catch (error) {
                   loaderContext.emitError(error);
