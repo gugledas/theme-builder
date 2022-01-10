@@ -44,7 +44,7 @@ module.exports = {
     flexor: "./src/flexor/flexor.js",
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "dist/flexor"),
     filename: "js/[name].js",
     assetModuleFilename: "images/[name][ext]",
   },
@@ -124,13 +124,13 @@ module.exports = {
       //   exclude: path.resolve(__dirname, "./src/index.html"),
       // },
       // reégles pour le html.
-      {
-        test: /\.html$/,
-        type: "asset/resource",
-        generator: {
-          filename: "[name][ext]",
-        },
-      },
+      // {
+      //   test: /\.html$/,
+      //   type: "asset/resource",
+      //   generator: {
+      //     filename: "[name][ext]",
+      //   },
+      // },
       {
         test: /\.html$/i,
         use: [
