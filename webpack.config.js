@@ -12,7 +12,7 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 const htmlDatas = [""];
-
+const CurrentThemeName = "gp";
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
@@ -31,8 +31,8 @@ plugins.push(
       return html;
       // return htmlDatas.join("");
     },
-    filename: "flexor.html ",
-    title: " Template flexor ",
+    //filename: CurrentThemeName + ".html ",
+    title: " Template  " + CurrentThemeName,
   })
 );
 
@@ -41,10 +41,10 @@ module.exports = {
   plugins,
   mode: env || "development", // on définit le mode en fonction de la valeur de NODE_ENV
   entry: {
-    flexor: "./src/flexor/flexor.js",
+    script: "./src/" + CurrentThemeName + "/" + CurrentThemeName + ".js",
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "dist/" + CurrentThemeName),
     filename: "js/[name].js",
     assetModuleFilename: "images/[name][ext]",
   },
@@ -124,13 +124,13 @@ module.exports = {
       //   exclude: path.resolve(__dirname, "./src/index.html"),
       // },
       // reégles pour le html.
-      {
-        test: /\.html$/,
-        type: "asset/resource",
-        generator: {
-          filename: "[name][ext]",
-        },
-      },
+      // {
+      //   test: /\.html$/,
+      //   type: "asset/resource",
+      //   generator: {
+      //     filename: "[name][ext]",
+      //   },
+      // },
       {
         test: /\.html$/i,
         use: [
@@ -139,11 +139,7 @@ module.exports = {
             options: {
               sources: false,
               preprocessor: (content, loaderContext) => {
-                let result;
                 try {
-                  // console.log(content);
-                  // console.log(loaderContext);
-                  // plugins.push(new HtmlWebpackPlugin());
                   htmlDatas.push(content);
                 } catch (error) {
                   loaderContext.emitError(error);
@@ -160,9 +156,12 @@ module.exports = {
   devServer: {
     //contentBase: path.resolve(__dirname, "./public"),
     port: 3000,
-    //publicPath: "/dist/",
+    //publicPath: "dist/gp",
     //watchContentBase: true,
     hot: true,
+    static: {
+      directory: path.join(__dirname, "dist/" + CurrentThemeName),
+    },
   },
   optimization: {
     minimizer: [
