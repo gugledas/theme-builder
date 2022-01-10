@@ -28,8 +28,8 @@ module.exports = {
   plugins,
   mode: env || "development", // on définit le mode en fonction de la valeur de NODE_ENV
   entry: {
-    app: "./src/app.js",
-    home1: "./src/js/home1.js"
+    flexor: "./src/flexor/flexor-menue.js"
+    //home1: "./src/js/home1.js"
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -106,7 +106,8 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: "[name].[ext]"
+              name: "[name].[ext]",
+              outputPath: "html/"
             }
           }
         ],
