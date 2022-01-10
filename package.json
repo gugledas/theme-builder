@@ -39,5 +39,8 @@
   },
   "browserslist": [
     "last 2 versions"
-  ]
+  ],
+  "dependencies": {
+    "@stephane888/wbu-atomique": "file:../../wbu-atomique"
+  }
 }
