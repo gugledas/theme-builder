@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { cursorTo } = require("readline");
 
 // on récupère la valeur de NODE_ENV
 const env = process.env.NODE_ENV;
@@ -13,7 +14,6 @@ const devMode = process.env.NODE_ENV !== "production";
 const plugins = [];
 const htmlDatas = [""];
 const CurrentThemeName = "gp";
-
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
@@ -32,7 +32,7 @@ plugins.push(
       return html;
       // return htmlDatas.join("");
     },
-    filename: CurrentThemeName + ".html ",
+    //filename: CurrentThemeName + ".html ",
     title: " Template  " + CurrentThemeName,
   })
 );
@@ -157,9 +157,12 @@ module.exports = {
   devServer: {
     //contentBase: path.resolve(__dirname, "./public"),
     port: 3000,
-    //publicPath: "/dist/",
+    //publicPath: "dist/gp",
     //watchContentBase: true,
     hot: true,
+    static: {
+      directory: path.join(__dirname, "dist/" + CurrentThemeName),
+    },
   },
   optimization: {
     minimizer: [
