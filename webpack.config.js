@@ -11,15 +11,19 @@ const env = process.env.NODE_ENV;
 const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
+const htmlDatas = ["<h1>text1</h1>", "<p>Description de plus</p>"];
 
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
-    chunkFilename: "[id].css"
-  }),
+    chunkFilename: "[id].css",
+  })
+);
+plugins.push(
   new HtmlWebpackPlugin({
-    title: "Testons webpack!",
-    template: path.resolve(__dirname, "src", "index.html")
+    templateContent: () => {
+      return htmlDatas.join("");
+    },
   })
 );
 
@@ -28,14 +32,12 @@ module.exports = {
   plugins,
   mode: env || "development", // on définit le mode en fonction de la valeur de NODE_ENV
   entry: {
-    flexor: "./src/flexor/flexor-menue.js"
-    //home1: "./src/js/home1.js"
+    flexor: "./src/flexor/flexor.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "js/[name].js",
     assetModuleFilename: "images/[name][ext]",
-    clean: true
   },
   devtool: devMode ? "inline-source-map" : false,
   module: {
@@ -47,9 +49,9 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"]
-          }
-        }
+            presets: ["@babel/preset-env"],
+          },
+        },
       },
       //règles de compilations pour les fichiers .css
       {
@@ -59,68 +61,99 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
             options: {
               //publicPath: "../"
-            }
+            },
           },
 
           {
             loader: "css-loader",
             options: {
-              importLoaders: 1
-            }
+              importLoaders: 1,
+            },
           },
           {
             loader: "postcss-loader",
             options: {
-              sourceMap: true
-            }
+              sourceMap: true,
+            },
           },
           {
             loader: "resolve-url-loader", // améliore la résolution des chemins relatifs
             // (utile par exemple quand une librairie tierce fait référence à des images ou des fonts situés dans son propre dossier)
             options: {
-              publicPath: "../images"
-            }
+              publicPath: "../images",
+            },
           },
           {
             loader: "sass-loader",
             options: {
               sourceMap: true, // il est indispensable d'activer les sourcemaps pour que postcss fonctionne correctement
-              implementation: require("sass")
-            }
-          }
-        ]
+              implementation: require("sass"),
+            },
+          },
+        ],
       },
       //règles de compilations pour les fonts
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-
         loader: "file-loader",
         options: {
-          name: "fonts/[name].[ext]"
-        }
+          name: "fonts/[name].[ext]",
+        },
       },
       //règles de compilations pour les fichiers html
+      // {
+      //   test: /\.html$/,
+      //   use: [
+      //     {
+      //       loader: "file-loader",
+      //       options: {
+      //         name: "[name].[ext]",
+      //         outputPath: "html/",
+      //       },
+      //     },
+      //   ],
+      //   exclude: path.resolve(__dirname, "./src/index.html"),
+      // },
+      // reégles pour le html.
       {
         test: /\.html$/,
+        type: "asset/resource",
+        generator: {
+          filename: "[name][ext]",
+        },
+      },
+      {
+        test: /\.html$/i,
         use: [
           {
-            loader: "file-loader",
+            loader: "html-loader",
             options: {
-              name: "[name].[ext]",
-              outputPath: "html/"
-            }
-          }
+              sources: false,
+              preprocessor: (content, loaderContext) => {
+                let result;
+                try {
+                  // console.log(content);
+                  // console.log(loaderContext);
+                  //plugins.push(new HtmlWebpackPlugin());
+                  htmlDatas.push(content);
+                } catch (error) {
+                  loaderContext.emitError(error);
+                  return content;
+                }
+                return content;
+              },
+            },
+          },
         ],
-        exclude: path.resolve(__dirname, "./src/index.html")
-      }
-    ]
+      },
+    ],
   },
   devServer: {
     //contentBase: path.resolve(__dirname, "./public"),
     port: 3000,
     //publicPath: "/dist/",
     //watchContentBase: true,
-    hot: true
+    hot: true,
   },
   optimization: {
     minimizer: [
@@ -129,12 +162,12 @@ module.exports = {
           preset: [
             "default",
             {
-              discardComments: { removeAll: true }
-            }
-          ]
-        }
+              discardComments: { removeAll: true },
+            },
+          ],
+        },
       }),
-      new TerserPlugin()
-    ]
-  }
+      new TerserPlugin(),
+    ],
+  },
 };

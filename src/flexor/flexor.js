@@ -1,5 +1,5 @@
-import "../html/flexor.html";
-import "../scss/flexor.scss";
+import "./headers/header.js";
+import "./HeroSection/hero.js";
 
 /**
  * Mobile nav toggle
