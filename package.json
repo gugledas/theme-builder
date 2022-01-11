@@ -8,7 +8,7 @@
     "dev": "webpack --node-env=development",
     "prod": "webpack --node-env=production",
     "watch": "webpack --watch",
-    "serve": "webpack serve --node-env=development --open"
+    "serve": "webpack serve --node-env=development"
   },
   "keywords": [],
   "author": "",
@@ -41,6 +41,11 @@
     "last 2 versions"
   ],
   "dependencies": {
+<<<<<<< HEAD
     "@stephane888/wbu-atomique": "file:../../wbu-atomique"
+=======
+    "@stephane888/wbu-atomique": "file:../wbu-atomique",
+    "jquery": "^3.6.0"
+>>>>>>> 2df4faa664850b8c1ee840d7fd1c2eed1795075f
   }
 }

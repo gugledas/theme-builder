@@ -11,8 +11,14 @@ const env = process.env.NODE_ENV;
 const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
+<<<<<<< HEAD
 const htmlDatas = [""];
 const CurrentThemeName = "vesperr";
+=======
+const htmlDatas = [];
+const htmlDatasKey = [];
+const CurrentThemeName = "gp";
+>>>>>>> 2df4faa664850b8c1ee840d7fd1c2eed1795075f
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
@@ -22,6 +28,7 @@ plugins.push(
 plugins.push(
   new HtmlWebpackPlugin({
     templateContent: () => {
+      console.log("reload HtmlWebpackPlugin");
       let html = "<html>";
       //html += "<head>  </head>";
       html += "<body>";
@@ -29,14 +36,11 @@ plugins.push(
       html += "</body>";
       html += "</html>";
       return html;
-      // return htmlDatas.join("");
     },
-    //filename: CurrentThemeName + ".html ",
     title: " Template  " + CurrentThemeName,
   })
 );
 
-console.log("devMode", devMode);
 module.exports = {
   plugins,
   mode: env || "development", // on définit le mode en fonction de la valeur de NODE_ENV
@@ -103,33 +107,28 @@ module.exports = {
       },
       //règles de compilations pour les fonts
       {
-        test: /\.(eot|ttf|woff|woff2)$/,
+        test: /\.(ttf|woff|woff2)$/,
         loader: "file-loader",
         options: {
           name: "fonts/[name].[ext]",
         },
       },
-      //règles de compilations pour les fichiers html
+      //règles de compilations pour les images
       // {
-      //   test: /\.html$/,
+      //   test: /\.(gif|png|jpe?g)$/i,
       //   use: [
       //     {
-      //       loader: "file-loader",
-      //       options: {
-      //         name: "[name].[ext]",
-      //         outputPath: "html/",
-      //       },
+      //       // Using file-loader for these files
+      //       loader: "file-loader?name=[name].[ext]&outputPath=./images/",
+
+      //       // In options we can set different things like format
+      //       // and directory to save
+      //       // options: {
+      //       //     outputPath: (__dirname, '../images')
+      //       // }
       //     },
+      //     { loader: "image-webpack-loader" },
       //   ],
-      //   exclude: path.resolve(__dirname, "./src/index.html"),
-      // },
-      // reégles pour le html.
-      // {
-      //   test: /\.html$/,
-      //   type: "asset/resource",
-      //   generator: {
-      //     filename: "[name][ext]",
-      //   },
       // },
       {
         test: /\.html$/i,
@@ -140,7 +139,15 @@ module.exports = {
               sources: false,
               preprocessor: (content, loaderContext) => {
                 try {
-                  htmlDatas.push(content);
+                  console.log(loaderContext.resource);
+                  var index = htmlDatasKey.indexOf(loaderContext.resource);
+                  if (index !== -1) {
+                    console.log("MAJ : ", index);
+                    htmlDatas[index] = content;
+                  } else {
+                    htmlDatas.push(content);
+                    htmlDatasKey.push(loaderContext.resource);
+                  }
                 } catch (error) {
                   loaderContext.emitError(error);
                   return content;

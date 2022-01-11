@@ -1,0 +1,31 @@
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+@use "@stephane888/wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+@use "@stephane888/wbu-atomique/scss/atome/typography/h2.scss";
+@use "@stephane888/wbu-atomique/scss/molecule/steph/puce-dd-check.scss";
+.section-text-left--img {
+  .fst-italic {
+    font-style: italic;
+  }
+  .content {
+    .titre {
+      font-weight: 700;
+      margin-bottom: $wbu-margin;
+      line-height: 1.2;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    p {
+      margin-bottom: $wbu-margin;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+    .list-items {
+      margin-bottom: $wbu-margin;
+    }
+  }
+}
