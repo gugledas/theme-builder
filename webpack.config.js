@@ -11,14 +11,13 @@ const env = process.env.NODE_ENV;
 const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
-<<<<<<< HEAD
+
 const htmlDatas = [""];
 const CurrentThemeName = "vesperr";
-=======
+
 const htmlDatas = [];
 const htmlDatasKey = [];
 const CurrentThemeName = "gp";
->>>>>>> 2df4faa664850b8c1ee840d7fd1c2eed1795075f
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
