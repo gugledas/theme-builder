@@ -8,7 +8,7 @@
     "dev": "webpack --node-env=development",
     "prod": "webpack --node-env=production",
     "watch": "webpack --watch",
-    "serve": "webpack serve --node-env=development --open"
+    "serve": "webpack serve --node-env=development"
   },
   "keywords": [],
   "author": "",
@@ -39,5 +39,9 @@
   },
   "browserslist": [
     "last 2 versions"
-  ]
+  ],
+  "dependencies": {
+    "@stephane888/wbu-atomique": "file:../wbu-atomique",
+    "jquery": "^3.6.0"
+  }
 }

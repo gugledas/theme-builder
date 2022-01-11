@@ -1,0 +1,50 @@
+@use "@stephane888/wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+@use "./variables.scss" as *;
+@use "@stephane888/wbu-atomique/scss/bootstrap-all.scss";
+@use "@stephane888/wbu-atomique/scss/atome/typography/_default.scss";
+@use "./text-left--img-right/text-left--img-right.scss";
+@use "./clients-logos/clients-logos.scss";
+@use "./features-section/features-section.scss";
+@use "./services-section/services-section.scss";
+@use "./cta-section/cta-section.scss";
+@use "./portfolio-section/portfolio-section.scss";
+@use "./counts-section/counts-section.scss";
+@use "./testimonials-section/testimonials-section.scss";
+@use "./team-section/team-section.scss";
+@use "./contact-section/contact-section.scss";
+@use "./footer/footer.scss";
+
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+// style du titre.
+.section-title {
+  padding-bottom: 40px;
+}
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 5px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+}
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #ffde9e;
+  margin: 4px 10px;
+}
+.section-title p {
+  margin: 0;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #151515;
+}
