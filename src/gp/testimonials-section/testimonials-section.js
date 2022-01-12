@@ -8,12 +8,12 @@ new Swiper(".testimonials-slider", {
   loop: true,
   autoplay: {
     delay: 5000,
-    disableOnInteraction: false,
+    disableOnInteraction: false
   },
   slidesPerView: "auto",
   pagination: {
     el: ".swiper-pagination",
     type: "bullets",
-    clickable: true,
-  },
+    clickable: true
+  }
 });

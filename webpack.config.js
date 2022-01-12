@@ -13,11 +13,11 @@ const devMode = process.env.NODE_ENV !== "production";
 const plugins = [];
 const htmlDatas = [];
 const htmlDatasKey = [];
-const CurrentThemeName = "gp";
+const CurrentThemeName = "flexor";
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
-    chunkFilename: "[id].css",
+    chunkFilename: "[id].css"
   })
 );
 plugins.push(
@@ -32,7 +32,7 @@ plugins.push(
       html += "</html>";
       return html;
     },
-    title: " Template  " + CurrentThemeName,
+    title: " Template  " + CurrentThemeName
   })
 );
 
@@ -40,12 +40,12 @@ module.exports = {
   plugins,
   mode: env || "development", // on définit le mode en fonction de la valeur de NODE_ENV
   entry: {
-    script: "./src/" + CurrentThemeName + "/" + CurrentThemeName + ".js",
+    script: "./src/" + CurrentThemeName + "/" + CurrentThemeName + ".js"
   },
   output: {
     path: path.resolve(__dirname, "dist/" + CurrentThemeName),
     filename: "js/[name].js",
-    assetModuleFilename: "images/[name][ext]",
+    assetModuleFilename: "images/[name][ext]"
   },
   devtool: devMode ? "inline-source-map" : false,
   module: {
@@ -57,9 +57,9 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"],
-          },
-        },
+            presets: ["@babel/preset-env"]
+          }
+        }
       },
       //règles de compilations pour les fichiers .css
       {
@@ -69,44 +69,44 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
             options: {
               //publicPath: "../"
-            },
+            }
           },
 
           {
             loader: "css-loader",
             options: {
-              importLoaders: 1,
-            },
+              importLoaders: 1
+            }
           },
           {
             loader: "postcss-loader",
             options: {
-              sourceMap: true,
-            },
+              sourceMap: true
+            }
           },
           {
             loader: "resolve-url-loader", // améliore la résolution des chemins relatifs
             // (utile par exemple quand une librairie tierce fait référence à des images ou des fonts situés dans son propre dossier)
             options: {
-              publicPath: "../images",
-            },
+              publicPath: "../images"
+            }
           },
           {
             loader: "sass-loader",
             options: {
               sourceMap: true, // il est indispensable d'activer les sourcemaps pour que postcss fonctionne correctement
-              implementation: require("sass"),
-            },
-          },
-        ],
+              implementation: require("sass")
+            }
+          }
+        ]
       },
       //règles de compilations pour les fonts
       {
         test: /\.(ttf|woff|woff2)$/,
         loader: "file-loader",
         options: {
-          name: "fonts/[name].[ext]",
-        },
+          name: "fonts/[name].[ext]"
+        }
       },
       //règles de compilations pour les images
       // {
@@ -114,16 +114,17 @@ module.exports = {
       //   use: [
       //     {
       //       // Using file-loader for these files
-      //       loader: "file-loader?name=[name].[ext]&outputPath=./images/",
-
+      //       //loader: "file-loader?name=[name].[ext]&outputPath=./images/",
+      //       loader: "file-loader",
       //       // In options we can set different things like format
       //       // and directory to save
-      //       // options: {
-      //       //     outputPath: (__dirname, '../images')
-      //       // }
+      //       options: {
+      //         name: "[name].[ext]",
+      //         outputPath: (__dirname, "/dist/" + CurrentThemeName + "/images")
+      //       }
       //     },
-      //     { loader: "image-webpack-loader" },
-      //   ],
+      //     { loader: "image-webpack-loader" }
+      //   ]
       // },
       {
         test: /\.html$/i,
@@ -131,10 +132,9 @@ module.exports = {
           {
             loader: "html-loader",
             options: {
-              sources: false,
+              sources: true,
               preprocessor: (content, loaderContext) => {
                 try {
-                  console.log(loaderContext.resource);
                   var index = htmlDatasKey.indexOf(loaderContext.resource);
                   if (index !== -1) {
                     console.log("MAJ : ", index);
@@ -144,16 +144,16 @@ module.exports = {
                     htmlDatasKey.push(loaderContext.resource);
                   }
                 } catch (error) {
-                  loaderContext.emitError(error);
                   return content;
                 }
+
                 return content;
-              },
-            },
-          },
-        ],
-      },
-    ],
+              }
+            }
+          }
+        ]
+      }
+    ]
   },
   devServer: {
     //contentBase: path.resolve(__dirname, "./public"),
@@ -162,8 +162,8 @@ module.exports = {
     //watchContentBase: true,
     hot: true,
     static: {
-      directory: path.join(__dirname, "dist/" + CurrentThemeName),
-    },
+      directory: path.join(__dirname, "dist/" + CurrentThemeName)
+    }
   },
   optimization: {
     minimizer: [
@@ -172,12 +172,12 @@ module.exports = {
           preset: [
             "default",
             {
-              discardComments: { removeAll: true },
-            },
-          ],
-        },
+              discardComments: { removeAll: true }
+            }
+          ]
+        }
       }),
-      new TerserPlugin(),
-    ],
-  },
+      new TerserPlugin()
+    ]
+  }
 };
