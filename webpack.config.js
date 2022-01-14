@@ -15,9 +15,9 @@ const plugins = [];
 const htmlDatas = [""];
 const CurrentThemeName = "vesperr";
 
-const htmlDatas = [];
+//const htmlDatas = [];
 const htmlDatasKey = [];
-const CurrentThemeName = "gp";
+//const CurrentThemeName = "gp";
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
