@@ -18,7 +18,7 @@ const CurrentThemeName = "vesperr";
 //const htmlDatas = [];
 const htmlDatasKey = [];
 //const CurrentThemeName = "gp";
-const CurrentThemeName = "flexor";
+//const CurrentThemeName = "flexor";
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
