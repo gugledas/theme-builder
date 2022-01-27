@@ -1,11 +1,10 @@
 @use "@stephane888/wbu-atomique/scss/wbu-ressources-clean.scss" as *;
-@use "../variables.scss";
 
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 .hero-section {
-  padding: 150px 100px;
+  padding: $space_top * 2.7 0 $space_bottom * 1.8;
   background: rgb(15, 10, 10);
   @include media-max(SM) {
     padding: 100px 60px;
