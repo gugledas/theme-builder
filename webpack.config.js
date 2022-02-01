@@ -13,7 +13,7 @@ const devMode = process.env.NODE_ENV !== "production";
 const plugins = [];
 
 const htmlDatas = [""];
-const CurrentThemeName = "rc-web";
+const CurrentThemeName = "agenceconstant";
 
 //const htmlDatas = [];
 const htmlDatasKey = [];

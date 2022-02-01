@@ -40,12 +40,9 @@
     "last 2 versions"
   ],
   "dependencies": {
-<<<<<<< HEAD
     "@stephane888/wbu-atomique": "file:../../wbu-atomique",
     "jquery": "^3.6.0",
-=======
     "@stephane888/wbu-atomique": "^1.0.5",
->>>>>>> d9a81bf532dc92c672bad9c86950991a486c2e58
     "jquery": "^3.6.0",
     "swiper": "^7.4.1"
   }
