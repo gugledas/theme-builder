@@ -1,2 +1,2 @@
-import "./footer.html";
-import "./footer.scss";
+import './footer.html';
+import './footer.scss'
