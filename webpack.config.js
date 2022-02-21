@@ -13,7 +13,7 @@ const devMode = process.env.NODE_ENV !== "production";
 const plugins = [];
 
 const htmlDatas = [""];
-const CurrentThemeName = "mckinsey";
+const CurrentThemeName = "wix-yoga-classes";
 
 //const htmlDatas = [];
 const htmlDatasKey = [];
