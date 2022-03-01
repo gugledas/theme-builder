@@ -1,2 +1,3 @@
-import './home.html'
-import './home.scss'
+import './home.html';
+import './home.scss';
+
