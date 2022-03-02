@@ -1,17 +1,20 @@
 {
-  "name": "theme-builder",
+  "name": "@gugledas/theme-builder",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --node-env=development",
     "prod": "webpack --node-env=production",
     "watch": "webpack --watch",
     "serve": "webpack serve --node-env=development"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gugledas/theme-builder.git"
+  },
   "keywords": [],
-  "author": "",
+  "author": "gugledas",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.16.7",
