@@ -1,0 +1,56 @@
+@use "@stephane888/wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+@font-face {
+  font-family: "lg";
+  src: url("../fonts/lg.ttf") format("truetype"),
+    url("../fonts/lg.woff?22t19m") format("woff"),
+    url("../fonts/lg.svg?22t19m#lg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+/*--------------------------------------------------------------
+# mosaic images
+--------------------------------------------------------------*/
+.mosaic-img {
+  padding: 0 4px;
+  width: 65%;
+  margin-bottom: 8rem;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  &-two {
+    display: flex;
+    &__img {
+      padding: 0 4px 6px;
+      //background-color: gray;
+      max-height: 600px;
+      width: 50%;
+      img {
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+    //flex: 50%;
+  }
+  &-three {
+    display: flex;
+
+    &__img {
+      padding: 0 4px;
+      // background-color: gray;
+      max-height: 400px;
+      width: calc(100% / 3);
+      img {
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
