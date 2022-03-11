@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const manageImportHtml = require("./manageImportHtml.js");
 
 // on récupère la valeur de NODE_ENV
 const env = process.env.NODE_ENV;
@@ -13,9 +14,8 @@ const devMode = process.env.NODE_ENV !== "production";
 const plugins = [];
 
 const htmlDatas = [""];
-const CurrentThemeName = "kave-home";
+const CurrentThemeName = "appson";
 
-//const htmlDatas = [];
 const htmlDatasKey = [];
 //const CurrentThemeName = "gp";
 //const CurrentThemeName = "flexor";
@@ -142,6 +142,8 @@ module.exports = {
               sources: true,
               preprocessor: (content, loaderContext) => {
                 try {
+                  const mj = new manageImportHtml(loaderContext);
+                  console.log("loaderContext : ", loaderContext);
                   var index = htmlDatasKey.indexOf(loaderContext.resource);
                   if (index !== -1) {
                     console.log("MAJ : ", index);
@@ -150,6 +152,8 @@ module.exports = {
                     htmlDatas.push(content);
                     htmlDatasKey.push(loaderContext.resource);
                   }
+                  console.log("htmlDatasKey", htmlDatasKey);
+                  console.log("htmlDatas.length", htmlDatas.length);
                 } catch (error) {
                   return content;
                 }
