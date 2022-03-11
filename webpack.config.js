@@ -13,11 +13,11 @@ const devMode = process.env.NODE_ENV !== "production";
 const plugins = [];
 
 const htmlDatas = [""];
-<<<<<<< HEAD
+//<<<<<<< HEAD
 const CurrentThemeName = "fusion-bootstrap";
-=======
-const CurrentThemeName = "kave-home";
->>>>>>> 73124ecf68f8cccb44e30ed4902869fe2c00b5a2
+//=======
+//const CurrentThemeName = "kave-home";
+//>>>>>>> 73124ecf68f8cccb44e30ed4902869fe2c00b5a2
 
 //const htmlDatas = [];
 const htmlDatasKey = [];
