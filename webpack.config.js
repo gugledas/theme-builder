@@ -15,7 +15,11 @@ const devMode = process.env.NODE_ENV !== "production";
 const plugins = [];
 
 const htmlDatas = [""];
-const CurrentThemeName = "appson";
+//<<<<<<< HEAD
+const CurrentThemeName = "fusion-bootstrap";
+//=======
+//const CurrentThemeName = "kave-home";
+//>>>>>>> 73124ecf68f8cccb44e30ed4902869fe2c00b5a2
 
 const htmlDatasKey = [];
 //const CurrentThemeName = "gp";
@@ -51,50 +55,51 @@ plugins.push(
   })()
 );
 
-plugins.push(
-  new (class OutputMonitor {
-    apply(compiler) {
-      compiler.hooks.normalModuleFactory.tap("MyPlugin2", (factory) => {
-        factory.hooks.parser
-          .for("javascript/auto")
-          .tap("MyPlugin2", (parser, options) => {
-            parser.hooks.import.tap("MyPlugin", (statement, source) => {
-              console.log(" source : ", source);
-              //console.log(" parser.state : ", parser.state.module);
-            });
-            // parser.hooks.export.tap("MyPlugin", (node) => {
-            //   const {
-            //     module: { rawRequest },
-            //   } = parser.state;
-            //   //console.log(" parser.state : ", parser.state.module.resource);
-            //   // ..
-            // });
-            // parser.hooks.importSpecifier.tap(
-            //   "MyPlugin2",
-            //   (statement, source, exportName, identifierName) => {
-            //     console.log(
-            //       " parser.state : ",
-            //       statement,
-            //       source,
-            //       exportName,
-            //       identifierName
-            //     );
-            //   }
-            // );
-          });
-      });
-      compiler.hooks.emit.tapAsync("MyPlugin", (compilation, callback) => {
-        var changedChunks = compilation.chunks.filter((chunk) => {
-          console.log(" chunk.name : ", chunk);
-          // var oldVersion = this.chunkVersions[chunk.name];
-          // this.chunkVersions[chunk.name] = chunk.hash;
-          // return chunk.hash !== oldVersion;
-        });
-        callback();
-      });
-    }
-  })()
-);
+// on essaie de ressoudre le probleme de chargement det de merge de html.
+// plugins.push(
+//   new (class OutputMonitor {
+//     apply(compiler) {
+//       compiler.hooks.normalModuleFactory.tap("MyPlugin2", (factory) => {
+//         factory.hooks.parser
+//           .for("javascript/auto")
+//           .tap("MyPlugin2", (parser, options) => {
+//             parser.hooks.import.tap("MyPlugin", (statement, source) => {
+//               console.log(" source : ", source);
+//               //console.log(" parser.state : ", parser.state.module);
+//             });
+//             // parser.hooks.export.tap("MyPlugin", (node) => {
+//             //   const {
+//             //     module: { rawRequest },
+//             //   } = parser.state;
+//             //   //console.log(" parser.state : ", parser.state.module.resource);
+//             //   // ..
+//             // });
+//             // parser.hooks.importSpecifier.tap(
+//             //   "MyPlugin2",
+//             //   (statement, source, exportName, identifierName) => {
+//             //     console.log(
+//             //       " parser.state : ",
+//             //       statement,
+//             //       source,
+//             //       exportName,
+//             //       identifierName
+//             //     );
+//             //   }
+//             // );
+//           });
+//       });
+//       compiler.hooks.emit.tapAsync("MyPlugin", (compilation, callback) => {
+//         var changedChunks = compilation.chunks.filter((chunk) => {
+//           console.log(" chunk.name : ", chunk);
+//           // var oldVersion = this.chunkVersions[chunk.name];
+//           // this.chunkVersions[chunk.name] = chunk.hash;
+//           // return chunk.hash !== oldVersion;
+//         });
+//         callback();
+//       });
+//     }
+//   })()
+// );
 
 module.exports = {
   plugins,
