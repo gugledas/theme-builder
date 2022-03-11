@@ -13,7 +13,7 @@ const devMode = process.env.NODE_ENV !== "production";
 const plugins = [];
 
 const htmlDatas = [""];
-const CurrentThemeName = "Appson";
+const CurrentThemeName = "fusion-bootstrap";
 
 //const htmlDatas = [];
 const htmlDatasKey = [];
