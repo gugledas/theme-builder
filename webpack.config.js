@@ -14,14 +14,11 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-const htmlDatas = [""];
-//<<<<<<< HEAD
-const CurrentThemeName = "fusion-bootstrap";
-//=======
-//const CurrentThemeName = "kave-home";
-//>>>>>>> 73124ecf68f8cccb44e30ed4902869fe2c00b5a2
+//const htmlDatas = [""];
 
-const htmlDatasKey = [];
+const CurrentThemeName = "Appson";
+
+//const htmlDatasKey = [];
 //const CurrentThemeName = "gp";
 //const CurrentThemeName = "flexor";
 plugins.push(
@@ -55,7 +52,10 @@ plugins.push(
   })()
 );
 
-// on essaie de ressoudre le probleme de chargement det de merge de html.
+// On essaie de ressoudre le probleme de chargement det la merge de html.
+// actuelement le processus de merge de html (MIH) a deux principal probleme.
+// - il ne respecte pas l'ordre des imports.
+// - il ne supprime pas un import lorsqu'on le supprime.
 // plugins.push(
 //   new (class OutputMonitor {
 //     apply(compiler) {
