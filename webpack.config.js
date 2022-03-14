@@ -14,7 +14,7 @@ const plugins = [];
 
 const htmlDatas = [""];
 //<<<<<<< HEAD
-const CurrentThemeName = "fusion-bootstrap";
+const CurrentThemeName = "illico-travaux";
 //=======
 //const CurrentThemeName = "kave-home";
 //>>>>>>> 73124ecf68f8cccb44e30ed4902869fe2c00b5a2
