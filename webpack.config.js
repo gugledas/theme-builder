@@ -4,23 +4,30 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const manageImportHtml = require("./manageImportHtml.js");
+const MIH = new manageImportHtml();
 
-// on récupère la valeur de NODE_ENV
+// On récupère la valeur de NODE_ENV
 const env = process.env.NODE_ENV;
 
 const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
+<<<<<<< HEAD
 const htmlDatas = [""];
 //<<<<<<< HEAD
 const CurrentThemeName = "illico-travaux";
 //=======
 //const CurrentThemeName = "kave-home";
 //>>>>>>> 73124ecf68f8cccb44e30ed4902869fe2c00b5a2
+=======
+//const htmlDatas = [""];
+>>>>>>> 15003aa9f8888994c43e8ddce5752b4a3841d40c
 
-//const htmlDatas = [];
-const htmlDatasKey = [];
+const CurrentThemeName = "Appson";
+
+//const htmlDatasKey = [];
 //const CurrentThemeName = "gp";
 //const CurrentThemeName = "flexor";
 plugins.push(
@@ -31,21 +38,77 @@ plugins.push(
 );
 plugins.push(
   new HtmlWebpackPlugin({
-    templateContent: () => {
+    templateContent: async () => {
       console.log("reload HtmlWebpackPlugin");
       let html = "<html>";
       //html += "<head>  </head>";
       html += "<body>";
-      html += htmlDatas.join("\n");
+      html += await MIH.getContents();
       html += "</body>";
       html += "</html>";
       return html;
     },
     title: " Template  " + CurrentThemeName,
-    // hash: true,
-    // filename: "./dist/index.html",
   })
 );
+plugins.push(
+  new (class OutputMonitor {
+    apply(compiler) {
+      compiler.hooks.watchRun.tap("MyPlugin", (context, entry) => {
+        //console.log("entry : ", context);
+      });
+    }
+  })()
+);
+
+// On essaie de ressoudre le probleme de chargement det la merge de html.
+// actuelement le processus de merge de html (MIH) a deux principal probleme.
+// - il ne respecte pas l'ordre des imports.
+// - il ne supprime pas un import lorsqu'on le supprime.
+// plugins.push(
+//   new (class OutputMonitor {
+//     apply(compiler) {
+//       compiler.hooks.normalModuleFactory.tap("MyPlugin2", (factory) => {
+//         factory.hooks.parser
+//           .for("javascript/auto")
+//           .tap("MyPlugin2", (parser, options) => {
+//             parser.hooks.import.tap("MyPlugin", (statement, source) => {
+//               console.log(" source : ", source);
+//               //console.log(" parser.state : ", parser.state.module);
+//             });
+//             // parser.hooks.export.tap("MyPlugin", (node) => {
+//             //   const {
+//             //     module: { rawRequest },
+//             //   } = parser.state;
+//             //   //console.log(" parser.state : ", parser.state.module.resource);
+//             //   // ..
+//             // });
+//             // parser.hooks.importSpecifier.tap(
+//             //   "MyPlugin2",
+//             //   (statement, source, exportName, identifierName) => {
+//             //     console.log(
+//             //       " parser.state : ",
+//             //       statement,
+//             //       source,
+//             //       exportName,
+//             //       identifierName
+//             //     );
+//             //   }
+//             // );
+//           });
+//       });
+//       compiler.hooks.emit.tapAsync("MyPlugin", (compilation, callback) => {
+//         var changedChunks = compilation.chunks.filter((chunk) => {
+//           console.log(" chunk.name : ", chunk);
+//           // var oldVersion = this.chunkVersions[chunk.name];
+//           // this.chunkVersions[chunk.name] = chunk.hash;
+//           // return chunk.hash !== oldVersion;
+//         });
+//         callback();
+//       });
+//     }
+//   })()
+// );
 
 module.exports = {
   plugins,
@@ -146,18 +209,21 @@ module.exports = {
               sources: true,
               preprocessor: (content, loaderContext) => {
                 try {
-                  var index = htmlDatasKey.indexOf(loaderContext.resource);
-                  if (index !== -1) {
-                    console.log("MAJ : ", index);
-                    htmlDatas[index] = content;
-                  } else {
-                    htmlDatas.push(content);
-                    htmlDatasKey.push(loaderContext.resource);
-                  }
+                  MIH.addUpdate(loaderContext.resource, content);
+
+                  // var index = htmlDatasKey.indexOf(loaderContext.resource);
+                  // if (index !== -1) {
+                  //   console.log("MAJ : ", index);
+                  //   htmlDatas[index] = content;
+                  // } else {
+                  //   htmlDatas.push(content);
+                  //   htmlDatasKey.push(loaderContext.resource);
+                  // }
+                  // console.log("htmlDatasKey", htmlDatasKey);
+                  // console.log("htmlDatas.length", htmlDatas.length);
                 } catch (error) {
                   return content;
                 }
-
                 return content;
               },
             },
