@@ -14,18 +14,18 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 const htmlDatas = [""];
 //<<<<<<< HEAD
-const CurrentThemeName = "illico-travaux";
+const CurrentThemeName = "offrord-team";
 //=======
 //const CurrentThemeName = "kave-home";
 //>>>>>>> 73124ecf68f8cccb44e30ed4902869fe2c00b5a2
-=======
+//=======
 //const htmlDatas = [""];
->>>>>>> 15003aa9f8888994c43e8ddce5752b4a3841d40c
+//>>>>>>> 15003aa9f8888994c43e8ddce5752b4a3841d40c
 
-const CurrentThemeName = "Appson";
+//const CurrentThemeName = "Appson";
 
 //const htmlDatasKey = [];
 //const CurrentThemeName = "gp";
