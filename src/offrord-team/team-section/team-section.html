@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 
-<section class="team-section-handler">
+<section class="team-section-handler bg-image-moving overflow-hidden p-t80 p-b80 bg-cover bg-center">
     <div class="right-green-element">
         
     </div>
@@ -28,6 +28,8 @@
                 <div class="col-5 col-md-5 col-sm-10 slider p-5">
                     
                     <div class="slide col-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="4em" height="4em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="#2ce161" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"/></svg>
+                                                    
                         <p class="describe">
                             Après 3 lancements de produits disruptifs fondés sur l’Intelligence Artificielle et l’Edge Computing, son précédent poste de Directeur Innovation au sein d’une des majors des Travaux Publics lui a permis d’acquérir une vision globale du secteur.
                         </p>
@@ -36,22 +38,10 @@
                             <h3>Nom & || Prenom</h3>
                             <p> Poste</p>
                         </div>
-                       <div class="toggler">
-                            <a class="prev " onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                       </div>
+                       
                     </div>
-                        
-                    <div class="slide col-12">
-                        <p class="describe">
-                            Après 3 lancements de produits disruptifs fondés sur l’Intelligence Artificielle et l’Edge Computing, son précédent poste de Directeur Innovation au sein d’une des majors des Travaux Publics lui a permis d’acquérir une vision globale du secteur.
-                        </p>
-                        <img src="https://www.offroad.works/wp-content/uploads/2021/09/1.png" alt="" class="single-user">
-                        <div class="single-info">
-                            <h3>Nom & || Prenom</h3>
-                            <p> Poste</p>
-                        </div>
-                    </div>
+                       
+                  
                     
 
                 </div>
@@ -61,4 +51,37 @@
         </div>
         
     </div>
+    <script>
+        let slideIndex = 1
+        showSlides(slideIndex)
+        
+        //next & prev
+         function plus(n){
+             showSlides(slideIndex += n)
+         }
+        
+         //thumbnail image control
+        
+         function currentSlide(n){
+             showSlides(slideIndex = n)
+         }
+         function showSlides(n){
+             let i
+             let slides = document.querySelector('.slide')
+             let dots = document.getElementsByClassName("dot")
+             if(n > slides.length) {slideIndex = 1}
+             if(n < 1){slideIndex = slides.length}
+             
+             for(i = 0; i < slides.length; i++){
+                 slides[i].style.display = "none"
+             }
+        
+             for(i = 0; i < dots.length; i++){
+                 dots[i].className = dots[i].className.replace("active", "")
+             }
+             slides[slideIndex - 1].style.display = "block"
+             dots[slideIndex - 1].className += "active"
+         }
+    </script>
 </section>
+
