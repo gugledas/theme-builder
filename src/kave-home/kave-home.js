@@ -5,3 +5,4 @@ import "./kave-home.scss";
 // html
 import "./advantage-bloc/block";
 import "./type-parquet-section/parquet";
+import "./article-teaser/article";
