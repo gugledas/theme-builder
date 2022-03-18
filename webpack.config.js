@@ -16,7 +16,7 @@ const plugins = [];
 
 //const htmlDatas = [""];
 
-const CurrentThemeName = "Appson";
+const CurrentThemeName = "fusion-bootstrap";
 
 //const htmlDatasKey = [];
 //const CurrentThemeName = "gp";
@@ -30,7 +30,7 @@ plugins.push(
 plugins.push(
   new HtmlWebpackPlugin({
     templateContent: async () => {
-      console.log("reload HtmlWebpackPlugin");
+      console.log(" reload HtmlWebpackPlugin ");
       let html = "<html>";
       //html += "<head>  </head>";
       html += "<body>";
