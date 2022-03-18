@@ -3,4 +3,5 @@ import "./kave-home.scss";
 
 //import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 // html
-import "./mosaic-img/mosaic";
+import "./advantage-bloc/block";
+import "./type-parquet-section/parquet";
