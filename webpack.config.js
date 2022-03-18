@@ -14,9 +14,7 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-//const htmlDatas = [""];
-
-const CurrentThemeName = "fusion-bootstrap";
+const CurrentThemeName = "kave-home";
 
 //const htmlDatasKey = [];
 //const CurrentThemeName = "gp";
