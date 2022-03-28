@@ -164,13 +164,17 @@ module.exports = {
         ]
       },
       //règles de compilations pour les fonts
-      {
-        test: /\.(ttf|woff|woff2)$/,
-        loader: "file-loader",
-        options: {
-          name: "fonts/[name].[ext]"
-        }
-      },
+      // {
+      //   test: /\.(woff|woff2|eot|ttf|otf)$/i,
+      //   loader: "file-loader",
+      //   options: {
+      //     name: "fonts/[name].[ext]"
+      //   }
+      // },
+      // {
+      //   test: /\.(woff|woff2|eot|ttf|otf)$/i,
+      //   type: "asset/resource"
+      // },
       //règles de compilations pour les images
       // {
       //   test: /\.(gif|png|jpe?g)$/i,

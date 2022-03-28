@@ -1,0 +1,14 @@
+import "../section/header/header";
+import "../section/slider-section/slider";
+import "../section/banner/banner";
+import "../section/feartur-list/fearture";
+import "../section/tab-product-section/product";
+import "../section/television-entertainement/television";
+import "../section/trending-product/trending";
+import "../section/product-grids/grid";
+import "../section/top-category-moth/top";
+import "../section/recomend-for-you/recomend";
+import "../section/banner-two-colon/banner";
+import "../section/brand-carousel/carousel";
+import "../section/footer/footer";
+import "../section/go-to-up/go-to";

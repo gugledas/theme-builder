@@ -1,4 +1,4 @@
-import "./header/header.js";
+//import "./section/header/header.js";
 // import "./footer/footer";
 // import "./contact/contact";
 // import "./contactV2/contact";
@@ -12,37 +12,60 @@ import "./header/header.js";
 // import "./banner/banner";
 // import "./deals-and-tabs/deal";
 // import "./slider-section/slider";
-import "./side-bar-nav/sidebar";
+//import "./side-bar-nav/sidebar";
+
+//import "./section/top-bar/top-bar";
+//pages
+import "./pages/home3";
 //shop
 // import "./shop/wishlist/wishlist";
 // import "./shop/track-your-code/track";
 // import "./shop/aside-latest-product/latest";
-import "./shop/single-product-body/single";
-import "./shop/single-product-tab/single";
-import "./shop/related-prduct/related";
-import "./shop/filters/filters";
+// import "./shop/single-product-body/single";
+// import "./shop/single-product-tab/single";
+// import "./shop/related-prduct/related";
+// import "./shop/filters/filters";
 //
 
-import "./assets/scss/theme.scss";
-//import "./assets/vendor/font-awesome/css/fontawesome-all.min.css";
+// CSS Implementing Plugins
+import "./assets/vendor/font-awesome/css/fontawesome-all.min.css";
 import "./assets/css/font-electro.css";
+
 import "./assets/vendor/animate.css/animate.min.css";
-//import "./assets/vendor/hs-megamenu/src/hs.megamenu.css";
-//import "./assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css";
+import "./assets/vendor/hs-megamenu/src/hs.megamenu.css";
+import "./assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar";
 import "./assets/vendor/fancybox/jquery.fancybox.css";
 import "./assets/vendor/slick-carousel/slick/slick.css";
 import "./assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css";
-//bootstrap
-import "@stephane888/wbu-atomique/js/bootstrap/all.js";
+import "./assets/scss/theme.scss";
 
+// import "./assets/vendor/font-awesome/css/fontawesome-all.min.css";
+// import "./assets/css/font-electro.css";
+// import "./assets/vendor/animate.css/animate.min.css";
+//import "./assets/vendor/hs-megamenu/src/hs.megamenu.css";
+//import "./assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css";
+// import "./assets/vendor/fancybox/jquery.fancybox.css";
+// import "./assets/vendor/slick-carousel/slick/slick.css";
+// import "./assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css";
+
+// JS Global Compulsory
+//import "./assets/vendor/jquery/dist/jquery.min.js";
+//import "jquery-migrate";
+import $ from "jquery";
+import "./assets/vendor/jquery-migrate/dist/jquery-migrate.min.js";
+import "./assets/vendor/popper.js/dist/umd/popper.min.js";
+//bootstrap
+//import "bootstrap";
+//import "@stephane888/wbu-atomique/js/bootstrap/all.js";
+import "./assets/vendor/bootstrap/bootstrap.min.js";
 //<!-- JS Implementing Plugins -->
 import "./assets/vendor/appear.js";
 import "./assets/vendor/jquery.countdown.min.js";
-//import "./assets/vendor/hs-megamenu/src/hs.megamenu.js";
+import "./assets/vendor/hs-megamenu/src/hs.megamenu.js";
 import "./assets/vendor/svg-injector/dist/svg-injector.min.js";
-//import "./assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js";
+import "./assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js";
 import "./assets/vendor/jquery-validation/dist/jquery.validate.min.js";
-import "./assets/vendor/fancybox/jquery.fancybox.min.js";
+import "./assets/vendor/fancybox/jquery.fancybox";
 import "./assets/vendor/typed.js/lib/typed.min.js";
 import "./assets/vendor/slick-carousel/slick/slick.js";
 import "./assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js";
@@ -52,9 +75,9 @@ import "./assets/js/hs.core.js";
 import "./assets/js/components/hs.countdown.js";
 import "./assets/js/components/hs.header.js";
 import "./assets/js/components/hs.hamburgers.js";
-import "./assets/js/components/hs.unfold.js";
 import "./assets/js/components/hs.focus-state.js";
 import "./assets/js/components/hs.malihu-scrollbar.js";
+import "./assets/js/components/hs.unfold.js";
 import "./assets/js/components/hs.validation.js";
 import "./assets/js/components/hs.fancybox.js";
 import "./assets/js/components/hs.onscroll-animation.js";
@@ -71,12 +94,12 @@ if (document.head) {
   console.log("header false");
 }
 //
-var script = document.createElement("script");
-script.type = "text/javascript";
-script.src =
-  "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.2/jquery.min.js";
-document.head.appendChild(script);
-console.log("document.head : ", document.head);
+// var script = document.createElement("script");
+// script.type = "text/javascript";
+// script.src =
+//   "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.2/jquery.min.js";
+// document.head.appendChild(script);
+// console.log("document.head : ", document.head);
 
 //
 var link = document.createElement("link");
@@ -113,7 +136,7 @@ document.head.appendChild(link);
     });
 
     // initialization of popups
-    $.HSCore.components.HSFancyBox.init(".js-fancybox");
+    //$.HSCore.components.HSFancyBox.init(".js-fancybox");
 
     // initialization of countdowns
     var countdowns = $.HSCore.components.HSCountdown.init(".js-countdown", {

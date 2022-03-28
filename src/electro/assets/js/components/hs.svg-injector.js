@@ -4,9 +4,9 @@
  * @author Htmlstream
  * @version 1.0
  *
- */
-;(function ($) {
-  'use strict';
+ */ import jQuery from "jquery";
+(function ($) {
+  "use strict";
   $.HSCore.components.HSSVGIngector = {
     /**
      *
@@ -35,8 +35,10 @@
       this.collection = selector && $(selector).length ? $(selector) : $();
       if (!$(selector).length) return;
 
-      this.config = config && $.isPlainObject(config) ?
-        $.extend({}, this._baseConfig, config) : this._baseConfig;
+      this.config =
+        config && $.isPlainObject(config)
+          ? $.extend({}, this._baseConfig, config)
+          : this._baseConfig;
 
       this.config.itemSelector = selector;
 
@@ -54,13 +56,13 @@
       this.collection.each(function (i, el) {
         //Variables
         var $this = $(el),
-          array = JSON.parse(el.getAttribute('data-img-paths')),
+          array = JSON.parse(el.getAttribute("data-img-paths")),
           arrayLength = array ? array.length : 0,
-          $parent = $($this.data('parent')),
+          $parent = $($this.data("parent")),
           targetId,
           newPath;
 
-        $parent.css('height', $parent.outerHeight());
+        $parent.css("height", $parent.outerHeight());
 
         SVGInjector($this, {
           each: function (svg) {
@@ -69,11 +71,11 @@
                 targetId = array[i].targetId;
                 newPath = array[i].newPath;
 
-                $(svg).find(targetId).attr('xlink:href', newPath);
+                $(svg).find(targetId).attr("xlink:href", newPath);
               }
             }
 
-            $parent.removeClass('svg-preloader').css('height', '');
+            $parent.removeClass("svg-preloader").css("height", "");
           }
         });
 

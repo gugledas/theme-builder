@@ -4,9 +4,9 @@
  * @author Htmlstream
  * @version 1.0
  *
- */
-;(function ($) {
-  'use strict';
+ */ import jQuery from "jquery";
+(function ($) {
+  "use strict";
   $.HSCore.components.HSSelectPicker = {
     /**
      *
@@ -35,8 +35,10 @@
       this.collection = selector && $(selector).length ? $(selector) : $();
       if (!$(selector).length) return;
 
-      this.config = config && $.isPlainObject(config) ?
-        $.extend({}, this._baseConfig, config) : this._baseConfig;
+      this.config =
+        config && $.isPlainObject(config)
+          ? $.extend({}, this._baseConfig, config)
+          : this._baseConfig;
 
       this.config.itemSelector = selector;
 
@@ -57,9 +59,11 @@
 
         $this.selectpicker();
 
-        $this.on('loaded.bs.select', function (e) {
-          var $searchbox = $this.siblings('.dropdown-menu ').find('.bs-searchbox'),
-            searchBoxClasses = $this.data('searchbox-classes');
+        $this.on("loaded.bs.select", function (e) {
+          var $searchbox = $this
+              .siblings(".dropdown-menu ")
+              .find(".bs-searchbox"),
+            searchBoxClasses = $this.data("searchbox-classes");
 
           if (!searchBoxClasses) return;
 
@@ -77,9 +81,7 @@
         newArguments = [];
 
       for (var i = 1; i < arguments.length; i++) {
-
         newArguments.push(arguments[i]);
-
       }
 
       //Actions
