@@ -4,9 +4,9 @@
  * @author Htmlstream
  * @version 1.0
  *
- */
-;(function ($) {
-  'use strict';
+ */ import jQuery from "jquery";
+(function ($) {
+  "use strict";
   $.HSCore.components.HSGoTo = {
     /**
      *
@@ -35,8 +35,10 @@
       this.collection = selector && $(selector).length ? $(selector) : $();
       if (!$(selector).length) return;
 
-      this.config = config && $.isPlainObject(config) ?
-        $.extend({}, this._baseConfig, config) : this._baseConfig;
+      this.config =
+        config && $.isPlainObject(config)
+          ? $.extend({}, this._baseConfig, config)
+          : this._baseConfig;
 
       this.config.itemSelector = selector;
 
@@ -54,14 +56,14 @@
       this.collection.each(function (i, el) {
         //Variables
         var $this = $(el),
-          $target = $this.data('target'),
-          isReferencedToPage = Boolean($this.data('is-referenced-to-page')),
-          type = $this.data('type'),
-          showEffect = $this.data('show-effect'),
-          hideEffect = $this.data('hide-effect'),
-          position = JSON.parse(el.getAttribute('data-position')),
-          compensation = $($this.data('compensation')).outerHeight(),
-          offsetTop = $this.data('offset-top'),
+          $target = $this.data("target"),
+          isReferencedToPage = Boolean($this.data("is-referenced-to-page")),
+          type = $this.data("type"),
+          showEffect = $this.data("show-effect"),
+          hideEffect = $this.data("hide-effect"),
+          position = JSON.parse(el.getAttribute("data-position")),
+          compensation = $($this.data("compensation")).outerHeight(),
+          offsetTop = $this.data("offset-top"),
           targetOffsetTop = function () {
             if (compensation) {
               return $target ? $($target).offset().top - compensation : 0;
@@ -70,84 +72,102 @@
             }
           };
 
-        if (type === 'static') {
+        if (type === "static") {
           $this.css({
-            'display': 'inline-block'
+            display: "inline-block"
           });
         } else {
-          $this.addClass('animated').css({
-            'display': 'inline-block',
-            'position': type,
-            'opacity': 0
+          $this.addClass("animated").css({
+            display: "inline-block",
+            position: type,
+            opacity: 0
           });
         }
 
-        if (type === 'fixed' || type === 'absolute') {
+        if (type === "fixed" || type === "absolute") {
           $this.css(position);
         }
 
-        $this.on('click', function (e) {
+        $this.on("click", function (e) {
           if (!isReferencedToPage) {
             e.preventDefault();
 
-            $('html, body').stop().animate({
-              'scrollTop': targetOffsetTop()
-            }, 800);
+            $("html, body").stop().animate(
+              {
+                scrollTop: targetOffsetTop()
+              },
+              800
+            );
           }
         });
 
-        if (!$this.data('offset-top') && !$this.hasClass('js-animation-was-fired') && type !== 'static') {
+        if (
+          !$this.data("offset-top") &&
+          !$this.hasClass("js-animation-was-fired") &&
+          type !== "static"
+        ) {
           if ($this.offset().top <= $(window).height()) {
             $this.show();
 
             setTimeout(function () {
-              $this.addClass('js-animation-was-fired ' + showEffect).css({
-                'opacity': ''
+              $this.addClass("js-animation-was-fired " + showEffect).css({
+                opacity: ""
               });
             });
           }
         }
 
-        if (type !== 'static') {
-          $(window).on('scroll', function () {
-            clearTimeout($.data(this, 'scrollTimer'));
+        if (type !== "static") {
+          $(window).on("scroll", function () {
+            clearTimeout($.data(this, "scrollTimer"));
 
-            if ($this.data('offset-top')) {
-              if ($(window).scrollTop() >= offsetTop && !$this.hasClass('js-animation-was-fired')) {
+            if ($this.data("offset-top")) {
+              if (
+                $(window).scrollTop() >= offsetTop &&
+                !$this.hasClass("js-animation-was-fired")
+              ) {
                 $this.show();
 
                 setTimeout(function () {
-                  $this.addClass('js-animation-was-fired ' + showEffect).css({
-                    'opacity': ''
+                  $this.addClass("js-animation-was-fired " + showEffect).css({
+                    opacity: ""
                   });
                 });
-              } else if ($(window).scrollTop() <= offsetTop && $this.hasClass('js-animation-was-fired')) {
-                $.data(this, 'scrollTimer', setTimeout(function () {
-
-                  $this.removeClass('js-animation-was-fired ' + showEffect);
-
+              } else if (
+                $(window).scrollTop() <= offsetTop &&
+                $this.hasClass("js-animation-was-fired")
+              ) {
+                $.data(
+                  this,
+                  "scrollTimer",
                   setTimeout(function () {
-                    $this.addClass(hideEffect).css({
-                      'opacity': 0
-                    });
-                  }, 100);
+                    $this.removeClass("js-animation-was-fired " + showEffect);
 
-                  setTimeout(function () {
-                    $this.removeClass(hideEffect).hide();
-                  }, 400);
+                    setTimeout(function () {
+                      $this.addClass(hideEffect).css({
+                        opacity: 0
+                      });
+                    }, 100);
 
-                }, 500));
+                    setTimeout(function () {
+                      $this.removeClass(hideEffect).hide();
+                    }, 400);
+                  }, 500)
+                );
               }
             } else {
               var thisOffsetTop = $this.offset().top;
 
-              if (!$this.hasClass('js-animation-was-fired')) {
-                if ($(window).scrollTop() >= thisOffsetTop - $(window).height()) {
+              if (!$this.hasClass("js-animation-was-fired")) {
+                if (
+                  $(window).scrollTop() >=
+                  thisOffsetTop - $(window).height()
+                ) {
                   $this.show();
 
                   setTimeout(function () {
-                    $this.addClass('js-animation-was-fired ' + showEffect).css({
-                      'opacity': ''
+                    $this.addClass("js-animation-was-fired " + showEffect).css({
+                      opacity: ""
                     });
                   });
                 }
@@ -155,7 +175,7 @@
             }
           });
 
-          $(window).trigger('scroll');
+          $(window).trigger("scroll");
         }
 
         //Actions

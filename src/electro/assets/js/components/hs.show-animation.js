@@ -4,9 +4,9 @@
  * @author Htmlstream
  * @version 1.0
  *
- */
-;(function ($) {
-  'use strict';
+ */ import jQuery from "jquery";
+(function ($) {
+  "use strict";
   $.HSCore.components.HSShowAnimation = {
     /**
      *
@@ -14,7 +14,7 @@
      * @var Object _baseConfig
      */
     _baseConfig: {
-      afterShow: function() {}
+      afterShow: function () {}
     },
 
     /**
@@ -37,8 +37,10 @@
       this.collection = selector && $(selector).length ? $(selector) : $();
       if (!$(selector).length) return;
 
-      this.config = config && $.isPlainObject(config) ?
-        $.extend({}, this._baseConfig, config) : this._baseConfig;
+      this.config =
+        config && $.isPlainObject(config)
+          ? $.extend({}, this._baseConfig, config)
+          : this._baseConfig;
 
       this.config.itemSelector = selector;
 
@@ -57,20 +59,20 @@
       this.collection.each(function (i, el) {
         //Variables
         var $this = $(el),
-          linkGroup = $this.data('link-group'),
-          $target = $($this.data('target')),
-          targetGroup = $target.data('target-group'),
-          animateIn = $this.data('animation-in');
+          linkGroup = $this.data("link-group"),
+          $target = $($this.data("target")),
+          targetGroup = $target.data("target-group"),
+          animateIn = $this.data("animation-in");
 
-        $this.on('click', function(e) {
+        $this.on("click", function (e) {
           e.preventDefault();
 
-          if($(this).hasClass('active')) return;
+          if ($(this).hasClass("active")) return;
 
-          $('[data-link-group="'+linkGroup+'"]').removeClass('active');
-          $this.addClass('active');
+          $('[data-link-group="' + linkGroup + '"]').removeClass("active");
+          $this.addClass("active");
 
-          if(animateIn) {
+          if (animateIn) {
             $self.addAnimation($target, targetGroup, animateIn, config);
           } else {
             $self.hideShow($target, targetGroup, config);
@@ -84,9 +86,10 @@
 
     hideShow: function (target, targetgroup, config) {
       $('[data-target-group="' + targetgroup + '"]')
-        .hide().css('opacity', 0);
+        .hide()
+        .css("opacity", 0);
 
-      target.show().css('opacity', 1);
+      target.show().css("opacity", 1);
 
       config.afterShow();
     },
@@ -94,17 +97,15 @@
     addAnimation: function (target, targetgroup, animatein, config) {
       $('[data-target-group="' + targetgroup + '"]')
         .hide()
-        .css('opacity', 0)
-        .removeClass('animated ' + animatein);
+        .css("opacity", 0)
+        .removeClass("animated " + animatein);
 
       target.show();
 
       config.afterShow();
 
       setTimeout(function () {
-        target
-          .css('opacity', 1)
-          .addClass('animated ' + animatein);
+        target.css("opacity", 1).addClass("animated " + animatein);
       }, 50);
     }
   };
