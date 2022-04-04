@@ -8,7 +8,6 @@ function setImage(img) {
     "mouseover",
     () => {
       img.src = dataset;
-      //removeEvent(img);
     },
     true
   );
@@ -19,6 +18,5 @@ function setImage(img) {
 var img = document.querySelectorAll(".the-image");
 
 for (let im of img) {
-  console.log("img", im);
   setImage(im);
 }
