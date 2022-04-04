@@ -56,8 +56,8 @@ import "./assets/vendor/jquery-migrate/dist/jquery-migrate.min.js";
 import "./assets/vendor/popper.js/dist/umd/popper.min.js";
 //bootstrap
 //import "bootstrap";
-//import "@stephane888/wbu-atomique/js/bootstrap/all.js";
-import "./assets/vendor/bootstrap/bootstrap.min.js";
+import "@stephane888/wbu-atomique/js/bootstrap/all.js";
+//import "./assets/vendor/bootstrap/bootstrap.min.js";
 //<!-- JS Implementing Plugins -->
 import "./assets/vendor/appear.js";
 import "./assets/vendor/jquery.countdown.min.js";
@@ -117,7 +117,7 @@ document.head.appendChild(link);
       direction: "horizontal",
       pageContainer: $(".container"),
       breakpoint: 767.98,
-      hideTimeOut: 0
+      hideTimeOut: 0,
     });
   });
 
@@ -132,7 +132,7 @@ document.head.appendChild(link);
     $.HSCore.components.HSUnfold.init($("[data-unfold-target]"), {
       afterOpen: function () {
         $(this).find('input[type="search"]').focus();
-      }
+      },
     });
 
     // initialization of popups
@@ -145,7 +145,7 @@ document.head.appendChild(link);
       daysElSelector: ".js-cd-days",
       hoursElSelector: ".js-cd-hours",
       minutesElSelector: ".js-cd-minutes",
-      secondsElSelector: ".js-cd-seconds"
+      secondsElSelector: ".js-cd-seconds",
     });
 
     // initialization of malihu scrollbar
@@ -158,9 +158,9 @@ document.head.appendChild(link);
     $.HSCore.components.HSValidation.init(".js-validate", {
       rules: {
         confirmPassword: {
-          equalTo: "#signupPassword"
-        }
-      }
+          equalTo: "#signupPassword",
+        },
+      },
     });
 
     // initialization of show animations
@@ -185,7 +185,7 @@ document.head.appendChild(link);
       },
       afterClose: function () {
         $("#headerSidebarList .collapse.show").collapse("hide");
-      }
+      },
     });
 
     $('#headerSidebarList [data-toggle="collapse"]').on("click", function (e) {
