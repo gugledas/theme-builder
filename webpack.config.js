@@ -17,19 +17,8 @@ const plugins = [];
 //<<<<<<< HEAD
 const htmlDatas = [""];
 //<<<<<<< HEAD
-const CurrentThemeName = "offrord-team";
-//=======
-//const CurrentThemeName = "kave-home";
-//>>>>>>> 73124ecf68f8cccb44e30ed4902869fe2c00b5a2
-//=======
-//const htmlDatas = [""];
-//>>>>>>> 15003aa9f8888994c43e8ddce5752b4a3841d40c
+const CurrentThemeName = "new-offroad";
 
-//const CurrentThemeName = "Appson";
-
-//const htmlDatasKey = [];
-//const CurrentThemeName = "gp";
-//const CurrentThemeName = "flexor";
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
