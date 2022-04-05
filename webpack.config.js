@@ -14,7 +14,7 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-const CurrentThemeName = "offrord-team";
+const CurrentThemeName = "new-offroad";
 
 plugins.push(
   new MiniCssExtractPlugin({
