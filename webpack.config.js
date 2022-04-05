@@ -14,11 +14,19 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
+<<<<<<< HEAD
+//<<<<<<< HEAD
+const htmlDatas = [""];
+//<<<<<<< HEAD
+const CurrentThemeName = "new-offroad";
+
+=======
 const CurrentThemeName = "saint-gobain";
 
 //const htmlDatasKey = [];
 //const CurrentThemeName = "gp";
 //const CurrentThemeName = "flexor";
+>>>>>>> 4431e94ed041449c6abe1e20b37cb46f6c9d5de3
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
