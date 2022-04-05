@@ -56,8 +56,8 @@ import "./assets/vendor/jquery-migrate/dist/jquery-migrate.min.js";
 import "./assets/vendor/popper.js/dist/umd/popper.min.js";
 //bootstrap
 //import "bootstrap";
-import "@stephane888/wbu-atomique/js/bootstrap/all.js";
-//import "./assets/vendor/bootstrap/bootstrap.min.js";
+//import "@stephane888/wbu-atomique/js/bootstrap/all.js";
+import "./assets/vendor/bootstrap/bootstrap.min.js";
 //<!-- JS Implementing Plugins -->
 import "./assets/vendor/appear.js";
 import "./assets/vendor/jquery.countdown.min.js";
