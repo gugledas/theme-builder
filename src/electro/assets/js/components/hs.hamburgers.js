@@ -5,8 +5,9 @@
  * @version 1.0
  *
  */
-;(function ($) {
-  'use strict';
+import jQuery from "jquery";
+(function ($) {
+  "use strict";
 
   $.HSCore.components.HSHamburgers = {
     /**
@@ -27,19 +28,19 @@
     pageCollection: $(),
 
     init: function (selector, config) {
-
       this.collection = selector && $(selector).length ? $(selector) : $();
       if (!$(selector).length) return;
 
-      this.config = config && $.isPlainObject(config) ?
-        $.extend({}, this._baseConfig, config) : this._baseConfig;
+      this.config =
+        config && $.isPlainObject(config)
+          ? $.extend({}, this._baseConfig, config)
+          : this._baseConfig;
 
       this.config.itemSelector = selector;
 
       this.initHamburgers();
 
       return this.pageCollection;
-
     },
 
     /**
@@ -60,42 +61,32 @@
       //Actions
       this.collection.each(function (i, el) {
         var $this = $(el),
-          button = $this.parents('button, a'),
+          button = $this.parents("button, a"),
           isActive = false;
 
         // if(button.length) {
-        $(button).on('click', function () {
-
+        $(button).on("click", function () {
           if (isActive === false) {
-
-            $this.addClass('is-active');
+            $this.addClass("is-active");
 
             isActive = true;
 
             config.afterOpen();
-
           } else {
-
-            $this.removeClass('is-active');
+            $this.removeClass("is-active");
 
             isActive = false;
 
             config.afterClose();
-
           }
-
         });
 
-        $(document).on('keyup.HSHeaderSide', function (e) {
-
+        $(document).on("keyup.HSHeaderSide", function (e) {
           if (e.keyCode && e.keyCode === 27) {
-
             isActive = false;
 
             config.afterClose();
-
           }
-
         });
 
         //Actions

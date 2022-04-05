@@ -5,8 +5,9 @@
  * @version 1.0
  *
  */
-;(function ($) {
-  'use strict';
+import jQuery from "jquery";
+(function ($) {
+  "use strict";
 
   $.HSCore.components.HSFocusState = {
     /**
@@ -15,22 +16,24 @@
      * @return undefined
      */
     init: function () {
-      var collection = $('.js-focus-state input:not([type="checkbox"], [type="radio"]), .js-focus-state textarea, .js-focus-state select');
+      var collection = $(
+        '.js-focus-state input:not([type="checkbox"], [type="radio"]), .js-focus-state textarea, .js-focus-state select'
+      );
 
       if (!collection.length) return;
 
-      collection.on('focusin', function () {
+      collection.on("focusin", function () {
         var $this = $(this),
-            $thisParent = $this.closest('.js-focus-state');
+          $thisParent = $this.closest(".js-focus-state");
 
-        $thisParent.addClass('u-focus-state');
+        $thisParent.addClass("u-focus-state");
       });
 
-      collection.on('focusout', function () {
+      collection.on("focusout", function () {
         var $this = $(this),
-            $thisParent = $this.closest('.js-focus-state');
+          $thisParent = $this.closest(".js-focus-state");
 
-        $thisParent.removeClass('u-focus-state');
+        $thisParent.removeClass("u-focus-state");
       });
     }
   };

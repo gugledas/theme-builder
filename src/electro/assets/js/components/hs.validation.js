@@ -6,13 +6,13 @@
  * @requires
  *
  */
+import jQuery from "jquery";
 var isEmpty = function isEmpty(f) {
-  return (/^function[^{]+\{\s*\}/m.test(f.toString())
-  );
-}
+  return /^function[^{]+\{\s*\}/m.test(f.toString());
+};
 
-;(function ($) {
-  'use strict';
+(function ($) {
+  "use strict";
 
   $.HSCore.components.HSValidation = {
     /**
@@ -21,14 +21,16 @@ var isEmpty = function isEmpty(f) {
      * @var Object _baseConfig
      */
     _baseConfig: {
-      errorElement: 'div',
-      errorClass: 'invalid-feedback',
+      errorElement: "div",
+      errorClass: "invalid-feedback",
       rules: {},
-      onkeyup: function(element){$(element).valid()},
-      errorPlacement: function(){},
-      highlight: function(){},
-      unhighlight: function(){},
-      submitHandler: function(){}
+      onkeyup: function (element) {
+        $(element).valid();
+      },
+      errorPlacement: function () {},
+      highlight: function () {},
+      unhighlight: function () {},
+      submitHandler: function () {}
     },
 
     /**
@@ -51,8 +53,10 @@ var isEmpty = function isEmpty(f) {
       this.collection = selector && $(selector).length ? $(selector) : $();
       if (!$(selector).length) return;
 
-      this.config = config && $.isPlainObject(config) ?
-        $.extend({}, this._baseConfig, config) : this._baseConfig;
+      this.config =
+        config && $.isPlainObject(config)
+          ? $.extend({}, this._baseConfig, config)
+          : this._baseConfig;
 
       this.config.itemSelector = selector;
 
@@ -72,33 +76,43 @@ var isEmpty = function isEmpty(f) {
         //Variables
         var $this = $(el);
 
-        if ($this.hasClass('js-step-form')) {
+        if ($this.hasClass("js-step-form")) {
           $.validator.setDefaults({
-            ignore: ':hidden:not(.active select)'
+            ignore: ":hidden:not(.active select)"
           });
         } else {
           $.validator.setDefaults({
-            ignore: ':hidden:not(select)'
+            ignore: ":hidden:not(select)"
           });
         }
 
         $this.validate({
-          errorElement: config['errorElement'],
-          errorClass: config['errorClass'],
-          rules: config['rules'],
-          onkeyup: config['onkeyup'],
-          errorPlacement: isEmpty(config['errorPlacement']) === true ? $self.errorPlacement : config['errorPlacement'],
-          highlight: isEmpty(config['highlight']) === true ? $self.highlight : config['highlight'],
-          unhighlight: isEmpty(config['unhighlight']) === true ? $self.unHighlight : config['unhighlight'],
-          submitHandler: isEmpty(config['submitHandler']) === true ? $self.submitHandler : config['submitHandler']
+          errorElement: config["errorElement"],
+          errorClass: config["errorClass"],
+          rules: config["rules"],
+          onkeyup: config["onkeyup"],
+          errorPlacement:
+            isEmpty(config["errorPlacement"]) === true
+              ? $self.errorPlacement
+              : config["errorPlacement"],
+          highlight:
+            isEmpty(config["highlight"]) === true
+              ? $self.highlight
+              : config["highlight"],
+          unhighlight:
+            isEmpty(config["unhighlight"]) === true
+              ? $self.unHighlight
+              : config["unhighlight"],
+          submitHandler:
+            isEmpty(config["submitHandler"]) === true
+              ? $self.submitHandler
+              : config["submitHandler"]
         });
 
-        if($this.find('select').length) {
-
-          $('select').change(function () {
+        if ($this.find("select").length) {
+          $("select").change(function () {
             $(this).valid();
           });
-
         }
 
         //Actions
@@ -108,30 +122,36 @@ var isEmpty = function isEmpty(f) {
 
     errorPlacement: function (error, element) {
       var $this = $(element),
-        errorMsgClasses = $this.data('error-msg-classes');
+        errorMsgClasses = $this.data("error-msg-classes");
 
       error.addClass(errorMsgClasses);
-      error.appendTo(element.parents('.js-form-message'));
+      error.appendTo(element.parents(".js-form-message"));
     },
 
     highlight: function (element) {
       var $this = $(element),
-        errorClass = $this.data('error-class'),
-        successClass = $this.data('success-class');
+        errorClass = $this.data("error-class"),
+        successClass = $this.data("success-class");
 
-      $this.parents('.js-form-message').removeClass(successClass).addClass(errorClass);
+      $this
+        .parents(".js-form-message")
+        .removeClass(successClass)
+        .addClass(errorClass);
     },
 
     unHighlight: function (element) {
       var $this = $(element),
-        errorClass = $this.data('error-class'),
-        successClass = $this.data('success-class');
+        errorClass = $this.data("error-class"),
+        successClass = $this.data("success-class");
 
-      $this.parents('.js-form-message').removeClass(errorClass).addClass(successClass);
+      $this
+        .parents(".js-form-message")
+        .removeClass(errorClass)
+        .addClass(successClass);
     },
 
     submitHandler: function (form) {
       form.submit();
     }
-  }
+  };
 })(jQuery);
