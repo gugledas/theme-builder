@@ -16,9 +16,6 @@ const plugins = [];
 
 const CurrentThemeName = "offrord-team";
 
-//const htmlDatasKey = [];
-//const CurrentThemeName = "gp";
-//const CurrentThemeName = "flexor";
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
