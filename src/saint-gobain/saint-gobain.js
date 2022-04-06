@@ -16,3 +16,4 @@ import "@stephane888/wbu-atomique/scss/atome/typography/_default.scss";
 // import "./service-section/service";
 // import "./about-us/about";
 import "./bloc-image-scroll/image-scroll";
+import "./teaser-img-scroll/teaser-srcoll";
