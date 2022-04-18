@@ -1,1 +1,1 @@
-import './our-services-section/services'
+import './security-info-section/security.js'
