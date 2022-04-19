@@ -8,4 +8,8 @@ import "./lib/js/jquery-3.6.0.min";
 // importation des sections :
 import "./header/header";
 //import "./hero-section/hero";
-import "./consult-section/consult";
+//import "./consult-section/consult";
+//import "./type-section/type";
+//import "./projects-section/project";
+//import "./discuss-section/discuss";
+import "./footer-section/footer";
