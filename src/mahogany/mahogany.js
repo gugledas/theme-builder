@@ -12,4 +12,5 @@ import "./header/header";
 //import "./type-section/type";
 //import "./projects-section/project";
 //import "./discuss-section/discuss";
-import "./footer-section/footer";
+import "./update-section/update";
+//import "./footer-section/footer";
