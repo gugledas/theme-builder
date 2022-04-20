@@ -14,7 +14,7 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-const CurrentThemeName = "plumbing";
+const CurrentThemeName = "hotlock";
 
 plugins.push(
   new MiniCssExtractPlugin({
