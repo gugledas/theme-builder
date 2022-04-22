@@ -4,4 +4,5 @@
 //import './team-section/team'
 //import './products-section/product'
 //import './welcome-section/welcome'
-import './footer/footer'
+//import './footer/footer'
+import './services-overview/overview'
