@@ -1,0 +1,46 @@
+<div>
+  <p>
+    Il est possible d'utiliser des expressions de classes, nommées ou anonymes.
+    Si on utilise un nom dans l'expression, ce nom ne sera accessible que depuis
+    le corps de la classe via la propriété
+    <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name"
+      ><code>name</code></a
+    >
+    (cette valeur ne sera pas directement accessible pour les instances).
+  </p>
+  <div class="code-example">
+    <pre
+      class="brush: js notranslate"
+    ><code><span class="token comment">// anonyme</span>
+<span class="token keyword">let</span> Rectangle <span class="token operator">=</span> <span class="token keyword">class</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">hauteur<span class="token punctuation">,</span> largeur</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>hauteur <span class="token operator">=</span> hauteur<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>largeur <span class="token operator">=</span> largeur<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// nommée</span>
+<span class="token keyword">let</span> Rectangle <span class="token operator">=</span> <span class="token keyword">class</span> <span class="token class-name">Rectangle</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">hauteur<span class="token punctuation">,</span> largeur</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>hauteur <span class="token operator">=</span> hauteur<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>largeur <span class="token operator">=</span> largeur<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+    <button type="button" class="icon copy-icon">
+      <span class="visually-hidden">Copy to Clipboard</span></button
+    ><span
+      class="copy-icon-message visually-hidden"
+      role="alert"
+      style="top: 52px"
+    ></span>
+  </div>
+  <div class="notecard note" id="sect1">
+    <p>
+      <strong>Note :</strong> Les mêmes règles s'appliquent aux expressions de
+      classes en ce qui concerne la remontée (<em>hoisting</em>) des classes
+      (cf. le paragraphe précédent sur les remontées des déclarations de
+      classe).
+    </p>
+  </div>
+</div>

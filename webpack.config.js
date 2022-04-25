@@ -4,21 +4,18 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const manageImportHtml = require("./manageImportHtml.js");
+const MIH = new manageImportHtml();
 
-// on récupère la valeur de NODE_ENV
+// On récupère la valeur de NODE_ENV
 const env = process.env.NODE_ENV;
 
 const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-const htmlDatas = [""];
-const CurrentThemeName = "smallfarm";
+const CurrentThemeName = "plumbing";
 
-//const htmlDatas = [];
-const htmlDatasKey = [];
-//const CurrentThemeName = "gp";
-//const CurrentThemeName = "flexor";
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
@@ -27,12 +24,12 @@ plugins.push(
 );
 plugins.push(
   new HtmlWebpackPlugin({
-    templateContent: () => {
-      console.log("reload HtmlWebpackPlugin");
+    templateContent: async () => {
+      console.log(" reload HtmlWebpackPlugin ");
       let html = "<html>";
       //html += "<head>  </head>";
       html += "<body>";
-      html += htmlDatas.join("\n");
+      html += await MIH.getContents();
       html += "</body>";
       html += "</html>";
       return html;
@@ -40,6 +37,64 @@ plugins.push(
     title: " Template  " + CurrentThemeName
   })
 );
+plugins.push(
+  new (class OutputMonitor {
+    apply(compiler) {
+      compiler.hooks.watchRun.tap("MyPlugin", (context, entry) => {
+        //console.log("entry : ", context);
+      });
+    }
+  })()
+);
+
+// On essaie de ressoudre le probleme de chargement det la merge de html.
+// actuelement le processus de merge de html (MIH) a deux principal probleme.
+// - il ne respecte pas l'ordre des imports.
+// - il ne supprime pas un import lorsqu'on le supprime.
+// plugins.push(
+//   new (class OutputMonitor {
+//     apply(compiler) {
+//       compiler.hooks.normalModuleFactory.tap("MyPlugin2", (factory) => {
+//         factory.hooks.parser
+//           .for("javascript/auto")
+//           .tap("MyPlugin2", (parser, options) => {
+//             parser.hooks.import.tap("MyPlugin", (statement, source) => {
+//               console.log(" source : ", source);
+//               //console.log(" parser.state : ", parser.state.module);
+//             });
+//             // parser.hooks.export.tap("MyPlugin", (node) => {
+//             //   const {
+//             //     module: { rawRequest },
+//             //   } = parser.state;
+//             //   //console.log(" parser.state : ", parser.state.module.resource);
+//             //   // ..
+//             // });
+//             // parser.hooks.importSpecifier.tap(
+//             //   "MyPlugin2",
+//             //   (statement, source, exportName, identifierName) => {
+//             //     console.log(
+//             //       " parser.state : ",
+//             //       statement,
+//             //       source,
+//             //       exportName,
+//             //       identifierName
+//             //     );
+//             //   }
+//             // );
+//           });
+//       });
+//       compiler.hooks.emit.tapAsync("MyPlugin", (compilation, callback) => {
+//         var changedChunks = compilation.chunks.filter((chunk) => {
+//           console.log(" chunk.name : ", chunk);
+//           // var oldVersion = this.chunkVersions[chunk.name];
+//           // this.chunkVersions[chunk.name] = chunk.hash;
+//           // return chunk.hash !== oldVersion;
+//         });
+//         callback();
+//       });
+//     }
+//   })()
+// );
 
 module.exports = {
   plugins,
@@ -106,13 +161,17 @@ module.exports = {
         ]
       },
       //règles de compilations pour les fonts
-      {
-        test: /\.(ttf|woff|woff2)$/,
-        loader: "file-loader",
-        options: {
-          name: "fonts/[name].[ext]"
-        }
-      },
+      // {
+      //   test: /\.(woff|woff2|eot|ttf|otf)$/i,
+      //   loader: "file-loader",
+      //   options: {
+      //     name: "fonts/[name].[ext]"
+      //   }
+      // },
+      // {
+      //   test: /\.(woff|woff2|eot|ttf|otf)$/i,
+      //   type: "asset/resource"
+      // },
       //règles de compilations pour les images
       // {
       //   test: /\.(gif|png|jpe?g)$/i,
@@ -137,21 +196,24 @@ module.exports = {
           {
             loader: "html-loader",
             options: {
-              sources: true,
+              sources: false,
               preprocessor: (content, loaderContext) => {
                 try {
-                  var index = htmlDatasKey.indexOf(loaderContext.resource);
-                  if (index !== -1) {
-                    console.log("MAJ : ", index);
-                    htmlDatas[index] = content;
-                  } else {
-                    htmlDatas.push(content);
-                    htmlDatasKey.push(loaderContext.resource);
-                  }
+                  MIH.addUpdate(loaderContext.resource, content);
+
+                  // var index = htmlDatasKey.indexOf(loaderContext.resource);
+                  // if (index !== -1) {
+                  //   console.log("MAJ : ", index);
+                  //   htmlDatas[index] = content;
+                  // } else {
+                  //   htmlDatas.push(content);
+                  //   htmlDatasKey.push(loaderContext.resource);
+                  // }
+                  // console.log("htmlDatasKey", htmlDatasKey);
+                  // console.log("htmlDatas.length", htmlDatas.length);
                 } catch (error) {
                   return content;
                 }
-
                 return content;
               }
             }
@@ -162,7 +224,7 @@ module.exports = {
   },
   devServer: {
     //contentBase: path.resolve(__dirname, "./public"),
-    port: 3000,
+    // port: 3000,
     //publicPath: "dist/gp",
     //watchContentBase: true,
     hot: true,
