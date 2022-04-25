@@ -209,7 +209,7 @@ if (nav) {
 }
 
 /* pop up recherche */
-let search = document.querySelector(".search");
+let search = document.querySelector(".search-link");
 let fermer = document.querySelector(".hide-search");
 let blocSearch = document.querySelector(".search-pop-up");
 search.addEventListener("click", activeSearch);
