@@ -77,7 +77,7 @@ function copyNode2(bp) {
   let child = Array.from(document.querySelectorAll(".sub-build > ul > li "));
   let navLi2 = Array.from(header.querySelectorAll("nav .nav-list > li"));
   if (bp.matches) {
-    subuild.style.display = "flex";
+    subuild.style.display = "block";
     if (navLi.length) {
       for (let i = navLi2.length - 3; i > 1; i--) {
         (function (rs) {
@@ -100,7 +100,7 @@ function copyNode(bp) {
   let child = document.querySelectorAll(".sub-build > ul > li ");
   let navLi = Array.from(header.querySelectorAll("nav .nav-list > li"));
   if (bp.matches) {
-    subuild.style.display = "flex";
+    subuild.style.display = "block";
     if (navLi.length) {
       for (let i = navLi.length - 3; i > 3; i--) {
         (function (rs) {
