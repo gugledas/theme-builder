@@ -12,7 +12,7 @@ const toggleNav = () => {
     var ul = select(".nav-list");
 
     ul.classList.add("nav-list-mobile");
-
+    hideScrollBar();
     ul.classList.remove("nav-list");
     while (count < 1) {
       setToggleUl();
@@ -22,6 +22,7 @@ const toggleNav = () => {
   select(".hide").addEventListener("click", () => {
     header.classList.toggle("active");
     var ul = select(".nav-list-mobile");
+    hideScrollBar(false);
     ul.classList.remove("nav-list-mobile");
     ul.classList.add("nav-list");
     //setToggleUl();
@@ -33,7 +34,28 @@ const toggleNav = () => {
 
   //
 };
-
+/*Gère l'affichage du menu sur petit écran*/
+function hideMenuSM(bp) {
+  if (!bp.matches) {
+    select(".plumbing-navbar").classList.remove("active");
+    select(".plumbing-navbar nav > ul").classList.remove("nav-list-mobile");
+    select(".plumbing-navbar nav > ul").classList.add("nav-list");
+    hideScrollBar(false);
+    rebuildNav();
+  } else {
+    rebuildNav();
+  }
+  //setToggleUl();
+}
+/* cache la scroll bar du body */
+function hideScrollBar(hide = true) {
+  if (hide) {
+    document.body.style.height = "100%";
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style = "";
+  }
+}
 toggleNav();
 
 /* cacher les nav lorsque besoin s'impose */
@@ -101,11 +123,9 @@ function rebuildNav() {
     copyNode({ matches: true });
   }
   if (windowWidth < 992 && windowWidth >= 768) {
-    console.log("> 768", windowWidth);
     copyNode2({ matches: true });
   }
   if (windowWidth <= 768) {
-    console.log("< 768", windowWidth);
     copyNode({ matches: false });
   }
 }
@@ -113,19 +133,6 @@ function rebuildNav() {
 window.addEventListener("DOMContentLoaded", (event) => {
   rebuildNav();
 });
-
-/*Gère l'affichage du menu sur petit écran*/
-function hideMenuSM(bp) {
-  if (!bp.matches) {
-    select(".plumbing-navbar").classList.remove("active");
-    select(".plumbing-navbar nav > ul").classList.remove("nav-list-mobile");
-    select(".plumbing-navbar nav > ul").classList.add("nav-list");
-    rebuildNav();
-  } else {
-    rebuildNav();
-  }
-  //setToggleUl();
-}
 
 /* permet de gérer les menu deroulant sur petit écran au click du burger*/
 function setToggleUl() {
@@ -165,7 +172,7 @@ function setToggleUl() {
     }
   }
 }
-/* gere le max-height des ul au click */
+/* gere le max-height des ul au click pour les transition de fermeture et d'ouverture des accordeon*/
 function trueHeight(a) {
   var parent = header.querySelectorAll(".nav-list-mobile");
   var ulNext = a.nextElementSibling;
@@ -199,4 +206,15 @@ if (nav) {
   };
   window.addEventListener("load", fixedTop);
   onscroll(document, fixedTop);
+}
+
+/* pop up recherche */
+let search = document.querySelector(".search");
+let fermer = document.querySelector(".hide-search");
+let blocSearch = document.querySelector(".search-pop-up");
+search.addEventListener("click", activeSearch);
+fermer.addEventListener("click", activeSearch);
+
+function activeSearch() {
+  blocSearch.classList.toggle("search-pop-up--show");
 }
