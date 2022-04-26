@@ -12,7 +12,7 @@ import "./header/header"; // js to review ****
 //import "./type-section/type";
 //import "./offer-section/offer";
 //import "./projects-section/project";
-import "./help-section/help"; //js to review ****
+//import "./help-section/help"; //js to review ****
 //import "./testimonial-section/testimonial";
 //import "./flooring-section/flooring";
 //import "./guide-section/guide";
