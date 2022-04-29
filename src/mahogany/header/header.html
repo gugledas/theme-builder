@@ -44,7 +44,7 @@
             </div>
             
             <!-- entete two -->
-            <div class="row entete-two mobile-navigation">
+            <div class="row entete-two mobile-navigation" id="mobile-navigation">
 
                 <div class="closer" id="closer">
                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="30" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="white" d="M15.59 7L12 10.59L8.41 7L7 8.41L10.59 12L7 15.59L8.41 17L12 13.41L15.59 17L17 15.59L13.41 12L17 8.41L15.59 7Z"/></svg>
@@ -66,11 +66,11 @@
 
                     <ul>
                         <li id="submenu">
-                            <a href="#" class="active-link">
+                            <a href="#" class="active-link" id="activable-link" data-for-nar="1" data-for-tab="1">
                                 <span>Home</span>    
-                                <svg class="narrow-bottom" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="#ee8700" d="m15 14l-5-5l-5 5l-2-1l7-7l7 7z"/></svg>
+                                <svg class="narrow-bottom" id="narrow-bottom" data-nar="1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="#ee8700" d="m15 14l-5-5l-5 5l-2-1l7-7l7 7z"/></svg>
                             </a>
-                            <ul>
+                            <ul id="activable" class="activable" data-tab="1">
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#ee8700" d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z"/></svg>
                                 <li>
                                     <a href="">Home 1</a>
@@ -86,11 +86,11 @@
                         </li>
 
                         <li id="submenu">
-                            <a href="#">
+                            <a href="#" id="activable-link" data-for-nar="2" data-for-tab="2">
                                 <span>About Us</span>
-                                <svg class="narrow-bottom" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="#ffffff" d="m15 14l-5-5l-5 5l-2-1l7-7l7 7z"/></svg>   
+                                <svg class="narrow-bottom" data-nar="2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="#ffffff" d="m15 14l-5-5l-5 5l-2-1l7-7l7 7z"/></svg>   
                             </a>
-                            <ul>
+                            <ul id="activable" class="activable" data-tab="2">
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#ee8700" d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z"/></svg>
                                 <li>
                                     <a href="">About Us style 1</a>
@@ -106,20 +106,20 @@
                         </li>
 
                         <li id="submenu">
-                            <a href="#">
+                            <a href="#" id="activable-link" data-for-nar="3" data-for-tab="3">
                                 <span>Blog</span>
-                                <svg class="narrow-bottom" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="#ffffff" d="m15 14l-5-5l-5 5l-2-1l7-7l7 7z"/></svg>    
+                                <svg class="narrow-bottom" data-nar="3" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="#ffffff" d="m15 14l-5-5l-5 5l-2-1l7-7l7 7z"/></svg>    
                             </a>
-                            <ul>
+                            <ul id="activable" class="activable" data-tab="3">
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#ee8700" d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z"/></svg>
                                 <li class="sub-submenu">
-                                    <a href="">
+                                    <a href="#" id="sub-activable-link" data-for-subnar="1" data-for-sub="1">
                                         <span>
                                             Classic 
                                         </span>
-                                        <svg class="small-narrow-off" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="white" fill-rule="evenodd" d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"/></svg>
+                                        <svg class="small-narrow-off" data-subnar="1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="white" fill-rule="evenodd" d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"/></svg>
                                     </a>
-                                    <ul>
+                                    <ul id="sub-activable" class="me" data-sub="1">
                                         <li>
                                             <a href="">
                                                 1 columns
@@ -138,13 +138,13 @@
                                     </ul>
                                 </li>
                                 <li class="sub-submenu">
-                                    <a href="">
+                                    <a href="#" id="sub-activable-link" data-for-subnar="2" data-for-sub="2">
                                         <span>
                                             Chess
                                         </span> 
-                                        <svg class="small-narrow-off" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="white" fill-rule="evenodd" d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"/></svg>
+                                        <svg class="small-narrow-off" data-subnar="2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="white" fill-rule="evenodd" d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"/></svg>
                                     </a>
-                                    <ul>
+                                    <ul id="sub-activable" class="me" data-sub="2">
                                         <li>
                                             <a href="">
                                                 2 columns
@@ -163,13 +163,13 @@
                                     </ul>
                                 </li>
                                 <li class="sub-submenu">
-                                    <a href="">
+                                    <a href="#" id="sub-activable-link" data-for-subnar="3" data-for-sub="3">
                                         <span>
                                             Portfolio
                                         </span>
-                                        <svg class="small-narrow-off" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="white" fill-rule="evenodd" d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"/></svg>
+                                        <svg class="small-narrow-off" data-subnar="3" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="white" fill-rule="evenodd" d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"/></svg>
                                     </a>
-                                    <ul>
+                                    <ul id="sub-activable" class="me" data-sub="3">
                                         <li>
                                             <a href="">
                                                 2 columns
@@ -195,20 +195,20 @@
                         </li>
 
                         <li id="submenu">
-                            <a href="#">
+                            <a href="#" id="activable-link" data-for-nar="4" data-for-tab="4">
                                 <span>Features</span>
-                                <svg class="narrow-bottom" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="#ffffff" d="m15 14l-5-5l-5 5l-2-1l7-7l7 7z"/></svg>   
+                                <svg class="narrow-bottom" data-nar="4" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="#ffffff" d="m15 14l-5-5l-5 5l-2-1l7-7l7 7z"/></svg>   
                             </a>
-                            <ul>
+                            <ul id="activable" class="activable" data-tab="4">
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#ee8700" d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z"/></svg>
                                 <li class="sub-submenu">
-                                    <a href="">
+                                    <a href="#" id="sub-activable-link" data-for-subnar="4" data-for-sub="4">
                                         <span>
                                            Tools 
                                         </span>                                        
-                                        <svg class="small-narrow-off" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="white" fill-rule="evenodd" d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"/></svg>
+                                        <svg class="small-narrow-off" data-subnar="4" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="white" fill-rule="evenodd" d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"/></svg>
                                     </a>
-                                    <ul>
+                                    <ul id="sub-activable" class="me" data-sub="4">
                                         <li>
                                             <a href="">
                                                 Typography
@@ -222,13 +222,13 @@
                                     </ul>
                                 </li>
                                 <li class="sub-submenu">
-                                    <a href="">
+                                    <a href="#" id="sub-activable-link" data-for-subnar="5" data-for-sub="5">
                                         <span>
                                             Gallery
                                         </span>                                        
-                                        <svg class="small-narrow-off" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="white" fill-rule="evenodd" d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"/></svg>
+                                        <svg class="small-narrow-off" data-subnar="5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="white" fill-rule="evenodd" d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"/></svg>
                                     </a>
-                                    <ul>
+                                    <ul id="sub-activable" class="me" data-sub="5">
                                         <li>
                                             <a href="">
                                                 Grid
@@ -318,7 +318,7 @@
                     <div class="btns">
                         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="30" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="gray" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0a5.5 5.5 0 0 1 11 0z"/></svg>
                     </div>
-                    <div class="btns">
+                    <div class="btns" id="ham">
                         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="30" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="none" stroke="#ee8700" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"/></svg>
                     </div>
 
