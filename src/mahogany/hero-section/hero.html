@@ -1,18 +1,8 @@
 <!-- mahogany : hero section -->
-<script type="text/javascript">
-    jQuery(document).ready(function () {})
-    $(document).ready(function(){
-        console.log("jquery is ok!")
-    });
-    $( "dot" ).on ("click" ,function() {
-        console.log("my name is noumel");
-        console.log("that's event with jquery");
-    });
-</script>
-<section class="hero-section">
+<section class="hero-section container-flex">
 
     <!-- slider container flex -->
-    <div class="container-flex">
+    <div class="row">
 
         <!-- slider item -->
         <div class="slider-item">
@@ -27,7 +17,7 @@
                         Flooring that feels like <span>home</span>
                     </h1>
 
-                    <a href="" class="btn btn-primary btn-lg w-max mt-2">
+                    <a href="" class="btn btn-primary btn-lg text-center">
                         Visit Online Store
                     </a>
 
@@ -37,57 +27,12 @@
 
         </div>
 
-        <div class="slider-item">
-
-            <div class="slider-image">
-
-                <img class="img" src="https://mahogany.themerex.net/wp-content/uploads/2017/12/slider_1_2-copyright.jpg" alt="">
-
-                <div class="slider-text">
-
-                    <h1>
-                        Let us do your <span>home</span> better
-                    </h1>
-
-                    <a href="" class="btn btn-primary btn-lg w-max mt-2">
-                        Visit Online Store
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="slider-item">
-
-            <div class="slider-image">
-
-                <img class="img" src="https://mahogany.themerex.net/wp-content/uploads/2017/12/slider_1_3-copyright.jpg" alt="">
-
-                <div class="slider-text">
-
-                    <h1>
-                        <span>Care</span> For your Home and comfort
-                    </h1>
-
-                    <a href="" class="btn btn-primary btn-lg w-max mt-2">
-                        Visit Online Store
-                    </a>
-                    
-                </div>
-
-            </div>
-
-        </div>
-
-
         <!-- bullet starting point-->
         <div class="slider-bullets">
 
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+            <div class="dot" id="dot-one"></div>
+            <div class="dot" id="dot-two"></div>
+            <div class="dot" id="dot-three"></div>
 
         </div>
 

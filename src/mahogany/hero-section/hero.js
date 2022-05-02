@@ -11,10 +11,22 @@ import "../lib/js/jquery-3.6.0.min";
 //    console.log("my name is noumel")
 //});
 
-let index = 0;
-showSlides();
+/*let index = 1;
+showSlides(index);
 
-function showSlides() {
+// try specific 
+document.getElementById('dot-two').addEventListener("click", function(){
+    currentSlider(0);
+});
+document.getElementById('dot-three').addEventListener("click", function(){
+    currentSlider(1);
+});
+document.getElementById('dot-three').addEventListener("click", function(){
+    currentSlider(-1);
+});
+
+// function for sliding
+function showSlides(n) {
 
     let i;
     let slides = document.getElementsByClassName("slider-item");
@@ -28,7 +40,11 @@ function showSlides() {
         dots[i].className = dots[i].className.replace(" active", "");
     }
     slides[index - 1].style.display = "block";
-    dots[i-1].className += " active";
-    setTimeout(showSlides, 5000);
+    dots[index-1].className += " active";
+    setTimeout(showSlides, 7000);
     
 }
+// show specific slide () ...
+function currentSlider(j) {
+    showSlides(j);
+}*/
