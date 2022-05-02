@@ -11,7 +11,7 @@ import "../lib/js/jquery-3.6.0.min";
 //    console.log("my name is noumel")
 //});
 
-let index = 1;
+/*let index = 1;
 showSlides(index);
 
 // try specific 
@@ -47,4 +47,4 @@ function showSlides(n) {
 // show specific slide () ...
 function currentSlider(j) {
     showSlides(j);
-}
+}*/
