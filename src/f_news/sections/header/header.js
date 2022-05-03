@@ -2,7 +2,7 @@ import "./header.html";
 import "./header.scss";
 
 (function () {
-  ("use-strict");
+  "use-strict";
   let fnewsHeader = document.querySelector(".fnews-header");
   let firstNavUl = fnewsHeader.querySelector(".first-nav > ul");
   let liList = fnewsHeader.querySelectorAll(".first-nav  ul li");
@@ -60,9 +60,10 @@ import "./header.scss";
     }
   }
   /* permet de plier deplier le menu sur petit ecran */
-  function addRemoveActive() {
+  function addRemoveActive(e) {
     // firstNavUl.classList.toggle("nav-list");
     // firstNavUl.classList.toggle("nav-list-mobile");
+    e.preventDefault();
     let active = fnewsHeader.classList.contains("active");
     if (active) {
       showSmNav(firstNavUl);
