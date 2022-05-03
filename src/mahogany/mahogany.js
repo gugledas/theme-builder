@@ -16,7 +16,7 @@ import "./header/header"; // js to review ****
 //import "./testimonial-section/testimonial";
 //import "./flooring-section/flooring";
 //import "./guide-section/guide";
-//import "./free-home-section/free-home";
-import "./update-section/update";
-import "./discuss-section/discuss";
-//import "./footer-section/footer";
+import "./free-home-section/free-home";
+//import "./update-section/update";
+//import "./discuss-section/discuss";
+import "./footer-section/footer";
