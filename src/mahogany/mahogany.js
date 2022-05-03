@@ -12,11 +12,11 @@ import "./header/header"; // js to review ****
 //import "./type-section/type";
 //import "./offer-section/offer";
 //import "./projects-section/project";
-import "./help-section/help"; //js to review ****
-import "./testimonial-section/testimonial";
+//import "./help-section/help"; //js to review ****
+//import "./testimonial-section/testimonial";
 //import "./flooring-section/flooring";
 //import "./guide-section/guide";
 //import "./free-home-section/free-home";
-//import "./update-section/update";
-//import "./discuss-section/discuss";
+import "./update-section/update";
+import "./discuss-section/discuss";
 //import "./footer-section/footer";
