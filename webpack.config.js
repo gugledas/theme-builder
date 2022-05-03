@@ -14,11 +14,7 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-<<<<<<< HEAD
-const CurrentThemeName = "1433";
-=======
-const CurrentThemeName = "f_news";
->>>>>>> dee8bc2d8719166a328de7dc9dc18dcb0a300d96
+const CurrentThemeName = "mahogany";
 
 plugins.push(
   new MiniCssExtractPlugin({
