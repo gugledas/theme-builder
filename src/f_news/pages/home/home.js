@@ -12,3 +12,5 @@ import "../../sections/in-case/in-case";
 
 /* blog */
 import "../../sections/hero-blog/hero-blog";
+/* archive */
+import "../../sections/archive/archive";
