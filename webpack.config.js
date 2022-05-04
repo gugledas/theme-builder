@@ -14,11 +14,7 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-<<<<<<< Updated upstream
-const CurrentThemeName = "mahogany";
-=======
 const CurrentThemeName = "f_news";
->>>>>>> Stashed changes
 
 plugins.push(
   new MiniCssExtractPlugin({
