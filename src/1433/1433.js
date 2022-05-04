@@ -4,4 +4,5 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import './tech-stories-section/tech'
 //import './finance-section/finance'
 //import './proposition/proposition'
-import './teasers/home-teaser/teaser'
+//import './teasers/home-teaser/teaser'
+import './video-headlines/video'
