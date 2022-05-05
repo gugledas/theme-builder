@@ -22,3 +22,4 @@ import "../../sections/bac-to-top/bac-top";
 /* service */
 import "../../sections/first-service/first-service.js";
 import "../../sections/teaser-services/teaser-services";
+import "../../sections/metro-service/metro-service";
