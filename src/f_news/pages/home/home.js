@@ -15,6 +15,10 @@ import "../../sections/bac-to-top/bac-top";
 /* blog */
 // import "../../sections/hero-blog/hero-blog";
 // import "../../sections/sticky-author/sticky-author";
-import "../../sections/blog-lists/blog";
+//import "../../sections/blog-lists/blog";
 /* archive */
 // import "../../sections/archive/archive";
+
+/* service */
+import "../../sections/first-service/first-service.js";
+import "../../sections/teaser-services/teaser-services";
