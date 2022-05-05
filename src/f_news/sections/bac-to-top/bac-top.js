@@ -3,11 +3,11 @@ import "./bac-top.scss";
 
 (function () {
   "use-strict";
-  // let bacTop = document.querySelector(".bac-top-fnews");
-  // bacTop.addEventListener("click", scrollUp);
-  // window.onscroll = () => {
-  //   scrollFunction();
-  // };
+  let bacTop = document.querySelector(".bac-top-fnews");
+  bacTop.addEventListener("click", scrollUp);
+  window.onscroll = () => {
+    scrollFunction();
+  };
   function scrollFunction() {
     if (
       document.body.scrollTop > 500 ||
