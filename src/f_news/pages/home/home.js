@@ -24,3 +24,6 @@ import "../../sections/tag-list/tag-list";
 // import "../../sections/first-service/first-service.js";
 // import "../../sections/teaser-services/teaser-services";
 // import "../../sections/metro-service/metro-service";
+
+/* testimony */
+import "../../sections/testimony/testimony";
