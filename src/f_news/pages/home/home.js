@@ -15,11 +15,12 @@ import "../../sections/bac-to-top/bac-top";
 /* blog */
 // import "../../sections/hero-blog/hero-blog";
 // import "../../sections/sticky-author/sticky-author";
-import "../../sections/blog-lists/blog";
+//import "../../sections/blog-lists/blog";
+import "../../sections/tag-list/tag-list";
 /* archive */
 // import "../../sections/archive/archive";
 
 /* service */
 // import "../../sections/first-service/first-service.js";
 // import "../../sections/teaser-services/teaser-services";
-import "../../sections/metro-service/metro-service";
+// import "../../sections/metro-service/metro-service";
