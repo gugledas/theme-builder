@@ -27,13 +27,11 @@ import "../../sections/tag-list/tag-list";
  import "../../sections/metro-service/metro-service";
 
 /* testimony */
-<<<<<<< HEAD
 import "../../sections/testimony/testimony";
 
 /* leadership */
  import "../../sections/leadership/leadership";
  import "../../sections/leader-mansory/leader-mansory";
-=======
 //import "../../sections/testimony/testimony";
 //import "../../sections/testimony-2/testimony-2";
 
@@ -47,4 +45,3 @@ import "../../sections/testimony/testimony";
 
 /* slideshow */
 // import "../../sections/slideshow-hero/slideshow-hero";
->>>>>>> 114a658e6d11ea5b8d4b693169c74e1a2f4717bc
