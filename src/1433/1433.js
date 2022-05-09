@@ -8,4 +8,5 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import './video-headlines/video'
 //import './blog-lists/blog'
 //import './testimony/testimony'
-import "./leadership/leadership"
+//import "./leadership/leadership"
+import './testimonials/testimonials'
