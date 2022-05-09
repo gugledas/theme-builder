@@ -32,3 +32,7 @@ import "../../sections/bac-to-top/bac-top";
 /* leadership */
 // import "../../sections/leadership/leadership";
 // import "../../sections/leader-mansory/leader-mansory";
+
+/* contact */
+// import "../../sections/contact/contact";
+// import "../../sections/our-location/our-location";
