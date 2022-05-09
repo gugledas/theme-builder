@@ -28,6 +28,7 @@ import "../../sections/bac-to-top/bac-top";
 
 /* testimony */
 //import "../../sections/testimony/testimony";
+//import "../../sections/testimony-2/testimony-2";
 
 /* leadership */
 // import "../../sections/leadership/leadership";
@@ -36,3 +37,6 @@ import "../../sections/bac-to-top/bac-top";
 /* contact */
 // import "../../sections/contact/contact";
 // import "../../sections/our-location/our-location";
+
+/* slideshow */
+// import "../../sections/slideshow-hero/slideshow-hero";
