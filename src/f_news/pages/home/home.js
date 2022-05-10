@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import "../../sections/header/header";
 import "../../sections/bac-to-top/bac-top";
 import "../../sections/hero-home/home-hero";
+=======
+// import "../../sections/header/header";
+// import "../../sections/bac-to-top/bac-top";
+// import "../../sections/hero-home/home-hero";
+>>>>>>> f543b1e17003e3adc8f7c4ced32d9e6f6f12a961
 
 import "../../sections/featured-section/featured.js";
  import "../../sections/tech-stories-section/tech";
@@ -21,10 +27,19 @@ import "../../sections/tag-list/tag-list";
  import "../../sections/archive/archive";
 
 /* service */
+<<<<<<< HEAD
  import "../../sections/filter-section/filter-section";
  import "../../sections/first-service/first-service.js";
  import "../../sections/teaser-services/teaser-services";
  import "../../sections/metro-service/metro-service";
+=======
+// import "../../sections/filter-section/filter-section";
+// import "../../sections/first-service/first-service.js";
+// import "../../sections/teaser-services/teaser-services";
+// import "../../sections/metro-service/metro-service";
+import "../../sections/img-right-left/img-right-left";
+import "../../sections/text-btn-right/text-btn-right";
+>>>>>>> f543b1e17003e3adc8f7c4ced32d9e6f6f12a961
 
 /* testimony */
 import "../../sections/testimony/testimony";
@@ -36,8 +51,8 @@ import "../../sections/testimony/testimony";
 //import "../../sections/testimony-2/testimony-2";
 
 /* leadership */
-// import "../../sections/leadership/leadership";
-// import "../../sections/leader-mansory/leader-mansory";
+import "../../sections/leadership/leadership";
+import "../../sections/leader-mansory/leader-mansory";
 
 /* contact */
 // import "../../sections/contact/contact";
