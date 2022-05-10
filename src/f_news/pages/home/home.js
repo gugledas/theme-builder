@@ -23,11 +23,13 @@
 
 /* service */
 // import "../../sections/filter-section/filter-section";
-// import "../../sections/first-service/first-service.js";
+//import "../../sections/first-service/first-service.js";
 // import "../../sections/teaser-services/teaser-services";
 // import "../../sections/metro-service/metro-service";
 // import "../../sections/img-right-left/img-right-left";
 // import "../../sections/text-btn-right/text-btn-right";
+import "../../sections/teaser-product-slide/teaser-product-slide";
+//import "../../sections/accordeon/accordeon";
 
 /* testimony */
 // import "../../sections/testimony/testimony";
@@ -48,3 +50,6 @@
 
 /* slideshow */
 // import "../../sections/slideshow-hero/slideshow-hero";
+
+/* showcase */
+import "../../sections/hero-showcase/hero-showcase";
