@@ -8,13 +8,13 @@ import "../../sections/bac-to-top/bac-top";
 // import "../../sections/proposition/proposition";
 // import "../../sections/video-headlines/video";
 // import "../../sections/in-case/in-case";
-//  import "../../sections/bottom-text/teaser";
+// import "../../sections/bottom-text/teaser";
 
 // import "../../sections/footer/footer";
 
 /* blog */
-//import "../../sections/hero-blog/hero-blog";
-// import "../../sections/sticky-author/sticky-author";
+// import "../../sections/hero-blog/hero-blog";
+//import "../../sections/sticky-author/sticky-author";
 // import "../../sections/blog-lists/blog";
 // import "../../sections/tag-list/tag-list";
 
@@ -37,7 +37,7 @@ import "../../sections/bac-to-top/bac-top";
 
 /* testimony */
 // import "../../sections/testimony/testimony";
-//import "../../sections/testimony-2/testimony-2";
+// import "../../sections/testimony-2/testimony-2";
 
 /* leadership */
 // import "../../sections/leadership/leadership";
