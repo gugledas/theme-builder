@@ -9,4 +9,5 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import './blog-lists/blog'
 //import './testimony/testimony'
 //import "./leadership/leadership"
-import './testimonials/testimonials'
+//import './testimonials/testimonials'
+import './comment/comment'
