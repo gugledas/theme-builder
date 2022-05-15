@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 import "../../sections/header/header";
 import "../../sections/bac-to-top/bac-top";
 import "../../sections/hero-home/home-hero";
@@ -23,7 +21,7 @@ import "../../sections/hero-blog/hero-blog";
  import "../../sections/sticky-author/sticky-author";
  import "../../sections/blog-lists/blog";
  import "../../sections/tag-list/tag-list";
-=======
+
 import "../../sections/header/header";
 import "../../sections/bac-to-top/bac-top";
 // import "../../sections/hero-home/home-hero";
@@ -43,13 +41,11 @@ import "../../sections/bac-to-top/bac-top";
 //import "../../sections/sticky-author/sticky-author";
 // import "../../sections/blog-lists/blog";
 // import "../../sections/tag-list/tag-list";
->>>>>>> ea318e64bf907caf62279c853ca0acdb18a71334
 
 /* archive */
  import "../../sections/archive/archive";
 
 /* service */
-<<<<<<< HEAD
 
  import "../../sections/filter-section/filter-section";
  import "../../sections/first-service/first-service.js";
@@ -75,7 +71,7 @@ import "../../sections/text-btn-right/text-btn-right";
  import "../../sections/leader-mansory/leader-mansory";
 import "../../sections/testimony/testimony";
 import "../../sections/testimony-2/testimony-2";
-=======
+
 // import "../../sections/filter-section/filter-section";
 // import "../../sections/first-service/first-service.js";
 // import "../../sections/teaser-services/teaser-services";
@@ -92,7 +88,6 @@ import "../../sections/testimony-2/testimony-2";
 /* testimony */
 // import "../../sections/testimony/testimony";
 // import "../../sections/testimony-2/testimony-2";
->>>>>>> ea318e64bf907caf62279c853ca0acdb18a71334
 
 /* leadership */
  import "../../sections/leadership/leadership";
@@ -103,11 +98,8 @@ import "../../sections/testimony-2/testimony-2";
  import "../../sections/our-location/our-location";
 
 /* slideshow */
-<<<<<<< HEAD
  import "../../sections/slideshow-hero/slideshow-hero";
-=======
 // import "../../sections/slideshow-hero/slideshow-hero";
 
 /* showcase */
 // import "../../sections/hero-showcase/hero-showcase";
->>>>>>> ea318e64bf907caf62279c853ca0acdb18a71334
