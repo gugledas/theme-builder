@@ -6,8 +6,8 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import './security-info-section/security.js'
 //import './locksmith-services/lock.js'
 import './team-section/team'
-//import './products-section/product'
-//import './services-overview/overview'
+import './products-section/product'
+import './services-overview/overview'
 //import './footer/footer'
 
 // Teasers importations
