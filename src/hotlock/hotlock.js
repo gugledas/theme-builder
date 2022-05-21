@@ -7,7 +7,7 @@ import './header/header'
 //import './locksmith-services/lock.js'
 //import './team-section/team'
 //import './products-section/product'
-//import './services-overview/overview'
+import './services-overview/overview'
 //import './footer/footer'
 
 // Teasers importations
