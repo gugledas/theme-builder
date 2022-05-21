@@ -1,13 +1,13 @@
 import "@stephane888/wbu-atomique/scss/bootstrap-all.scss";
 import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 
-//import './header/header'
+import './header/header'
 //import './welcome-section/welcome'
 //import './security-info-section/security.js'
 //import './locksmith-services/lock.js'
-import './team-section/team'
-import './products-section/product'
-import './services-overview/overview'
+//import './team-section/team'
+//import './products-section/product'
+//import './services-overview/overview'
 //import './footer/footer'
 
 // Teasers importations
