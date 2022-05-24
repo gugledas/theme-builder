@@ -20,7 +20,7 @@ import "../../sections/footer/footer";
 // import "../../sections/tag-list/tag-list";
 
 /* archive */
-// import "../../sections/archive/archive";
+import "../../sections/archive/archive";
 
 /* service */
 
