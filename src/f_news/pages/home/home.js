@@ -11,7 +11,7 @@ import "../../sections/video-headlines/video";
 // import "../../sections/in-case/in-case";
 // import "../../sections/bottom-text/teaser";
 
-//import "../../sections/footer/footer";
+import "../../sections/footer/footer";
 
 /* blog */
 // import "../../sections/hero-blog/hero-blog";
