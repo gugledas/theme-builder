@@ -8,7 +8,7 @@ import "../../sections/featured-section/featured.js";
 // import "../../sections/finance-section/finance";
 // import "../../sections/proposition/proposition";
 import "../../sections/video-headlines/video";
-// import "../../sections/in-case/in-case";
+import "../../sections/in-case/in-case";
 // import "../../sections/bottom-text/teaser";
 
 import "../../sections/footer/footer";
