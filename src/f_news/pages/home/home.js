@@ -4,10 +4,10 @@ import "../../sections/hero-home/home-hero";
 
 /* home */
 import "../../sections/featured-section/featured.js";
-// import "../../sections/tech-stories-section/tech";
-// import "../../sections/finance-section/finance";
+import "../../sections/tech-stories-section/tech";
+import "../../sections/finance-section/finance";
 // import "../../sections/proposition/proposition";
-import "../../sections/video-headlines/video";
+// import "../../sections/video-headlines/video";
 import "../../sections/in-case/in-case";
 // import "../../sections/bottom-text/teaser";
 
@@ -47,7 +47,7 @@ import "../../sections/archive/archive";
 // import "../../sections/leader-mansory/leader-mansory";
 
 /* contact */
-import "../../sections/contact/contact";
+//import "../../sections/contact/contact";
 // import "../../sections/our-location/our-location";
 
 /* slideshow */
