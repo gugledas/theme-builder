@@ -1,6 +1,6 @@
 // import "../../sections/header/header";
 // import "../../sections/bac-to-top/bac-top";
-import "../../sections/hero-home/home-hero";
+//import "../../sections/hero-home/home-hero";
 
 /* home */
 // import "../../sections/featured-section/featured.js";
@@ -14,9 +14,9 @@ import "../../sections/hero-home/home-hero";
 //import "../../sections/footer/footer";
 
 /* blog */
-// import "../../sections/hero-blog/hero-blog";
+//import "../../sections/hero-blog/hero-blog";
 // import "../../sections/sticky-author/sticky-author";
-// import "../../sections/blog-lists/blog";
+//import "../../sections/blog-lists/blog";
 // import "../../sections/tag-list/tag-list";
 
 /* archive */
@@ -24,9 +24,9 @@ import "../../sections/hero-home/home-hero";
 
 /* service */
 
-// import "../../sections/filter-section/filter-section";
-// import "../../sections/first-service/first-service.js";
-// import "../../sections/teaser-services/teaser-services";
+//import "../../sections/filter-section/filter-section";
+//import "../../sections/first-service/first-service.js";
+//import "../../sections/teaser-services/teaser-services";
 // import "../../sections/metro-service/metro-service";
 // import "../../sections/img-right-left/img-right-left";
 // import "../../sections/text-btn-right/text-btn-right";
