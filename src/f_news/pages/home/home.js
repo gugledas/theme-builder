@@ -1,6 +1,6 @@
 import "../../sections/header/header";
 // import "../../sections/bac-to-top/bac-top";
-// import "../../sections/hero-home/home-hero";
+import "../../sections/hero-home/home-hero";
 
 /* home */
 // import "../../sections/featured-section/featured.js";
