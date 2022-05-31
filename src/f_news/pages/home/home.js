@@ -1,11 +1,11 @@
 import "../../sections/header/header";
 // import "../../sections/bac-to-top/bac-top";
-import "../../sections/hero-home/home-hero";
+//import "../../sections/hero-home/home-hero";
 
 /* home */
 // import "../../sections/featured-section/featured.js";
 // import "../../sections/tech-stories-section/tech";
-//import "../../sections/finance-section/finance";
+// import "../../sections/finance-section/finance";
 // import "../../sections/proposition/proposition";
 // import "../../sections/video-headlines/video";
 // import "../../sections/in-case/in-case";
@@ -26,8 +26,8 @@ import "../../sections/hero-home/home-hero";
 
 //import "../../sections/filter-section/filter-section";
 //import "../../sections/first-service/first-service.js";
-import "../../sections/teaser-services/teaser-services";
-import "../../sections/metro-service/metro-service";
+// import "../../sections/teaser-services/teaser-services";
+// import "../../sections/metro-service/metro-service";
 // import "../../sections/img-right-left/img-right-left";
 // import "../../sections/text-btn-right/text-btn-right";
 
