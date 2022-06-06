@@ -9,4 +9,4 @@ import "@stephane888/wbu-atomique/scss/atome/typography/_default.scss";
 import "./sections/header/header";
 //import "./pages/single-showcase/single-showcase";
 //import "./pages/single-product/single-product";
-//import "./pages/single-blog/single-blog";
+import "./pages/single-blog/single-blog";
