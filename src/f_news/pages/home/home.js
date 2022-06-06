@@ -14,8 +14,8 @@ import "../../sections/header/header";
 //import "../../sections/footer/footer";
 
 /* blog */
-//import "../../sections/hero-blog/hero-blog";
-// import "../../sections/sticky-author/sticky-author";
+import "../../sections/hero-blog/hero-blog";
+import "../../sections/sticky-author/sticky-author";
 //import "../../sections/blog-lists/blog";
 // import "../../sections/tag-list/tag-list";
 
