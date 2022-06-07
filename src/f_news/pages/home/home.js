@@ -15,9 +15,9 @@
 
 /* blog */
 //import "../../sections/hero-blog/hero-blog";
-// import "../../sections/sticky-author/sticky-author";
+import "../../sections/sticky-author/sticky-author";
 //import "../../sections/blog-lists/blog";
-import "../../sections/tag-list/tag-list";
+//import "../../sections/tag-list/tag-list";
 
 /* archive */
 //import "../../sections/archive/archive";
@@ -25,7 +25,7 @@ import "../../sections/tag-list/tag-list";
 /* service */
 
 //import "../../sections/filter-section/filter-section";
-import "../../sections/first-service/first-service.js";
+//import "../../sections/first-service/first-service.js";
 //import "../../sections/teaser-services/teaser-services";
 //import "../../sections/metro-service/metro-service";
 // import "../../sections/img-right-left/img-right-left";
