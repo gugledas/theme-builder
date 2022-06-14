@@ -14,10 +14,14 @@
 //import "../../sections/footer/footer";
 
 /* blog */
+<<<<<<< HEAD
 import "../../sections/hero-blog/hero-blog";
+=======
+//import "../../sections/hero-blog/hero-blog";
+>>>>>>> 1e6d04f84963567c8b8211d6465010cb6fda37ea
 import "../../sections/sticky-author/sticky-author";
 //import "../../sections/blog-lists/blog";
-import "../../sections/tag-list/tag-list";
+//import "../../sections/tag-list/tag-list";
 
 /* archive */
 //import "../../sections/archive/archive";
