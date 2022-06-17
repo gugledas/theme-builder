@@ -9,9 +9,9 @@ import "./locksmith-services/lock.js";
 import "./our-services-section/services";
 import "./team-section/team";
 import "./products-section/product";
-// import "./services-overview/overview";
-// import "./footer/footer";
-// import "./testimony/testimony";
-// Teasers importations
+import "./services-overview/overview";
 
-//import "./teasers/teasers";
+import "./testimony/testimony";
+// Teasers importations
+import "./teasers/teasers";
+import "./footer/footer";
