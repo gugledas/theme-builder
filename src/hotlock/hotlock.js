@@ -1,6 +1,6 @@
-import "@stephane888/wbu-atomique/scss/bootstrap-all.scss";
+import "./hotlock.scss";
 import "@stephane888/wbu-atomique/js/bootstrap/all.js";
-
+//
 import "./header/header";
 import "./bac-to-top/bac-top";
 import "./welcome-section/welcome";
@@ -13,5 +13,9 @@ import "./services-overview/overview";
 import "./team-section/team";
 import "./testimony/testimony";
 import "./products-section/product";
-
+import "./services-overview/overview";
+//
+import "./testimony/testimony";
+// Teasers importations
+import "./teasers/teasers";
 import "./footer/footer";
