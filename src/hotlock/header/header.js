@@ -1,3 +1,3 @@
-import './header.html'
-import './header.scss'
-import '@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/hotlock/js/header.js'
+import "./header.html";
+import "./header.scss";
+import "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/hotlock/js/header.js";
