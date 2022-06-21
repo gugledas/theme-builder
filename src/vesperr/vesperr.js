@@ -7,8 +7,7 @@ import "./lib/glightbox/js/glightbox";
 import "./lib/js/main";
 import AOS from "./lib/aos/aos";
 
-
-// == importations des section du theme === // 
+// == importations des section du theme === //
 
 import "./headers/header.js";
 import "./HeroSection/hero.js";
@@ -25,18 +24,19 @@ import "./PriceSection/price.js";
 import "./FaqSection/faq.js";
 import "./ContactSection/contact.js";
 import "./FooterSection/footer.js";
-// == importation des scss par défaut == // 
+import "./bac-to-top/bac-top";
+// == importation des scss par défaut == //
 
 import "./vesperr.scss";
 
 /**
- * animation on scroll 
+ * animation on scroll
  */
- window.addEventListener("load", () => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: true,
-      mirror: false
-    });
+window.addEventListener("load", () => {
+  AOS.init({
+    duration: 1000,
+    easing: "ease-in-out",
+    once: true,
+    mirror: false
   });
+});
