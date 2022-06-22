@@ -1,2 +1,2 @@
-import "./security.html"
-import "./security.scss"
+import "./security.html";
+import "./security.scss";

@@ -6,57 +6,94 @@
  * Version: 1.1.4
  * Url: https://github.com/srexi/purecounterjs
  * License: MIT
- */!function(){"use strict";function e(e,t){var r=Object.keys(e);if(Object.getOwnPropertySymbols){var n=Object.getOwnPropertySymbols(e);t&&(n=n.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),r.push.apply(r,n)}return r}function t(e,t,r){return t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}function r(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}new(function(){function n(e){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,n),this.defaults={start:0,end:100,duration:2e3,delay:10,once:!0,decimals:0,legacy:!0,currency:!1,currencysymbol:!1,separator:!1,separatorsymbol:",",selector:".purecounter"},this.configOptions=Object.assign({},this.defaults,e||{}),this.registerEventListeners()}var a,i,o;return a=n,(i=[{key:"registerEventListeners",value:function(){var e=document.querySelectorAll(this.configOptions.selector);if(this.intersectionListenerSupported()){var t=new IntersectionObserver(this.animateElements.bind(this),{root:null,rootMargin:"20px",threshold:.5});e.forEach((function(e){t.observe(e)}))}else window.addEventListener&&(this.animateLegacy(e),window.addEventListener("scroll",(function(t){this.animateLegacy(e)}),{passive:!0}))}},{key:"animateLegacy",value:function(e){var t=this;e.forEach((function(e){!0===t.parseConfig(e).legacy&&t.elementIsInView(e)&&t.animateElements([e])}))}},{key:"animateElements",value:function(e,t){var r=this;e.forEach((function(e){var n=e.target||e,a=r.parseConfig(n);if(a.duration<=0)return n.innerHTML=r.formatNumber(a.end,a);if(!t&&!r.elementIsInView(e)||t&&e.intersectionRatio<.5){var i=a.start>a.end?a.end:a.start;return n.innerHTML=r.formatNumber(i,a)}setTimeout((function(){return r.startCounter(n,a)}),a.delay)}))}},{key:"startCounter",value:function(e,t){var r=this,n=(t.end-t.start)/(t.duration/t.delay),a="inc";t.start>t.end&&(a="dec",n*=-1);var i=this.parseValue(t.start);e.innerHTML=this.formatNumber(i,t),!0===t.once&&e.setAttribute("data-purecounter-duration",0);var o=setInterval((function(){var s=r.nextNumber(i,n,a);e.innerHTML=r.formatNumber(s,t),((i=s)>=t.end&&"inc"==a||i<=t.end&&"dec"==a)&&(e.innerHTML=r.formatNumber(t.end,t),clearInterval(o))}),t.delay)}},{key:"parseConfig",value:function(r){var n=this,a=function(r){for(var n=1;n<arguments.length;n++){var a=null!=arguments[n]?arguments[n]:{};n%2?e(Object(a),!0).forEach((function(e){t(r,e,a[e])})):Object.getOwnPropertyDescriptors?Object.defineProperties(r,Object.getOwnPropertyDescriptors(a)):e(Object(a)).forEach((function(e){Object.defineProperty(r,e,Object.getOwnPropertyDescriptor(a,e))}))}return r}({},this.configOptions),i=[].filter.call(r.attributes,(function(e){return/^data-purecounter-/.test(e.name)})),o={};return i.forEach((function(e){var t=e.name.replace("data-purecounter-","").toLowerCase(),r="duration"==t?parseInt(1e3*n.parseValue(e.value)):n.parseValue(e.value);o[t]=r})),Object.assign(a,o)}},{key:"nextNumber",value:function(e,t){var r=arguments.length>2&&void 0!==arguments[2]?arguments[2]:"inc";return e=this.parseValue(e),t=this.parseValue(t),parseFloat("inc"===r?e+t:e-t)}},{key:"convertToCurrencySystem",value:function(e,t){var r=t.currencysymbol||"",n=t.decimals||1;return r+((e=Math.abs(Number(e)))>=1e12?"".concat((e/1e12).toFixed(n)," T"):e>=1e9?"".concat((e/1e9).toFixed(n)," B"):e>=1e6?"".concat((e/1e6).toFixed(n)," M"):e>=1e3?"".concat((e/1e12).toFixed(n)," K"):e.toFixed(n))}},{key:"applySeparator",value:function(e,t){return t.separator?e.replace(/(\d)(?=(\d{3})+(?!\d))/g,"$1,").replace(new RegExp(/,/gi,"gi"),t.separatorsymbol):e.replace(new RegExp(/,/gi,"gi"),"")}},{key:"formatNumber",value:function(e,t){var r={minimumFractionDigits:t.decimals,maximumFractionDigits:t.decimals};return e=t.currency?this.convertToCurrencySystem(e,t):parseFloat(e),this.applySeparator(e.toLocaleString(void 0,r),t)}},{key:"parseValue",value:function(e){return/^[0-9]+\.[0-9]+$/.test(e)?parseFloat(e):/^[0-9]+$/.test(e)?parseInt(e):/^true|false/i.test(e)?/^true/i.test(e):e}},{key:"elementIsInView",value:function(e){for(var t=e.offsetTop,r=e.offsetLeft,n=e.offsetWidth,a=e.offsetHeight;e.offsetParent;)t+=(e=e.offsetParent).offsetTop,r+=e.offsetLeft;return t>=window.pageYOffset&&r>=window.pageXOffset&&t+a<=window.pageYOffset+window.innerHeight&&r+n<=window.pageXOffset+window.innerWidth}},{key:"intersectionListenerSupported",value:function(){return"IntersectionObserver"in window&&"IntersectionObserverEntry"in window&&"intersectionRatio"in window.IntersectionObserverEntry.prototype}}])&&r(a.prototype,i),o&&r(a,o),n}())}();
+ */!function () { "use strict"; function e(e, t) { var r = Object.keys(e); if (Object.getOwnPropertySymbols) { var n = Object.getOwnPropertySymbols(e); t && (n = n.filter((function (t) { return Object.getOwnPropertyDescriptor(e, t).enumerable }))), r.push.apply(r, n) } return r } function t(e, t, r) { return t in e ? Object.defineProperty(e, t, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : e[t] = r, e } function r(e, t) { for (var r = 0; r < t.length; r++) { var n = t[r]; n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(e, n.key, n) } } new (function () { function n(e) { !function (e, t) { if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function") }(this, n), this.defaults = { start: 0, end: 100, duration: 2e3, delay: 10, once: !0, decimals: 0, legacy: !0, currency: !1, currencysymbol: !1, separator: !1, separatorsymbol: ",", selector: ".purecounter" }, this.configOptions = Object.assign({}, this.defaults, e || {}), this.registerEventListeners() } var a, i, o; return a = n, (i = [{ key: "registerEventListeners", value: function () { var e = document.querySelectorAll(this.configOptions.selector); if (this.intersectionListenerSupported()) { var t = new IntersectionObserver(this.animateElements.bind(this), { root: null, rootMargin: "20px", threshold: .5 }); e.forEach((function (e) { t.observe(e) })) } else window.addEventListener && (this.animateLegacy(e), window.addEventListener("scroll", (function (t) { this.animateLegacy(e) }), { passive: !0 })) } }, { key: "animateLegacy", value: function (e) { var t = this; e.forEach((function (e) { !0 === t.parseConfig(e).legacy && t.elementIsInView(e) && t.animateElements([e]) })) } }, { key: "animateElements", value: function (e, t) { var r = this; e.forEach((function (e) { var n = e.target || e, a = r.parseConfig(n); if (a.duration <= 0) return n.innerHTML = r.formatNumber(a.end, a); if (!t && !r.elementIsInView(e) || t && e.intersectionRatio < .5) { var i = a.start > a.end ? a.end : a.start; return n.innerHTML = r.formatNumber(i, a) } setTimeout((function () { return r.startCounter(n, a) }), a.delay) })) } }, { key: "startCounter", value: function (e, t) { var r = this, n = (t.end - t.start) / (t.duration / t.delay), a = "inc"; t.start > t.end && (a = "dec", n *= -1); var i = this.parseValue(t.start); e.innerHTML = this.formatNumber(i, t), !0 === t.once && e.setAttribute("data-purecounter-duration", 0); var o = setInterval((function () { var s = r.nextNumber(i, n, a); e.innerHTML = r.formatNumber(s, t), ((i = s) >= t.end && "inc" == a || i <= t.end && "dec" == a) && (e.innerHTML = r.formatNumber(t.end, t), clearInterval(o)) }), t.delay) } }, { key: "parseConfig", value: function (r) { var n = this, a = function (r) { for (var n = 1; n < arguments.length; n++) { var a = null != arguments[n] ? arguments[n] : {}; n % 2 ? e(Object(a), !0).forEach((function (e) { t(r, e, a[e]) })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a)) : e(Object(a)).forEach((function (e) { Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e)) })) } return r }({}, this.configOptions), i = [].filter.call(r.attributes, (function (e) { return /^data-purecounter-/.test(e.name) })), o = {}; return i.forEach((function (e) { var t = e.name.replace("data-purecounter-", "").toLowerCase(), r = "duration" == t ? parseInt(1e3 * n.parseValue(e.value)) : n.parseValue(e.value); o[t] = r })), Object.assign(a, o) } }, { key: "nextNumber", value: function (e, t) { var r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "inc"; return e = this.parseValue(e), t = this.parseValue(t), parseFloat("inc" === r ? e + t : e - t) } }, { key: "convertToCurrencySystem", value: function (e, t) { var r = t.currencysymbol || "", n = t.decimals || 1; return r + ((e = Math.abs(Number(e))) >= 1e12 ? "".concat((e / 1e12).toFixed(n), " T") : e >= 1e9 ? "".concat((e / 1e9).toFixed(n), " B") : e >= 1e6 ? "".concat((e / 1e6).toFixed(n), " M") : e >= 1e3 ? "".concat((e / 1e12).toFixed(n), " K") : e.toFixed(n)) } }, { key: "applySeparator", value: function (e, t) { return t.separator ? e.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,").replace(new RegExp(/,/gi, "gi"), t.separatorsymbol) : e.replace(new RegExp(/,/gi, "gi"), "") } }, { key: "formatNumber", value: function (e, t) { var r = { minimumFractionDigits: t.decimals, maximumFractionDigits: t.decimals }; return e = t.currency ? this.convertToCurrencySystem(e, t) : parseFloat(e), this.applySeparator(e.toLocaleString(void 0, r), t) } }, { key: "parseValue", value: function (e) { return /^[0-9]+\.[0-9]+$/.test(e) ? parseFloat(e) : /^[0-9]+$/.test(e) ? parseInt(e) : /^true|false/i.test(e) ? /^true/i.test(e) : e } }, { key: "elementIsInView", value: function (e) { for (var t = e.offsetTop, r = e.offsetLeft, n = e.offsetWidth, a = e.offsetHeight; e.offsetParent;)t += (e = e.offsetParent).offsetTop, r += e.offsetLeft; return t >= window.pageYOffset && r >= window.pageXOffset && t + a <= window.pageYOffset + window.innerHeight && r + n <= window.pageXOffset + window.innerWidth } }, { key: "intersectionListenerSupported", value: function () { return "IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype } }]) && r(a.prototype, i), o && r(a, o), n }()) }();
   //# sourceMappingURL=purecounter.js.map
 
 </script>
 
 <section id="counts" class="counts">
-    <div class="container">
+  <div class="container">
 
-      <div class="row">
-        <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start aos-init aos-animate" data-aos="fade-right" data-aos-delay="150">
-          <img src="../images/counts-img.svg" alt="" class="img-fluid">
-        </div>
-
-        <div class="col-xl-7 d-flex align-items-stretch pt-4 pt-xl-0 aos-init aos-animate" data-aos="fade-left" data-aos-delay="300">
-          <div class="content d-flex flex-column justify-content-center">
-            <div class="row">
-              <div class="col-md-6 d-md-flex align-items-md-stretch">
-                <div class="count-box">
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#3498db"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75a.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25a.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/></g></svg>
-                  <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="0" class="purecounter">65</span>
-                  <p><strong>Happy Clients</strong> consequuntur voluptas nostrum aliquid ipsam architecto ut.</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 d-md-flex align-items-md-stretch">
-                <div class="count-box">
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#3498db"><path d="M7.5 3.75a.75.75 0 1 1-1.5 0a.75.75 0 0 1 1.5 0zm-.861 1.542l1.33.886l1.854-1.855a.25.25 0 0 1 .289-.047L11 4.75V7a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 7v-.5s1.54-1.274 1.639-1.208zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/><path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/><path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/></g></svg>
-                  <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="0" class="purecounter">85</span>
-                  <p><strong>Projects</strong> adipisci atque cum quia aspernatur totam laudantium et quia dere tan</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 d-md-flex align-items-md-stretch">
-                <div class="count-box">
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#3498db"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></g></svg>
-                  <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="0" class="purecounter">18</span>
-                  <p><strong>Years of experience</strong> aut commodi quaerat modi aliquam nam ducimus aut voluptate non vel</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 d-md-flex align-items-md-stretch">
-                <div class="count-box">
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#3498db"><path d="M9.669.864L8 0L6.331.864l-1.858.282l-.842 1.68l-1.337 1.32L2.6 6l-.306 1.854l1.337 1.32l.842 1.68l1.858.282L8 12l1.669-.864l1.858-.282l.842-1.68l1.337-1.32L13.4 6l.306-1.854l-1.337-1.32l-.842-1.68L9.669.864zm1.196 1.193l.684 1.365l1.086 1.072L12.387 6l.248 1.506l-1.086 1.072l-.684 1.365l-1.51.229L8 10.874l-1.355-.702l-1.51-.229l-.684-1.365l-1.086-1.072L3.614 6l-.25-1.506l1.087-1.072l.684-1.365l1.51-.229L8 1.126l1.356.702l1.509.229z"/><path d="M4 11.794V16l4-1l4 1v-4.206l-2.018.306L8 13.126L6.018 12.1L4 11.794z"/></g></svg>
-                  <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="0" class="purecounter">15</span>
-                  <p><strong>Awards</strong> rerum asperiores dolor alias quo reprehenderit eum et nemo pad der</p>
-                </div>
-              </div>
-            </div>
-          </div><!-- End .content-->
-        </div>
+    <div class="row">
+      <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start aos-init aos-animate"
+           data-aos="fade-right" data-aos-delay="150">
+        <img src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/counts-img.svg" alt="" class="img-fluid">
       </div>
 
+      <div class="col-xl-7 d-flex align-items-stretch pt-4 pt-xl-0 aos-init aos-animate" data-aos="fade-left"
+           data-aos-delay="300">
+        <div class="content d-flex flex-column justify-content-center">
+          <div class="row">
+            <div class="col-md-6 d-md-flex align-items-md-stretch">
+              <div class="count-box">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                     role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
+                  <g fill="#3498db">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path
+                          d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75a.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25a.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z" />
+                  </g>
+                </svg>
+                <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="0"
+                      class="purecounter">65</span>
+                <p><strong>Happy Clients</strong> consequuntur voluptas nostrum aliquid ipsam architecto ut.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 d-md-flex align-items-md-stretch">
+              <div class="count-box">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                     role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
+                  <g fill="#3498db">
+                    <path
+                          d="M7.5 3.75a.75.75 0 1 1-1.5 0a.75.75 0 0 1 1.5 0zm-.861 1.542l1.33.886l1.854-1.855a.25.25 0 0 1 .289-.047L11 4.75V7a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 7v-.5s1.54-1.274 1.639-1.208zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z" />
+                    <path
+                          d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                    <path
+                          d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                  </g>
+                </svg>
+                <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="0"
+                      class="purecounter">85</span>
+                <p><strong>Projects</strong> adipisci atque cum quia aspernatur totam laudantium et quia dere tan</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 d-md-flex align-items-md-stretch">
+              <div class="count-box">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                     role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
+                  <g fill="#3498db">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                  </g>
+                </svg>
+                <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="0"
+                      class="purecounter">18</span>
+                <p><strong>Years of experience</strong> aut commodi quaerat modi aliquam nam ducimus aut voluptate non
+                  vel</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 d-md-flex align-items-md-stretch">
+              <div class="count-box">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                     role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
+                  <g fill="#3498db">
+                    <path
+                          d="M9.669.864L8 0L6.331.864l-1.858.282l-.842 1.68l-1.337 1.32L2.6 6l-.306 1.854l1.337 1.32l.842 1.68l1.858.282L8 12l1.669-.864l1.858-.282l.842-1.68l1.337-1.32L13.4 6l.306-1.854l-1.337-1.32l-.842-1.68L9.669.864zm1.196 1.193l.684 1.365l1.086 1.072L12.387 6l.248 1.506l-1.086 1.072l-.684 1.365l-1.51.229L8 10.874l-1.355-.702l-1.51-.229l-.684-1.365l-1.086-1.072L3.614 6l-.25-1.506l1.087-1.072l.684-1.365l1.51-.229L8 1.126l1.356.702l1.509.229z" />
+                    <path d="M4 11.794V16l4-1l4 1v-4.206l-2.018.306L8 13.126L6.018 12.1L4 11.794z" />
+                  </g>
+                </svg>
+                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="0"
+                      class="purecounter">15</span>
+                <p><strong>Awards</strong> rerum asperiores dolor alias quo reprehenderit eum et nemo pad der</p>
+              </div>
+            </div>
+          </div>
+        </div><!-- End .content-->
+      </div>
     </div>
-  </section><!-- End Counts Section -->
+
+  </div>
+</section><!-- End Counts Section -->
