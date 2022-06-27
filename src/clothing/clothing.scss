@@ -1,4 +1,6 @@
 @use "@stephane888/wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+@use "@stephane888/wbu-atomique/scss/bootstrap-all.scss";
+@use "@stephane888/wbu-atomique/scss/atome/typography/_default.scss";
 body {
   margin: 0;
 }
