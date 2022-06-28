@@ -14,15 +14,7 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const CurrentThemeName = "hotlock";
-=======
-const CurrentThemeName = "clothing";
->>>>>>> b0cca8a976091e206c1af4936c906ef9842ec6de
-=======
-const CurrentThemeName = "Orphans-block";
->>>>>>> 9718286ab8958af0519a1093e55fa060cab40c2a
+const CurrentThemeName = "market-place";
 
 plugins.push(
   new MiniCssExtractPlugin({
