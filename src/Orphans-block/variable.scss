@@ -1,0 +1,5 @@
+@use "@stephane888/wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+// Liste des variables que vous pouvez surcharger dans "@stephane888/wbu-atomique/scss/_variables.scss" as *;
+// Example de surcharge.
+$wbu-color-primary-: rgb(59, 140, 233);
+$wbu-default-font-size: 1.8rem;
