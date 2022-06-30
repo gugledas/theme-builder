@@ -6,8 +6,16 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 import "@stephane888/wbu-atomique/scss/atome/typography/_default.scss";
 
 import "./pages/home/home";
+<<<<<<< HEAD
 import "./sections/header/header";
 import "./pages/single-showcase/single-showcase";
 import "./pages/single-product/single-product";
 import "./pages/single-blog/single-blog";
 import "./sections/footer/footer";
+=======
+//import "./sections/header/header";
+// import "./pages/single-showcase/single-showcase";
+// import "./pages/single-product/single-product";
+// import "./pages/single-blog/single-blog";
+// import "./sections/footer/footer";
+>>>>>>> f2839049770e75ac83beb2ca20e3849f563f1b02
