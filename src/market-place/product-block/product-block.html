@@ -1,5 +1,5 @@
 <div class="product-block">
-    <div class="container-fluid">
+    <div class="container-flex">
         <div class="row">
             <!-- Banner Block with the product image -->
             <div class="product-ban col-lg-12 text-center">
@@ -11,7 +11,7 @@
         <div class="product-content">
             <div class="row">
                 <!-- Block with relative products images -->
-                <div class="col-md-6 col-lg-6">
+                <div class="col-md-12 col-xm-12 col-lg-6">
                     <div class="product-tager">
                         <div class="product-tag">
                             <span class="product-tag__content">Prix Web</span>
@@ -53,7 +53,7 @@
                     </div> 
                 </div>
                 <!-- block with product caractéristics -->
-                <div class="col-md-6 col-lg-6">
+                <div class="col-md-12 col-xm-12 col-lg-6">
                     <!-- product-description -->
                     <div class="product-description">
                         <h1 itemprop="brand" class="product-description__name">DIOR</h1>
@@ -175,32 +175,29 @@
                                     <path d="M7.493 3H3.502a.6.6 0 0 0-.592.501L2.205 7.73a.504.504 0 0 0 .15.465c.328.29 1.061.806 2.138.806c1.5 0 2.5-1 2.5-1l.5-5Z"/>
                                 </g>
                             </svg>
-                            <a href="">
+                            <a class="product-btn-action__button__mag_link" href="">
                                 Disponibilité en magasin
                             </a>
                         </div>
-                        <div class="prodcut-btn-action__button_add">
-                            <button>
-                                <span class="add">
-                                        AJOUTER AU PANIER
-                                </span>
-                                <span class="added">
-                                    <i>
-                                        <svg width="10px" height="11px" viewBox="0 0 12 13" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                            <g stroke-width="1" fill-rule="evenodd">
-                                                <g transform="translate(-172.000000, -234.000000)" fill="#ffffff">
-                                                    <g transform="translate(164.000000, 226.000000)">
-                                                        <path d="M8.4981866,14.7129726 C8.87539706,14.3037597 9.49952854,14.2950978 9.88528738,14.6865868 L12.5012536,17.3414113 L18.9263956,8.32176864 C19.2498578,7.86769094 19.714715,7.89926117 19.9607204,8.3844667 L19.8346903,8.1358928 C20.0824699,8.62459768 20.0469147,9.40577405 19.7601971,9.87268451 L12.9272012,21 L8.30083864,16.3999688 C7.90959039,16.0109474 7.898751,15.3632643 8.27542099,14.9546376 L8.4981866,14.7129726 Z" id="Path-3-Copy-3">
-
-                                                        </path>
-                                                    </g>
+                        <div class="product-btn-action__button__add">
+                            <div class="product-btn-action__button__add_text">
+                                ajouter au panier
+                            </div>
+                            <div class="product-btn-action__button__add_added">
+                                <div class="product-btn-action__button__add_added_icon">
+                                    <svg width="10px" height="11px" viewBox="0 0 12 13" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                        <g stroke-width="1" fill-rule="evenodd">
+                                            <g transform="translate(-172.000000, -234.000000)" fill="#ffffff">
+                                                <g transform="translate(164.000000, 226.000000)">
+                                                    <path d="M8.4981866,14.7129726 C8.87539706,14.3037597 9.49952854,14.2950978 9.88528738,14.6865868 L12.5012536,17.3414113 L18.9263956,8.32176864 C19.2498578,7.86769094 19.714715,7.89926117 19.9607204,8.3844667 L19.8346903,8.1358928 C20.0824699,8.62459768 20.0469147,9.40577405 19.7601971,9.87268451 L12.9272012,21 L8.30083864,16.3999688 C7.90959039,16.0109474 7.898751,15.3632643 8.27542099,14.9546376 L8.4981866,14.7129726 Z" id="Path-3-Copy-3">
+                                                    </path>
                                                 </g>
                                             </g>
-                                        </svg>
-                                    </i>
-                                    <b>AJOUTÉ</b>
-                                </span>
-                            </button>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <p>ajouté</p>
+                            </div>
                         </div>
                     </div>
                     <!-- Product Zones -->
@@ -284,10 +281,10 @@
                         <!-- product-card__plus__product -->
                         <div class="product-card__plus__product">
                             <div class="product-card__plus__product__item">
-                                <div class="product-card__plus__product__item_img">
-                                    <img src="https://www.nocibe.fr/medias/produits/222875/222875-dior-sauvage-eau-de-parfum-vaporisateur-100-ml-300x300.jpg">
-                                </div>
                                 <div class="product-card__plus__product__item_desc">
+                                    <div class="product-card__plus__product__item_desc_img">
+                                        <img src="https://www.nocibe.fr/medias/produits/222875/222875-dior-sauvage-eau-de-parfum-vaporisateur-100-ml-300x300.jpg">
+                                    </div>
                                     <div class="product-card__plus__product__item_desc_name">DIOR</div>
                                     <div class="pproduct-card__plus__product__item_desc_type">Sauvage</div>
                                     <div class="product-card__plus__product__item_desc_text">Eau de Parfum</div>
@@ -297,7 +294,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="product-card__plus__product__item_cont produc_tag">
+                                <div class="product-card__plus__product__item_cont">
                                     <div>
                                         60 ml
                                     </div>
@@ -310,10 +307,10 @@
                                 </svg>
                             </div>
                             <div class="product-card__plus__product__item">
-                                <div class="product-card__plus__product__item_img">
-                                    <img src="https://www.nocibe.fr/medias/produits/204339/204339-dior-sauvage-deodorant-vaporisateur-vaporisateur-150-ml-300x300.jpg">
-                                </div>
                                 <div class="product-card__plus__product__item_desc">
+                                    <div class="product-card__plus__product__item_desc_img">
+                                        <img src="https://www.nocibe.fr/medias/produits/204339/204339-dior-sauvage-deodorant-vaporisateur-vaporisateur-150-ml-300x300.jpg">
+                                    </div>
                                     <div class="product-card__plus__product__item_desc_name">DIOR</div>
                                     <div class="product-card__plus__product__item_desc_type">Sauvage</div>
                                     <div class="product-card__plus__product__item_desc_text">Déodorant Vaporisateur</div>
@@ -323,27 +320,26 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="product-card__plus__product__item_cont produc_tag">
-                                    <div style="display: none;">
-                                        60 ml
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <!-- end product-card__plus__product -->
                         <!-- product-card__plus__total_product -->
                         <div class="product-card__plus__total">
-                            Les 2 produits pour
-                            <b>
-                                93,00&nbsp;€
-                            </b>
+                            <div class="product-card__plus__total_text">
+                                Les 2 produits pour
+                            </div>
+                            <div class="product-card__plus__total_price">
+                                93,00 €
+                            </div>
                         </div>
                         <!-- end product-card__plus__total -->
                         <!-- product-card__plus__bag -->
                         <div class="product-card__plus__bag">
-                            <span class="product-card__plus__bag_add">Ajouter l'ensemble au panier</span>
-                            <span class="product-card__plus__bag_added">
-                                <i>
+                            <div class="product-card__plus__bag_add">
+                                Ajouter l'ensemble au panier
+                            </div>
+                            <div class="product-card__plus__bag_added">
+                                <div class="product-card__plus__bag_added_icon">
                                     <svg width="10px" height="11px" viewBox="0 0 12 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <g stroke-width="1" fill-rule="evenodd">
                                             <g transform="translate(-172.000000, -234.000000)" fill="#ffffff">
@@ -354,9 +350,9 @@
                                             </g>
                                         </g>
                                     </svg>
-                                </i>
-                                <b>AJOUTÉ</b>
-                            </span>
+                                </div>
+                                <b>ajouté</b>
+                            </div>
                         </div>
                         <!-- end product-card__plus__bag -->
                     </div>
