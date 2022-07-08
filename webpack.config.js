@@ -14,7 +14,7 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-const CurrentThemeName = "hotlock";
+const CurrentThemeName = "f_news";
 
 plugins.push(
   new MiniCssExtractPlugin({
