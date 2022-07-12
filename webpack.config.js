@@ -14,7 +14,11 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
+<<<<<<< HEAD
 const CurrentThemeName = "f_news";
+=======
+const CurrentThemeName = "Orphans-block";
+>>>>>>> 94ea1453b9e5a22429e8d1a73b0ed8efb126db53
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
