@@ -9,5 +9,5 @@ import "./pages/home/home";
 //import "./sections/header/header";
 // import "./pages/single-showcase/single-showcase";
 // import "./pages/single-product/single-product";
-// import "./pages/single-blog/single-blog";
+import "./pages/single-blog/single-blog";
 // import "./sections/footer/footer";
