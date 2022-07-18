@@ -14,8 +14,12 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
+<<<<<<< HEAD
 const CurrentThemeName = "f_news";
 
+=======
+const CurrentThemeName = "sublime_r";
+>>>>>>> 1927f34bab0a16fa213d312a8d0cec5d3984dace
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
