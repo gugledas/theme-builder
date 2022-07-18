@@ -1,5 +1,5 @@
 import "../../sections/header/header";
-// import "../../sections/bac-to-top/bac-top";
+import "../../sections/bac-to-top/bac-top";
 import "../../sections/hero-home/home-hero";
 
 /* home */
@@ -15,8 +15,8 @@ import "../../sections/hero-home/home-hero";
 
 /* blog */
 // import "../../sections/hero-blog/hero-blog";
- import "../../sections/sticky-author/sticky-author";
-// import "../../sections/blog-lists/blog";
+// import "../../sections/sticky-author/sticky-author";
+//import "../../sections/blog-lists/blog";
 // import "../../sections/tag-list/tag-list";
 
 /* archive */
