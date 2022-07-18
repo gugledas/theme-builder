@@ -1,2 +1,2 @@
 import './collection.html'
-import './collection.js'
+import './collection.scss'
