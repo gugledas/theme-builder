@@ -1,0 +1,6 @@
+// Surcharger les variables de boostrap.
+// bootstrap < 5 utilise import.
+// Example
+$btn-padding-y: 1.5rem;
+$btn-padding-x: 2.2rem;
+@import "@stephane888/wbu-atomique/scss/bootstrap-all.scss";
