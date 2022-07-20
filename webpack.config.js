@@ -14,7 +14,7 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-const CurrentThemeName = "hongo";
+const CurrentThemeName = "wix-pricing";
 
 
 plugins.push(
