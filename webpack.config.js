@@ -15,7 +15,7 @@ const devMode = process.env.NODE_ENV !== "production";
 const plugins = [];
 
 
-const CurrentThemeName = "wix-pricing";
+const CurrentThemeName = "sublime_r";
 
 
 plugins.push(
