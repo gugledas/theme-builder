@@ -17,7 +17,6 @@ const plugins = [];
 
 const CurrentThemeName = "sublime_r";
 
-
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
