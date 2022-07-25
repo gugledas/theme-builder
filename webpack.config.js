@@ -14,14 +14,10 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-<<<<<<< HEAD
-const CurrentThemeName = "sublime_r";
-=======
 
-const CurrentThemeName = "wix-pricing";
+const CurrentThemeName = "hongo";
 
 
->>>>>>> d377383fb37a3bdf6b44cd45edf257dd1b9f2430
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
