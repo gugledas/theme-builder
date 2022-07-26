@@ -15,7 +15,7 @@ const devMode = process.env.NODE_ENV !== "production";
 const plugins = [];
 
 
-const CurrentThemeName = "hongo";
+const CurrentThemeName = "sublime_r";
 
 plugins.push(
   new MiniCssExtractPlugin({
