@@ -14,8 +14,12 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
+<<<<<<< Updated upstream
 
 const CurrentThemeName = "sublime_r";
+=======
+const CurrentThemeName = "kave-home";
+>>>>>>> Stashed changes
 
 plugins.push(
   new MiniCssExtractPlugin({
