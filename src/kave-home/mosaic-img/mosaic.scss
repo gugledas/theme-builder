@@ -7,18 +7,18 @@
   padding: 0 4px;
   //width: 65%;
   margin-bottom: 8rem;
-  .column__img {
-    padding: 0 4px 6px;
-    width: 50%;
+   
+  .column__img { 
     display: flex;
     justify-content: center;
-    max-height: 400px;
+   
+    margin-bottom: 15px;
     cursor: pointer;
-
+    align-items: end; 
     img {
       max-width: 100%;
-
-      transition: opacity 0.3s;
+      max-height: 400px;
+      transition: opacity ease-in-out 0.3s;
       height: auto;
       object-fit: contain;
       &:hover {
@@ -27,30 +27,4 @@
     }
   }
 }
-
-/* Create two equal columns that sits next to each other */
-.column {
-  &-two {
-    display: flex;
-    width: 100%;
-
-    //flex: 50%;
-    .column__img {
-      width: calc(100% / 2);
-    }
-  }
-  &-three {
-    display: flex;
-    flex-wrap: wrap;
-    .column__img {
-      width: calc(100% / 3);
-    }
-  }
-  &-four {
-    display: flex;
-    flex-wrap: wrap;
-    .column__img {
-      width: calc(100% / 4);
-    }
-  }
-}
+ 
