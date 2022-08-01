@@ -7,17 +7,18 @@
   padding: 0 4px;
   //width: 65%;
   margin-bottom: 8rem;
-   
-  .column__img { 
+  .column-gabarit {
+    //flex-wrap: nowrap;
+  }
+  .column__img {
     display: flex;
     justify-content: center;
-   
-    margin-bottom: 15px;
+    padding: 2px;
     cursor: pointer;
-    align-items: end; 
+    align-items: end;
     img {
-      max-width: 100%;
-      max-height: 400px;
+      width: 100%;
+      max-height: 650px;
       transition: opacity ease-in-out 0.3s;
       height: auto;
       object-fit: contain;
@@ -27,4 +28,3 @@
     }
   }
 }
- 
