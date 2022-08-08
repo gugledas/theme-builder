@@ -14,7 +14,7 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-const CurrentThemeName = "kave-home";
+const CurrentThemeName = "mitor";
 
 plugins.push(
   new MiniCssExtractPlugin({
