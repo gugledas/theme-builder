@@ -1,1 +1,4 @@
-@use "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/mitor/mitor-testimony.scss"
+@use "../variables" as *;
+@use "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/mitor/mitor-testimony.scss";
+@use "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/mitor/molecule/mitor-single-testimony.scss";
+@use "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/mitor/mitor-section-title.scss";
