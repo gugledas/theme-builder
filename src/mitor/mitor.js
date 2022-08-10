@@ -7,4 +7,5 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import "./menu-section/product";
 //import "./mitor-services/service"
 //import "./mitor-contact-us/contact"
-import './mitor-testimony/testimony'
+//import './mitor-testimony/testimony'
+import './mitor-pricing/pricing'
