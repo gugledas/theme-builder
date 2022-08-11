@@ -12,3 +12,4 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import "./mitor-footer/footer";
 // import "./mitor-pricing/pricing";
 //import "./mitor-overview/top";
+
