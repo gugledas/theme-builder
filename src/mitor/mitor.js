@@ -19,4 +19,7 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import "./mitor-contact-hero/hero"
 //import './mitor-why-our-service-teaser/why'
 //import './question-pricing/question'
-import './mitor-newsletter/newsletter'
+//import './mitor-newsletter/newsletter'
+//import './mitor-card-image/card-img'
+//import "./mitor-contact-form/contac-right/contact"
+import "./mitor-contact-form/contact-right/contact"
