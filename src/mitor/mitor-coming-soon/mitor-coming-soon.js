@@ -1,0 +1,1 @@
+import './coming-soon-2/soon2'

@@ -8,7 +8,7 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import "./mitor-card-blog/service.js";
 // import "./mitor-card-img/top";
 // import "./mitor-project-tabs/service";
-// import "./mitor-testimony/testimony";
+//import "./mitor-testimony/testimony";
 // import "./top-project-galery/service";
 //import "./mitor-footer/footer";
 //import "./mitor-pricing/pricing";
@@ -22,4 +22,5 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import './mitor-newsletter/newsletter'
 //import './mitor-card-image/card-img'
 //import "./mitor-contact-form/contac-right/contact"
-import "./mitor-contact-form/contact-right/contact"
+//import "./mitor-contact-form/contact-right/contact"
+import './mitor-coming-soon/mitor-coming-soon'

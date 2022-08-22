@@ -44,7 +44,7 @@
     "last 2 versions"
   ],
   "dependencies": {
-    "@stephane888/wbu-atomique": "file:../AppVuejs/wbu-atomique",
+    "@stephane888/wbu-atomique": "file:../wbu-atomique",
     "bootstrap": "^4.6.1",
     "fancybox": "^3.0.1",
     "jquery": "^3.6.0",
