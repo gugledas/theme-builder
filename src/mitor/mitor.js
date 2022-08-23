@@ -24,6 +24,7 @@ import "./mitor-hero/top";
 //import "./mitor-contact-form/contac-right/contact"
 //import "./mitor-contact-form/contact-right/contact"
 //import './mitor-coming-soon/mitor-coming-soon'
+import "./mitor-coming-soon/mitor-coming-soon";
 //  import "./mitor-contact-hero/hero"
 // import "./mitor-why-our-service-teaser/why";
 // import "./question-pricing/question";
