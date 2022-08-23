@@ -37,34 +37,71 @@
 <!-- derivée mitor-hero--3 -->
 
 <header class="mitor-hero mitor-hero--un ">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <div class="container">
         <div class="mitor-card   mitor-card--reverse row">
-            <div class="slide-content owl-carousel">
-                <div class="mitor-card__img col-lg-6">
-                    <div class="img-bloc">
-                        <a href="#">
-                            <img src="https://slidesigma.com/themes/html/mitor/assets/img/homepage-3/banner.png" alt="">
-                        </a>
+            <div class="slider-handler owl-carousel">
+                <div class="single-hero col-lg-12">
+                    <div class="mitor-card__img col-lg-6">
+                        <div class="img-bloc">
+                            <a href="#">
+                                <img src="https://slidesigma.com/themes/html/mitor/assets/img/homepage-3/banner.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mitor-card__body col-lg-6  ">
+                        <h3 class="mc-title">
+                            We Ensure the Success of Your Products and Business</h3>
+                        <div class="mc-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Quis ipsum suspe ndisse ultrices gravida. Risus commodo viverra maecenas
+        
+        
+                        </div>
+                        <a href="#" class="mitor-btn  ">Contact us</a>
                     </div>
                 </div>
-                <div class="mitor-card__body col-lg-6  ">
-                    <h3 class="mc-title">
-                        We Ensure the Success of Your Products and Business</h3>
-                    <div class="mc-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Quis ipsum suspe ndisse ultrices gravida. Risus commodo viverra maecenas
-    
-    
+                <div class="single-hero col-lg-12">
+                    <div class="mitor-card__img col-lg-6">
+                        <div class="img-bloc">
+                            <a href="#">
+                                <img src="https://slidesigma.com/themes/html/mitor/assets/img/homepage-3/banner.png" alt="">
+                            </a>
+                        </div>
                     </div>
-                    <a href="#" class="mitor-btn  ">Contact us</a>
+                    <div class="mitor-card__body col-lg-6  ">
+                        <h3 class="mc-title">
+                            We Ensure the Success of Your Products and Business</h3>
+                        <div class="mc-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Quis ipsum suspe ndisse ultrices gravida. Risus commodo viverra maecenas
+        
+        
+                        </div>
+                        <a href="#" class="mitor-btn  ">Contact us</a>
+                    </div>
+                </div>
+                <div class="single-hero col-lg-12">
+                    <div class="mitor-card__img col-lg-6">
+                        <div class="img-bloc">
+                            <a href="#">
+                                <img src="https://slidesigma.com/themes/html/mitor/assets/img/homepage-3/banner.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mitor-card__body col-lg-6  ">
+                        <h3 class="mc-title">
+                            We Ensure the Success of Your Products and Business</h3>
+                        <div class="mc-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Quis ipsum suspe ndisse ultrices gravida. Risus commodo viverra maecenas
+        
+        
+                        </div>
+                        <a href="#" class="mitor-btn  ">Contact us</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="carrousel-nav">
-            <div class="csl-nav csl-nav--active"></div>
-            <div class="csl-nav"></div>
-            <div class="csl-nav"></div>
         </div>
     </div>
     <div class="svg-1">
@@ -72,4 +109,27 @@
             <polygon fill="white" points="0,100 100,0 100,100"></polygon>
         </svg>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.slider-handler').owlCarousel({
+                    loop: true,
+                    margin: 50,
+                    nav: false,
+                    dots: true,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 1
+                        },
+                        1000:{
+                            items: 1
+                        }
+                    }
+                })
+            })
+        </script>
 </header>
