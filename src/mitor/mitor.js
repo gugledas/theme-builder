@@ -8,9 +8,9 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import "./mitor-card-blog/service.js";
 // import "./mitor-card-img/top";
 // import "./mitor-project-tabs/service";
-// import "./mitor-testimony/testimony";
+import "./mitor-testimony/testimony";
 // import "./top-project-galery/service";
-import "./mitor-footer/footer";
+//import "./mitor-footer/footer";
 //import "./mitor-pricing/pricing";
 //import "./mitor-overview/top";
 //import './mitor-team/team'
