@@ -1,0 +1,8 @@
+@use "@stephane888/wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+@use "@stephane888/wbu-atomique/scss/bootstrap-all.scss";
+@use "@stephane888/wbu-atomique/scss/atome/typography/_default.scss";
+@use "./_variables" as *;
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+body {
+  font-family: 'Rubik', sans-serif;
+}

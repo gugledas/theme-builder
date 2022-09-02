@@ -7,16 +7,17 @@ import lightGallery from "lightgallery";
 import "./mosaic.html";
 import "./mosaic.scss";
 
-// lightGallery(document.getElementById("my-mosaic"), {
-//   //plugins: [lgZoom],
-//   selector: ".gallery-item",
-//   hideControlOnEnd: true,
-//   backdropDuration: 100,
-//   mode: "fade",
-//   speed: 500,
-//   download: false,
-//   // ... other settings
-// });
+lightGallery(document.getElementById("my-mosaic"), {
+  //plugins: [lgZoom],
+  selector: ".gallery-item",
+  hideControlOnEnd: true,
+  backdropDuration: 100,
+  // mode: "lg-fade",
+  speed: 500,
+  download: false
+  // ... other settings
+});
 console.log("glit", lightGallery);
-lightGallery(document.getElementById("my-mosaic-2"));
-lightGallery(document.getElementById("my-mosaic"));
+// lightGallery(document.getElementById("my-mosaic-2"));
+// lightGallery(document.getElementById("my-mosaic"));
+// lightGallery(document.getElementById("my-mosaic-3"));

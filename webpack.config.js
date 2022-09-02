@@ -14,7 +14,7 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-const CurrentThemeName = "market-place";
+const CurrentThemeName = "salon-dessange";
 
 plugins.push(
   new MiniCssExtractPlugin({
