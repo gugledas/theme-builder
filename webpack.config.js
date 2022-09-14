@@ -14,7 +14,7 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-const CurrentThemeName = "salon-dessange";
+const CurrentThemeName = "Orphans-block";
 
 plugins.push(
   new MiniCssExtractPlugin({
