@@ -244,6 +244,6 @@ module.exports = {
         },
       }),
       new TerserPlugin(),
-    ],
-  },
-};
+    ]
+  }
+}
