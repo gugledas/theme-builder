@@ -11,3 +11,4 @@ import "./sections/header/header";
 // import "./pages/single-product/single-product";
 // import "./pages/single-blog/single-blog";
 // import "./sections/footer/footer";
+import "./sections/StorizbornArticle/storizborn_article.js"
