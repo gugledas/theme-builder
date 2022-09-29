@@ -13,7 +13,7 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 // import "./top-project-galery/service";
 //import "./mitor-footer/footer";
 //import "./mitor-pricing/pricing";
-//import "./mitor-overview/top";
+ //import "./mitor-overview/top";
 //import './mitor-team/team'
 //import "./mitor-blog/blogs"
 //import './mitor-team/team'
