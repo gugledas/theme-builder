@@ -7,6 +7,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const manageImportHtml = require("./manageImportHtml.js");
 const MIH = new manageImportHtml();
 
+/* stan plugins */
+const StanExport = require("./stanExport.js");
+
 // On récupère la valeur de NODE_ENV
 const env = process.env.NODE_ENV;
 
@@ -14,8 +17,11 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-const CurrentThemeName = "salon-dessange";
-
+<<<<<<< HEAD
+const CurrentThemeName = "mitor"; // kave-home
+=======
+const CurrentThemeName = "mitor";
+>>>>>>> ceeb943f89a0b75decf31e1ffc443e36446461c1
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
@@ -46,6 +52,14 @@ plugins.push(
     }
   })()
 );
+
+/* stan logic */
+// plugins.push(
+//   new StanExport({
+//     texte: 123,
+//     sizeLimit: 10
+//   })
+// );
 
 // On essaie de ressoudre le probleme de chargement det la merge de html.
 // actuelement le processus de merge de html (MIH) a deux principal probleme.
@@ -245,6 +259,6 @@ module.exports = {
         },
       }),
       new TerserPlugin(),
-    ],
-  },
-};
+    ]
+  }
+}
