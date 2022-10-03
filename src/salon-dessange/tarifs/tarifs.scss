@@ -1,2 +1,5 @@
 @use "../variables" as *;
+// Ce fichier n'est pas correctement divisée.
+// on doit faire un point sur comment esr qu'on pourrait le diviser.
+// SassError: There's already a module with namespace "sd-tarifs".
 @use "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/salon-dessange/sd-tarifs.scss";
