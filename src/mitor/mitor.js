@@ -1,7 +1,7 @@
 import "./mitor.scss";
 import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 
-// import "./mitor-core-value/core-value"
+ import "./mitor-core-value/core-value"
 // import "./navbar/navbar";
 //import "./mitor-hero/top";
 //import "./mitor-hero-2/top";
@@ -17,7 +17,7 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import './mitor-team/team'
 //import "./mitor-blog/blogs"
 //import './mitor-team/team'
-import "./mitor-blog/blogs"
+//import "./mitor-blog/blogs"
 //import './mitor-404/404'
 //import "./mitor-contact-hero/hero"
 //import './mitor-why-our-service-teaser/why'
