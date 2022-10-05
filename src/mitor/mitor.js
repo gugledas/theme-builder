@@ -1,8 +1,9 @@
 import "./mitor.scss";
 import "@stephane888/wbu-atomique/js/bootstrap/all.js"; 
 
-
- import "./mitor-core-value/core-value"
+import './mitor-aboutUs/about'
+//import './mitor-success-teaser/teaser'
+ //import "./mitor-core-value/core-value"
 // import "./navbar/navbar";
 //import "./mitor-core-value/core-value"
 //import "./navbar/navbar";
