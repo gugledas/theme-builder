@@ -3,7 +3,7 @@
 @use "@stephane888/wbu-atomique/scss/atome/typography/_default.scss";
 @use "./_variables" as *;
 @use "@stephane888/wbu-atomique/scss/molecule/default-class.scss";
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Rubik:wght@400&display=swap");
 body {
   font-family: "Rubik", sans-serif;
 }
