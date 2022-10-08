@@ -17,7 +17,7 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-const CurrentThemeName = "Orphans-block";
+const CurrentThemeName = "mitor";
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
