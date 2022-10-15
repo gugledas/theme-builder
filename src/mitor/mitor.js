@@ -1,6 +1,7 @@
 import "./mitor.scss";
 import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 
+import "./mitor-faq/faq"
 //import "./mitor-core-value/core-value"
 //import "./navbar/navbar";
 //import "./mitor-hero/top";
@@ -9,7 +10,7 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import "./mitor-card-blog/service.js";
 // import "./mitor-card-img/top";
 //import "./mitor-card-image/card-img";
-import "./mitor-project-tabs/service";
+//import "./mitor-project-tabs/service";
 // import "./mitor-testimony/testimony";
 // import "./top-project-galery/service";
 //import "./mitor-footer/footer";
