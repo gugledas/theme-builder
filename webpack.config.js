@@ -17,11 +17,7 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-<<<<<<< HEAD
-const CurrentThemeName = "mitor";
-=======
 const CurrentThemeName = "mitor"; // agenceconstant
->>>>>>> e53da21889f2cc225456879841e0b41d1b659ef6
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
