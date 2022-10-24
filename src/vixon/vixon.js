@@ -7,3 +7,6 @@ import "./vixon.scss";
 import "./vixon-section-title/section-title";
 import "./faq-section/faq";
 import "./event-section/event";
+import "./counter-section/counter";
+import "./about-section/about";
+import "./location-section/location";
