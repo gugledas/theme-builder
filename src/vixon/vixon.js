@@ -5,3 +5,5 @@ import "./vixon.scss";
 // import "./sponsor/sponsor";
 
 import "./vixon-section-title/section-title";
+import "./faq-section/faq";
+import "./event-section/event";
