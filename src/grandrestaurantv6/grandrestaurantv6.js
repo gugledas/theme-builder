@@ -5,7 +5,7 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import "./hero/hero";
 //import "./discover/discover";
 //import "./menus-section/menus";
-//import "./banner/banner";
+import "./banner/banner";
 //import "./footer/footer";
 import "./cards/card-teaser/teaser";
 //import "./footer/footer";
