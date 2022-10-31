@@ -5,7 +5,7 @@ import "./mitor-faq/faq"
 //import "./mitor-core-value/core-value"
 //import "./navbar/navbar";
 //import "./mitor-hero/top";
-//import "./mitor-hero-2/top";
+import "./mitor-hero-2/top";
 // import "./mitor-services/service";
 //import "./mitor-card-blog/service.js";
 // import "./mitor-card-img/top";
