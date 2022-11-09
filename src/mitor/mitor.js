@@ -1,13 +1,13 @@
 import "./mitor.scss";
 import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 
-import "./mitor-faq/faq"
+// import "./mitor-faq/faq"
 //import "./mitor-core-value/core-value"
 //import "./navbar/navbar";
 //import "./mitor-hero/top";
-//import "./mitor-hero-2/top";
+// import "./mitor-hero-2/top";
 // import "./mitor-services/service";
-//import "./mitor-card-blog/service.js";
+import "./mitor-card-blog/service.js";
 // import "./mitor-card-img/top";
 //import "./mitor-card-image/card-img";
 //import "./mitor-project-tabs/service";
