@@ -1,17 +1,16 @@
 // ressources necessary
 @use "@stephane888/wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+@use "./_variables" as *;
 @use "@stephane888/wbu-atomique/scss/bootstrap-all.scss";
 @use "@stephane888/wbu-atomique/scss/atome/typography/_default.scss";
 @use "@stephane888/wbu-atomique/scss/molecule/default-class.scss";
 
-// corresponding google fonts styles
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kristi&display=swap');
-* {
-    font-family: 'Lato', sans-serif;
+// Corresponding google fonts styles
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kristi&display=swap");
+body {
+  font-family: "Lato", sans-serif;
 }
-/**
-using kristi: {
-    font-family: 'Kristi', cursive;
+.font-family-2 {
+  font-family: "Kristi", cursive;
 }
-*/
