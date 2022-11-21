@@ -5,14 +5,12 @@
 @use "@stephane888/wbu-atomique/scss/molecule/default-class.scss";
 @use "./_variables.scss" as *;
 // corresponding google fonts styles
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kristi&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 * {
-    font-family: 'Lato', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 /**
 using kristi: {
     font-family: 'Kristi', cursive;
 }
 */
-
