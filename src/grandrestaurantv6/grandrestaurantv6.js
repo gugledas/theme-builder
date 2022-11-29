@@ -9,5 +9,5 @@ import "./hero/hero";
 //import "./footer/footer";
 //import "./grid-gallery/grid-gallery";
 import "./cards/card-teaser/teaser";
-//import "./chief-card/chief-card";
+import "./chief-card/chief-card";
 //import "./footer/footer";
