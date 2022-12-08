@@ -8,7 +8,7 @@ import "./hero/hero";
 //import "./banner/banner";
 //import "./footer/footer";
 import "./grid-gallery/grid-gallery";
-//import "./cards/card-teaser/teaser";
+import "./cards/card-teaser/teaser";
 //import "./chief-card/chief-card";
 //import "./counter-section/counter-section";
 //import "./footer/footer";
