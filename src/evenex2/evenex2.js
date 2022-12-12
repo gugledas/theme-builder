@@ -17,4 +17,5 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import "./evenex-why-attend-event/attend"
 //import "./evenex-speaker2/speaker"
 //import "./evenex-info/info"
-import "./evenex-footer2/footer"
+//import "./evenex-footer2/footer"
+import "./evenex-location/location"
