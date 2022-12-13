@@ -18,4 +18,6 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import "./evenex-speaker2/speaker"
 //import "./evenex-info/info"
 //import "./evenex-footer2/footer"
-import "./evenex-location/location"
+//import "./evenex-location/location"
+//import "./evenex-room-gallery/gallery"
+import "./evenex-room/room"
