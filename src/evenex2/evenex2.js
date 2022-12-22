@@ -21,5 +21,7 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import "./evenex-footer2/footer"
 //import "./evenex-location/location"
 //import "./evenex-room-gallery/gallery"
-import "./evenex-room/room"
+//import "./evenex-room/room"
 //import "./evenex-header/header"
+//import "./evenex-event-shedule/shedule"
+import "./evenex-conference/conference"
