@@ -27,4 +27,5 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import "./evenex-conference/conference"
 //import "./evenex-advantages/advantage"
 //import "./evenex-section-title/title"
-import "./evenex-speaker3/speaker"
+//import "./evenex-speaker3/speaker"
+import "./evenex-newsletter/newsletter"
