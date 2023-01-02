@@ -17,7 +17,7 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-const CurrentThemeName = "evenex2";
+const CurrentThemeName = "vixon";
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
