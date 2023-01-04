@@ -207,7 +207,7 @@ module.exports = {
           {
             loader: "html-loader",
             options: {
-              sources: false,
+              sources: true,
               preprocessor: (content, loaderContext) => {
                 try {
                   MIH.addUpdate(loaderContext.resource, content);
