@@ -8,6 +8,7 @@ const manageImportHtml = require("./manageImportHtml.js");
 const MIH = new manageImportHtml();
 
 /* stan plugins */
+
 const StanExport = require("./stanExport.js");
 
 // On récupère la valeur de NODE_ENV
@@ -17,7 +18,7 @@ const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
 
-const CurrentThemeName = "vixon";
+const CurrentThemeName = "evenex2";
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
@@ -207,7 +208,7 @@ module.exports = {
           {
             loader: "html-loader",
             options: {
-              sources: true,
+              sources: false,
               preprocessor: (content, loaderContext) => {
                 try {
                   MIH.addUpdate(loaderContext.resource, content);
