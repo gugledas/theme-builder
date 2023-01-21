@@ -32,5 +32,6 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import "./evenex-after-party/after-party"
 //import "./evenex-pricing2/pricing"
 //import "./evenex-testimonials/testimonial"
-//import "./evenex-article/article"
-import "./evenex-partner/partner"
+ //import "./evenex-article/article"
+ //import "./evenex-partner/partner"
+ import "./landrySection/landrySection"
