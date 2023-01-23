@@ -1,0 +1,20 @@
+@use "@stephane888/wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+// default style
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
+}
+
+// style bootstrap 4
+.pagination-round {
+  padding: 1rem 8rem;
+  border-radius: 30px;
+  .page-link {
+    border-radius: 25px !important;
+    margin-right: 2rem;
+  }
+}

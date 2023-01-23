@@ -17,8 +17,10 @@ const env = process.env.NODE_ENV;
 const devMode = process.env.NODE_ENV !== "production";
 
 const plugins = [];
-
-const CurrentThemeName = "evenex2";
+/**
+ * Selectionner le theme à afficher lors de la commande npm run serve.
+ */
+const CurrentThemeName = "utilitaires";
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
