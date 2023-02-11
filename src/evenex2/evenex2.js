@@ -42,7 +42,7 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import "./cvSectionDia/cvSectionDia"
 //import "./cvSectionFooter/cvSectionFooter"
  //import "./cvConvaincantHero/cvConvaincantHero"
-  //import "./cvConvaincantExp/cvConvaincantExp"
-  //import "./cvConvaincantComp/cvConvaincantComp"
+//import "./cvConvaincantExp/cvConvaincantExp"
+//import "./cvConvaincantComp/cvConvaincantComp"
   import "./cvFuturiste/cvFuturiste"
 
