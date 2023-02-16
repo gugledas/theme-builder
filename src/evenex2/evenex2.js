@@ -38,13 +38,13 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
  //import "./sslSectionHero/sslSectionHero"
 //import "./cvSectionHero/cvSectionHero"
 //import "./cvSectionProfil/cvSectionProfil"
-//import "./cvSectionExp/cvSectionExp"
+import "./cvSectionExp/cvSectionExp"
 //import "./cvSectionDia/cvSectionDia"
 //import "./cvSectionFooter/cvSectionFooter"
  //import "./cvConvaincantHero/cvConvaincantHero"
 //import "./cvConvaincantExp/cvConvaincantExp"
-import "./cvConvaincantComp/cvConvaincantComp"
+//import "./cvConvaincantComp/cvConvaincantComp"
   //import "./cvFuturiste/cvFuturiste"
-import "./sectComp/sectComp"
+//import "./sectComp/sectComp"
 
  
