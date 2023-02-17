@@ -36,15 +36,23 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
  //import "./evenex-partner/partner"
  //import "./landrySection/landrySection"
  //import "./sslSectionHero/sslSectionHero"
+ 
+ //cv1 steave
 //import "./cvSectionHero/cvSectionHero"
-import "./cvSectionProfil/cvSectionProfil"
+//import "./cvSectionProfil/cvSectionProfil"
 //import "./cvSectionExp/cvSectionExp"
 //import "./cvSectionDia/cvSectionDia"
 //import "./cvSectionFooter/cvSectionFooter"
+
+//cv2 sparker
+import "./sectComp/sectComp"
  //import "./cvConvaincantHero/cvConvaincantHero"
 //import "./cvConvaincantExp/cvConvaincantExp"
-//import "./cvConvaincantComp/cvConvaincantComp"
-  //import "./cvFuturiste/cvFuturiste"
-//import "./sectComp/sectComp"
+import "./cvConvaincantComp/cvConvaincantComp"
 
- 
+
+//cv3 
+//import "./cvFuturiste/cvFuturiste"
+
+
+  
