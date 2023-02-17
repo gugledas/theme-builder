@@ -37,11 +37,14 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
  //import "./landrySection/landrySection"
  //import "./sslSectionHero/sslSectionHero"
 //import "./cvSectionHero/cvSectionHero"
-//import "./cvSectionProfil/cvSectionProfil"
+import "./cvSectionProfil/cvSectionProfil"
 //import "./cvSectionExp/cvSectionExp"
 //import "./cvSectionDia/cvSectionDia"
 //import "./cvSectionFooter/cvSectionFooter"
- import "./cvConvaincantHero/cvConvaincantHero"
-  import "./cvConvaincantExp/cvConvaincantExp"
-  import "./cvConvaincantComp/cvConvaincantComp"
+ //import "./cvConvaincantHero/cvConvaincantHero"
+//import "./cvConvaincantExp/cvConvaincantExp"
+//import "./cvConvaincantComp/cvConvaincantComp"
+  //import "./cvFuturiste/cvFuturiste"
+//import "./sectComp/sectComp"
 
+ 
