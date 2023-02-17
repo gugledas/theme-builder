@@ -46,8 +46,6 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 
 //cv2 sparker
 import "./sectComp/sectComp"
- //import "./cvConvaincantHero/cvConvaincantHero"
-//import "./cvConvaincantExp/cvConvaincantExp"
 import "./cvConvaincantComp/cvConvaincantComp"
 
 
