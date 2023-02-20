@@ -32,25 +32,21 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import "./evenex-after-party/after-party"
 //import "./evenex-pricing2/pricing"
 //import "./evenex-testimonials/testimonial"
- //import "./evenex-article/article"
- //import "./evenex-partner/partner"
- //import "./landrySection/landrySection"
- //import "./sslSectionHero/sslSectionHero"
- 
- //cv1 steave
-//import "./cvSectionHero/cvSectionHero"
-//import "./cvSectionProfil/cvSectionProfil"
-//import "./cvSectionExp/cvSectionExp"
-//import "./cvSectionDia/cvSectionDia"
-//import "./cvSectionFooter/cvSectionFooter"
+//import "./evenex-article/article"
+//import "./evenex-partner/partner"
+//import "./landrySection/landrySection"
+//import "./sslSectionHero/sslSectionHero"
+
+//cv1 steave
+import "./cvSectionHero/cvSectionHero";
+import "./cvSectionProfil/cvSectionProfil";
+import "./cvSectionExp/cvSectionExp";
+import "./cvSectionDia/cvSectionDia";
+import "./cvSectionFooter/cvSectionFooter";
 
 //cv2 sparker
-import "./sectComp/sectComp"
-import "./cvConvaincantComp/cvConvaincantComp"
+//import "./sectComp/sectComp"
+//import "./cvConvaincantComp/cvConvaincantComp"
 
-
-//cv3 
+//cv3
 //import "./cvFuturiste/cvFuturiste"
-
-
-  
