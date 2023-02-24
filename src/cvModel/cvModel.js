@@ -1,2 +1,2 @@
 import "./cvModel.scss";
-import "./firstmodel/firstPresentation/firstPresentation";
+import "./cvBudapest/cvBudapest";
