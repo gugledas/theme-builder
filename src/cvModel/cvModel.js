@@ -1,3 +1,3 @@
 import "./cvModel.scss";
-import "./cvBudapest/cvBudapest";
-//import "./cvCarla/cvCarla";
+//import "./cvBudapest/cvBudapest";
+import "./cvCarla/cvCarla";
