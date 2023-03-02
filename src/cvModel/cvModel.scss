@@ -6,11 +6,11 @@
 @use "./_variables.scss" as *;
 // corresponding google fonts styles
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
 body {
   font-family: "Rubik", sans-serif;
 }
-/**
-using kristi: {
-    font-family: 'Kristi', cursive;
+
+.font-family-1 {
+  font-family: "Tilt Warp", cursive;
 }
-*/
