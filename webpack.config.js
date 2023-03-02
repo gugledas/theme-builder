@@ -20,7 +20,7 @@ const plugins = [];
 /**
  * Selectionner le theme à afficher lors de la commande npm run serve.
  */
-const CurrentThemeName = "cvModel";
+const CurrentThemeName = "evenex2";
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
