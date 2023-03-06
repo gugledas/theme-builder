@@ -1,2 +1,2 @@
-import "./cvBudapest.html"
-import "./cvBudapest.scss"
+import "./cvBudapest.html";
+import "./cvBudapest.scss";
