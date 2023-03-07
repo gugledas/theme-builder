@@ -1,5 +1,6 @@
 import "./evenex.scss";
 import "@stephane888/wbu-atomique/js/bootstrap/all.js";
+//import "https://unpkg.com/aos@2.3.1/dist/aos.js";
 
 //import "./evenex-countdown/countdown"
 //import "./evenex-teasers/evenex-teaser"
@@ -38,15 +39,11 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import "./sslSectionHero/sslSectionHero"
 
 //cv1 steave
-import "./cvSectionHero/cvSectionHero";
-import "./cvSectionProfil/cvSectionProfil";
-import "./cvSectionExp/cvSectionExp";
-import "./cvSectionDia/cvSectionDia";
-import "./cvSectionFooter/cvSectionFooter";
-
 //cv2 sparker
 //import "./sectComp/sectComp"
 //import "./cvConvaincantComp/cvConvaincantComp"
 
 //cv3
 //import "./cvFuturiste/cvFuturiste"
+
+import "./evenex-section-hero/hero"

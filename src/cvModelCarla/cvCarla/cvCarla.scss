@@ -1,0 +1,11 @@
+@use "../variables" as *;
+@use "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/cvModelCarla/cvCarla/cvCarla.scss";
+@use "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/cvModelCarla/cvCarla/cvCarlaPresentation.scss";
+@use "/siteweb/AppVuejs/wbu-atomique/scss/cv/fields/field-svg.scss";
+@use "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/cvModelCarla/cvCarla/cvCarlaImage.scss";
+@use "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/cvModelCarla/cvCarla/cvCarlaEducation.scss";
+@use "/siteweb/AppVuejs/wbu-atomique/scss/cv/fields/field-skill-region";
+@use "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/cvModelCarla/cvCarla/cvCarlaLanguage.scss";
+@use "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/cvModelCarla/cvCarla/cvCarlaDescription.scss";
+@use "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/cvModelCarla/cvCarla/cvCarlaExperience.scss";
+@use "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/cvModelCarla/cvCarla/cvCarlaSkill.scss";
