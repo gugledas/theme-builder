@@ -47,3 +47,4 @@ import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import "./cvFuturiste/cvFuturiste"
 
 import "./evenex-section-hero/hero"
+import "./evenex-hurry-up/hurry-up"

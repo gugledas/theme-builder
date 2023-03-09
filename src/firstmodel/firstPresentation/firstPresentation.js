@@ -1,2 +1,2 @@
-import "./firstPresentation.html"
-import "./firstPresentation.scss"
+import "../firstPresentation/firstPresentation.html";
+import "../firstPresentation/firstPresentation.scss";
