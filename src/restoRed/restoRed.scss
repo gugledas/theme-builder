@@ -7,7 +7,7 @@
 
 // corresponding google fonts styles
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cantata+One&family=Great+Vibes&display=swap");
 
 body {
   font-family: "Rubik", sans-serif;
@@ -15,4 +15,7 @@ body {
 
 .font-family-1 {
   font-family: "Great Vibes", cursive;
+}
+.section_reservation_title {
+  font-family: "Cantata One", serif;
 }
