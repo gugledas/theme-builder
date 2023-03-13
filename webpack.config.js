@@ -21,10 +21,14 @@ const plugins = [];
  * Selectionner le theme à afficher lors de la commande npm run serve.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 const CurrentThemeName = "vesperr";
 =======
 const CurrentThemeName = "restoRed";
 >>>>>>> a3e1325a7fcbfea1bce90d3b14d14e9d6bafcfba
+=======
+const CurrentThemeName = "evenex2";
+>>>>>>> 531f11047388507f60031f300cb25be5c58fb817
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",

@@ -1,29 +1,37 @@
 //import "./section/header/header.js";
-// import "./footer/footer";
-// import "./contact/contact";
-// import "./contactV2/contact";
-// import "./faq/faq";
-// import "./404/404";
-// import "./term-condition/term";
+//
+ //import "./footer/footer";
+ //
+ //import "./contact/contact";
+ //import "./contactV2/contact";
+ //import "./faq/faq";
+ //import "./404/404";
+ //import "./term-condition/term";
+ //
 // import "./brand-carousel/carousel";
-// import "./recent-vue/recent";
-// import "./full-banner/banner";
-// import "./product-carousel/product";
+//
+ //import "./recent-vue/recent";
+ //import "./full-banner/banner";
+ //import "./product-carousel/product";
+ 
+ //
 // import "./banner/banner";
 // import "./deals-and-tabs/deal";
 // import "./slider-section/slider";
+//
+
 //import "./side-bar-nav/sidebar";
 
 //import "./section/top-bar/top-bar";
 //pages
-import "./pages/home3";
+//import "./pages/home3";
 //shop
-// import "./shop/wishlist/wishlist";
-// import "./shop/track-your-code/track";
-// import "./shop/aside-latest-product/latest";
-// import "./shop/single-product-body/single";
-// import "./shop/single-product-tab/single";
-// import "./shop/related-prduct/related";
+ //import "./shop/wishlist/wishlist";
+ //import "./shop/track-your-code/track";
+ //import "./shop/aside-latest-product/latest";
+ //import "./shop/single-product-body/single";
+ //import "./shop/single-product-tab/single";
+ //import "./shop/related-prduct/related";
 // import "./shop/filters/filters";
 //
 
@@ -39,14 +47,14 @@ import "./assets/vendor/slick-carousel/slick/slick.css";
 import "./assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css";
 import "./assets/scss/theme.scss";
 
-// import "./assets/vendor/font-awesome/css/fontawesome-all.min.css";
-// import "./assets/css/font-electro.css";
-// import "./assets/vendor/animate.css/animate.min.css";
-//import "./assets/vendor/hs-megamenu/src/hs.megamenu.css";
-//import "./assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css";
-// import "./assets/vendor/fancybox/jquery.fancybox.css";
-// import "./assets/vendor/slick-carousel/slick/slick.css";
-// import "./assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css";
+ import "./assets/vendor/font-awesome/css/fontawesome-all.min.css";
+ import "./assets/css/font-electro.css";
+ import "./assets/vendor/animate.css/animate.min.css";
+import "./assets/vendor/hs-megamenu/src/hs.megamenu.css";
+import "./assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css";
+ import "./assets/vendor/fancybox/jquery.fancybox.css";
+ import "./assets/vendor/slick-carousel/slick/slick.css";
+ import "./assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css";
 
 // JS Global Compulsory
 //import "./assets/vendor/jquery/dist/jquery.min.js";
