@@ -2,7 +2,7 @@ import "./evenex.scss";
 import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 //import "https://unpkg.com/aos@2.3.1/dist/aos.js";
 
-import "./evenex-countdown/countdown"
+/* import "./evenex-countdown/countdown"
 import "./evenex-teasers/evenex-teaser"
  import "./evenex-become-sponsor/sponsor"
 import "./evenex-hurry-up/hurry-up"
@@ -17,7 +17,7 @@ import "./evenex-speaker/speaker"
 import "./evenex-stat-banner/stat"
 import "./evenex-sponsor/sponsor"
 import "./evenex-why-attend-event/attend"
-import "./evenex-speaker2/speaker"
+import "./evenex-speaker2/speaker" */
 import "./evenex-info/info"
 import "./evenex-footer2/footer"
 import "./evenex-location/location"
