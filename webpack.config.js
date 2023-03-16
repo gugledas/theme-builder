@@ -20,7 +20,7 @@ const plugins = [];
 /**
  * Selectionner le theme à afficher lors de la commande npm run serve.
  */
-const CurrentThemeName = "hotlock";
+const CurrentThemeName = "plumbing";
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
