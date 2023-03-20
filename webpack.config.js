@@ -12,7 +12,7 @@ const MIH = new manageImportHtml();
 const StanExport = require("./stanExport.js");
 
 // On récupère la valeur de NODE_ENV
-const env = process.env.NODE_ENV; 
+const env = process.env.NODE_ENV;
 
 const devMode = process.env.NODE_ENV !== "production";
 
@@ -20,7 +20,7 @@ const plugins = [];
 /**
  * Selectionner le theme à afficher lors de la commande npm run serve.
  */
-const CurrentThemeName = "flexor";
+const CurrentThemeName = "restoRed";
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
