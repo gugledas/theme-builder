@@ -1,7 +1,7 @@
 import "./sectionPopular.html"
 import "./sectionPopular.scss"
 import GLightbox from "../../vesperr/lib/glightbox/js/glightbox";
-import Swiper from "./vendor/swiper-bundle.min.js";
+//import Swiper from "./vendor/swiper-bundle.min.js";
 //import jquery from "jquery";
 //import Isotope from "../lib/isotope-layout/isotope.pkgd.js";
 import AOS from "../../vesperr/lib/aos/aos";
