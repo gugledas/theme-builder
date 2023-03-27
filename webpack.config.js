@@ -20,7 +20,7 @@ const plugins = [];
 /**
  * Selectionner le theme à afficher lors de la commande npm run serve.
  */
-const CurrentThemeName = "cvModelBudapest";
+const CurrentThemeName = "restoRed";
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
