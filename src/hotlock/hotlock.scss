@@ -3,7 +3,7 @@
 @use "@stephane888/wbu-atomique/scss/atome/typography/_default.scss";
 @use "./_variables" as *;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&family=Titillium+Web:wght@300;600&display=swap");
-
+@import "@stephane888/wbu-atomique/scss/cv/fields/field-bar.scss";
 body {
   font-family: "Poppins", sans-serif;
   font-family: "Titillium Web", sans-serif;
