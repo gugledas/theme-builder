@@ -1,0 +1,69 @@
+<section
+  class="facmaster-coming-soon"
+  style="
+    background: url('https://demo.cmssuperheroes.com/themeforest/facmaster/wp-content/uploads/2019/12/theme-10.jpg');
+    background-size: cover;
+    background-position: center;
+  "
+>
+  <div class="facmaster-coming-soon-container container">
+    <div class="coming-soon-text-element text-center">
+      <h1 class="coming-soon-title font-weight-bolder wbu-titre-suppra">
+        COMING SOON
+      </h1>
+      <h3 class="coming-soon-subtitle font-weight-bolder">
+        PRODUCING 1 MILLION CAKES FOR
+      </h3>
+      <div class="coming-soon-description h5">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac mi
+        lacus. Phasellus mollis et nibh et condimentum. Integer dui diam, ornare
+        a sagittis vel, suscipit et leo.
+      </div>
+    </div>
+    <div class="coming-soon-count">
+      <p id="demo" class="count"></p>
+    </div>
+  </div>
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML =
+        "<div class='demo_element'><div class='col-md-3 set'><div class='time h1 font-weight-bolder'>" +
+        days +
+        "</div> <div class='letter h6 font-weight-bolder'>days</div></div>" +
+        "<div class='col-md-3 set'><div class='time h1 font-weight-bolder'>" +
+        hours +
+        "</div> <div class='letter h6 font-weight-bolder'>hours</div></div>" +
+        "<div class='col-md-3 set'><div class='time h1 font-weight-bolder'>" +
+        minutes +
+        "</div> <div class='letter h6 font-weight-bolder'>minutes</div></div>" +
+        "<div class='col-md-3 set'><div class='time h1 font-weight-bolder'>" +
+        seconds +
+        "</div> <div class='letter h6 font-weight-bolder'>seconds</div></div></div>";
+
+      // If the count down is over, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+</section>
