@@ -1,5 +1,5 @@
 <section
-  class="facmaster-coming-soon"
+  class="facmaster-coming-soon cover-bg-theme opacity-before-055"
   style="
     background: url('https://demo.cmssuperheroes.com/themeforest/facmaster/wp-content/uploads/2019/12/theme-10.jpg');
     background-size: cover;
@@ -14,15 +14,22 @@
       <h3 class="coming-soon-subtitle font-weight-bolder">
         PRODUCING 1 MILLION CAKES FOR
       </h3>
-      <div class="coming-soon-description h5">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac mi
-        lacus. Phasellus mollis et nibh et condimentum. Integer dui diam, ornare
-        a sagittis vel, suscipit et leo.
+      <div class="coming-soon-description">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac mi
+          lacus. Phasellus mollis et nibh et condimentum. Integer dui diam,
+          ornare a sagittis vel, suscipit et leo.
+        </p>
       </div>
     </div>
     <div class="coming-soon-count">
       <p id="demo" class="count"></p>
     </div>
+  </div>
+  <div
+    class="coming-soon-copy-right d-flex position-relative align-items-center justify-content-center"
+  >
+    <p>Copyright NICAMEX by <a href="habeuk.com">Habeuk.com</a></p>
   </div>
   <script>
     // Set the date we're counting down to
@@ -46,18 +53,18 @@
 
       // Output the result in an element with id="demo"
       document.getElementById("demo").innerHTML =
-        "<div class='demo_element'><div class='col-md-3 set'><div class='time h1 font-weight-bolder'>" +
+        "<div class='demo_element'> <div class='row'> <div class='col-6 col-md-3'> <div class='set'> <div class='time h1 font-weight-bolder'>" +
         days +
-        "</div> <div class='letter h6 font-weight-bolder'>days</div></div>" +
-        "<div class='col-md-3 set'><div class='time h1 font-weight-bolder'>" +
+        "</div> <div class='letter h6 font-weight-bolder'>days</div></div></div>" +
+        "<div class='col-6 col-md-3'> <div class='set'> <div class='time h1 font-weight-bolder'>" +
         hours +
-        "</div> <div class='letter h6 font-weight-bolder'>hours</div></div>" +
-        "<div class='col-md-3 set'><div class='time h1 font-weight-bolder'>" +
+        "</div> <div class='letter h6 font-weight-bolder'>hours</div></div></div>" +
+        "<div class='col-6 col-md-3'> <div class='set'><div class='time h1 font-weight-bolder'>" +
         minutes +
-        "</div> <div class='letter h6 font-weight-bolder'>minutes</div></div>" +
-        "<div class='col-md-3 set'><div class='time h1 font-weight-bolder'>" +
+        "</div> <div class='letter h6 font-weight-bolder'>minutes</div></div></div>" +
+        "<div class='col-6 col-md-3'> <div class='set'><div class='time h1 font-weight-bolder'>" +
         seconds +
-        "</div> <div class='letter h6 font-weight-bolder'>seconds</div></div></div>";
+        "</div> <div class='letter h6 font-weight-bolder'> seconds </div></div></div></div></div>";
 
       // If the count down is over, write some text
       if (distance < 0) {
