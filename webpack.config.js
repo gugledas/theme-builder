@@ -20,7 +20,11 @@ const plugins = [];
 /**
  * Selectionner le theme à afficher lors de la commande npm run serve.
  */
+<<<<<<< HEAD
 const CurrentThemeName = "facmaster-hero";
+=======
+const CurrentThemeName = "facmaster";
+>>>>>>> c0445df276b70b43c6902215ebc5c0d8f7e6fbda
 plugins.push(
   new MiniCssExtractPlugin({
     filename: "css/[name].css",
