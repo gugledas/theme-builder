@@ -1,18 +1,12 @@
-@use "../facmaster-hero/variables";
+@use "../facmaster-coming-soon-bg-img/variables";
 @use "@stephane888/wbu-atomique/scss/wbu-ressources-clean.scss" as *;
 @use "@stephane888/wbu-atomique/scss/bootstrap-all.scss";
 @use "@stephane888/wbu-atomique/scss/atome/typography/_default.scss";
 @use "@stephane888/wbu-atomique/scss/molecule/default-class.scss";
 @use "./_variables.scss" as *;
-@use "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/facmaster/facmaster-hero.scss";
+@use "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/facmaster/facmaster.scss";
 // corresponding google fonts styles
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200&family=Roboto+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
-//
-@import "@stephane888/wbu-atomique/scss/swipper/cloting.scss"; // à supprimer et creer un nouveau.
 .coming-soon-title {
-  font-family: "Roboto Condensed", sans-serif;
-}
-.slide-one-subtitle {
   font-family: "Roboto Condensed", sans-serif;
 }
