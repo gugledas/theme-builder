@@ -1,19 +1,22 @@
 <div
-  class="swiper swiper-full-options clothing--bottom clothing--bottom--primary"
+  class="swiper swiper-full-options clothing--bottom clothing--bottom--primary swiper-button-left-bottom"
 >
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
     <div class="swiper-slide">
       <!-- section -->
-      <section
-        class="facmaster-section-hero"
-        style="
-          background: url('https://images.unsplash.com/photo-1618947084583-07ff857ca918?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80');
-          background-size: cover;
-          background-position: center;
-        "
-      >
+      <section class="facmaster-section-hero">
+        <div
+          class="picture"
+          data-aos="zoom-out-left"
+          data-aos-delay="0"
+          data-aos-duration="2000"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1618947084583-07ff857ca918?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
+          />
+        </div>
         <div class="container">
           <div class="slide-one-content">
             <h4
@@ -57,14 +60,17 @@
       </section>
     </div>
     <div class="swiper-slide">
-      <section
-        class="facmaster-section-hero"
-        style="
-          background: url('https://d.newsweek.com/en/full/2057041/welder.jpg?w=1600&h=1600&q=88&f=31b2fa934ab52431599811db342fe1b5');
-          background-size: cover;
-          background-position: center;
-        "
-      >
+      <section class="facmaster-section-hero">
+        <div
+          class="picture"
+          data-aos="zoom-out-left"
+          data-aos-delay="0"
+          data-aos-duration="2000"
+        >
+          <img
+            src="https://d.newsweek.com/en/full/2057041/welder.jpg?w=1600&h=1600&q=88&f=31b2fa934ab52431599811db342fe1b5"
+          />
+        </div>
         <div class="container">
           <div class="slide-one-content">
             <h4
@@ -107,6 +113,9 @@
   </div>
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
   <!-- If we need scrollbar -->
   <div class="swiper-scrollbar"></div>
 </div>
@@ -122,6 +131,10 @@
       el: ".swiper-pagination",
       type: "bullets",
       clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     navigation: true,
     parallax: true,
