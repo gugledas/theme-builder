@@ -156,7 +156,7 @@
     },
     navigation: true,
     parallax: true,
-    autoplay: false,
+    autoplay: true,
     module: ["Navigation", "Pagination"],
     supplement_class_status: 0,
     loopedSlides: 1,
@@ -165,7 +165,7 @@
     grabCursor: 0,
   };
   /**
-   * On ajoute la configuration aux models swiper.
+   * On ajoute la confiuration aux models swiper.
    */
   document.querySelectorAll(".swiper-full-options").forEach((element) => {
     element.setAttribute("data-swiper", JSON.stringify(CustomSwiperConfig));
