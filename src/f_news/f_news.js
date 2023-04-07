@@ -5,10 +5,12 @@ import "@stephane888/wbu-atomique/scss/bootstrap-all.scss";
 import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 import "@stephane888/wbu-atomique/scss/atome/typography/_default.scss";
 
-import "./pages/home/home";
-//import "./sections/header/header";
-// import "./pages/single-showcase/single-showcase";
-// import "./pages/single-product/single-product";
-// import "./pages/single-blog/single-blog";
-// import "./sections/footer/footer";
-import "./sections/StorizbornArticle/storizborn_article.js"
+import "./sections/accordeon/accordeon"
+
+import "./sections/archive/archive"
+import "./sections/bac-to-top/bac-top"
+import "./sections/blog-lists/blog"
+import "./sections/bottom-text/teaser"
+import "./sections/comment/comment"
+import "./sections/contact/contact"
+import "./sections/delivery-option/delivery-option"
