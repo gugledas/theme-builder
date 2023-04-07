@@ -1,3 +1,4 @@
+// model https://demo.morethanthemes.com/flashyplus-news8/default/
 /* theme style */
 import "./f_news.scss";
 
