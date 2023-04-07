@@ -16,4 +16,4 @@ import "./products-section/product";
 
 // import "./footer/footer";
 // buttons
-// import "./buttons/index";
+ import "./buttons/index";
