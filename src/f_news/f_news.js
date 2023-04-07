@@ -12,7 +12,7 @@ import "@stephane888/wbu-atomique/scss/atome/typography/_default.scss";
 // import "./pages/single-blog/single-blog";
 // import "./sections/footer/footer";
 // import "./sections/StorizbornArticle/storizborn_article.js";
-/* sections */
+/* sections SVP ne supprimer pas ces entrée */
 import "./sections/accordeon/accordeon";
 import "./sections/archive/archive";
 import "./sections/bac-to-top/bac-top";
