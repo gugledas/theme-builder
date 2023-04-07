@@ -1,5 +1,5 @@
 <div
-  class="swiper swiper-full-options clothing--bottom clothing--bottom--primary swiper-button-left-bottom"
+  class="swiper d-flex swiper-full-options clothing--bottom clothing--bottom--primary swiper-button-left-bottom"
 >
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
@@ -9,9 +9,9 @@
       <section class="facmaster-section-hero">
         <div
           class="picture"
-          data-aos="zoom-out-left"
-          data-aos-delay="0"
-          data-aos-duration="2000"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          data-aos-duration="5500"
         >
           <img
             src="https://images.unsplash.com/photo-1618947084583-07ff857ca918?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
@@ -63,9 +63,9 @@
       <section class="facmaster-section-hero">
         <div
           class="picture"
-          data-aos="zoom-out-left"
-          data-aos-delay="0"
-          data-aos-duration="2000"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          data-aos-duration="5500"
         >
           <img
             src="https://d.newsweek.com/en/full/2057041/welder.jpg?w=1600&h=1600&q=88&f=31b2fa934ab52431599811db342fe1b5"
@@ -123,6 +123,10 @@
 <!-- Ceci ne doit pas etre integrer au niveau drupal c'est deja fait, mais peut servir pour la configuration au niveau de la vue. -->
 <script>
   const CustomSwiperConfig = {
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
     direction: "horizontal",
     speed: 300,
     spaceBetween: 10,
@@ -138,7 +142,7 @@
     },
     navigation: true,
     parallax: true,
-    autoplay: true,
+    autoplay: false,
     module: ["Navigation", "Pagination"],
     supplement_class_status: 0,
     loopedSlides: 1,
