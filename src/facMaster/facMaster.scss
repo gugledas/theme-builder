@@ -4,8 +4,21 @@
 @use "@stephane888/wbu-atomique/scss/atome/typography/_default.scss";
 @use "@stephane888/wbu-atomique/scss/molecule/default-class.scss";
 @use "./_variables.scss" as *;
+@use "@stephane888/wbu-atomique/scss/cv/fields/field-buttons.scss";
+@use "@stephane888/wbu-atomique/scss/cv/fields/field-svg.scss";
+@use "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/facmaster/facmaster-header.scss";
 // corresponding google fonts styles
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cantata+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+/**
+ * Configuraion specifique:
+ */
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+body {
+  min-height: 2000px;
+}
