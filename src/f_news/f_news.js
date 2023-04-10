@@ -15,3 +15,11 @@ import "./sections/bottom-text/teaser"
 import "./sections/comment/comment"
 import "./sections/contact/contact"
 import "./sections/delivery-option/delivery-option"
+import "./sections/design-feature/design-feature"
+import "./sections/featured-section/featured"
+import "./sections/filter-section/filter-section"
+import "./sections/finance-section/finance"
+import "./sections/first-service/first-service"
+import "./sections/footer/footer"
+
+
