@@ -1,8 +1,8 @@
 import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 import "./facMaster.scss";
 import "./Heder/header";
-import "./facmaster-hero/facmaster-hero";
-import "./facmaster-gallery/facmaster-gallery";
+// import "./facmaster-hero/facmaster-hero";
+// import "./facmaster-gallery/facmaster-gallery";
 /**
  * Permet d'injecter les librairies js.
  * @param {*} src
