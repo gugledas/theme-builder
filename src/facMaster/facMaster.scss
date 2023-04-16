@@ -16,8 +16,8 @@
  * Configuraion specifique:
  */
 .container {
-  width: 100%;
-  max-width: 1200px;
+  width: 100% !important;
+  max-width: 1200px !important;
 }
 body {
   min-height: 2000px;
