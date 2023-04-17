@@ -8,7 +8,6 @@ const manageImportHtml = require("./manageImportHtml.js");
 const MIH = new manageImportHtml();
 
 /* stan plugins */
-
 const StanExport = require("./stanExport.js");
 
 // On récupère la valeur de NODE_ENV
