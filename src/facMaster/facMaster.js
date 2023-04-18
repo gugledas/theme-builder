@@ -1,5 +1,5 @@
 import "@stephane888/wbu-atomique/js/bootstrap/all.js";
-import "./facMaster.scss";
+import "../.";
 import "./Heder/header";
 // import "./facmaster-hero/facmaster-hero";
 // import "./facmaster-gallery/facmaster-gallery";
