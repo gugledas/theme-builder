@@ -1,0 +1,32 @@
+@use "@stephane888/wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+@use "./_variables" as *;
+@use "@stephane888/wbu-atomique/scss/bootstrap-all.scss";
+@use "@stephane888/wbu-atomique/scss/atome/typography/_default.scss";
+@use "@stephane888/wbu-atomique/scss/molecule/default-class.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+@font-face {
+  font-family: "hurmeGeometricSans";
+  src: url("./hurme-geometric-sans/n-1/HurmeGeometricSans1Bold.otf");
+}
+body {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    font-family: hurmeGeometricSans;
+  }
+  font-family: "Poppins", sans-serif;
+  color: $wbu-color-text;
+  .container-fluid {
+    padding-inline: $wbu-margin;
+  }
+}

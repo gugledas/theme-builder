@@ -34,7 +34,7 @@ import "./sections/hero-home/home-hero";
 // import "./sections/in-case/in-case";
 // import "./sections/leader-mansory/leader-mansory";
 // import "./sections/leadership/leadership";
-// import "./sections/metro-service/metro-service";
+import "./sections/metro-service/metro-service";
 // import "./sections/our-location/our-location";
 // import "./sections/proposition/proposition";
 // import "./sections/slideshow-hero/slideshow-hero";

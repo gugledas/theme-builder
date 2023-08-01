@@ -13,7 +13,7 @@ function loadScript(src) {
     const s = document.createElement("script");
     s.setAttribute("src", src);
     s.onload = function () {
-      console.log("Chargement du script ok : ", src);
+      console.log(" Chargement du script ok : ", src);
       resolv(true);
     };
     document.head.appendChild(s);

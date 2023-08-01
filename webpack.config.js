@@ -19,8 +19,8 @@ const plugins = [];
 /**
  * Selectionner le theme à afficher lors de la commande npm run serve.
  */
-//const CurrentThemeName = "f_news";
-const CurrentThemeName = "facMaster";
+const CurrentThemeName = "hiddey";
+// const CurrentThemeName = "facMaster";
 
 plugins.push(
   new MiniCssExtractPlugin({
