@@ -1,4 +1,5 @@
 import "@stephane888/wbu-atomique/js/aos/aos-drupal.js";
+import "@stephane888/wbu-atomique/js/bootstrap/all.js";
 
 import "./hiddey.scss";
 import "./header/header";
