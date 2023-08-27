@@ -20,7 +20,7 @@ const plugins = [];
  * Selectionner le theme à afficher lors de la commande npm run serve.
  */
 //const CurrentThemeName = "themeholy-driver";
-const CurrentThemeName = "hiddey";
+const CurrentThemeName = "utilitaires";
 
 plugins.push(
   new MiniCssExtractPlugin({
