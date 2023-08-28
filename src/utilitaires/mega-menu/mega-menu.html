@@ -4,7 +4,7 @@
     <div class="hbk-mega-menu--burgers">
       <!--region burger button-->
       <button class="burger__button" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
-        <svg width="100" height="100" viewBox="0 0 100 100">
+        <svg width="100%" height="100%" viewBox="0 0 100 100">
           <path
             class="line line1"
             d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
@@ -24,82 +24,124 @@
     <ul class="hbk-mega-menu--items">
       <li class="item"><a href="#" class="item-link">Home</a></li>
       <li class="item">
-        <a href="#">Classic</a>
+        <a href="#" class="item-link">Classic</a>
         <ul class="hbk-mega-menu--items__sub">
           <li class="item"><a href="#" class="item-link">2nd Level #1</a></li>
           <li class="item"><a href="#" class="item-link">2nd Level #2</a></li>
           <li class="item">
             <a href="#" class="item-link">2nd Level #3</a>
-            <ul>
-              <li>
-                <a href="#"> <i class="fa fa-university" aria-hidden="true"></i> 3rd Level #1 </a>
-                <ul>
-                  <li><a href="#">4th Level #1</a></li>
-                  <li><a href="#">4th Level #2</a></li>
+            <ul class="hbk-mega-menu--items__sub">
+              <li class="item">
+                <a href="#" class="item-link"> <i class="fa fa-university" aria-hidden="true"></i> 3rd Level #1 </a>
+                <ul class="hbk-mega-menu--items__sub">
+                  <li class="item"><a href="#" class="item-link">4th Level #1</a></li>
+                  <li class="item"><a href="#" class="item-link">4th Level #2</a></li>
                 </ul>
               </li>
-              <li>
-                <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i>3rd Level #2</a>
+              <li class="item">
+                <a href="#" class="item-link"><i class="fa fa-thumbs-up" aria-hidden="true"></i>3rd Level #2</a>
               </li>
-              <li>
-                <a href="#"><i class="fa fa-users" aria-hidden="true"></i>3rd Level #3</a>
-                <ul>
-                  <li>
-                    <a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i>4th Level #1</a>
+              <li class="item">
+                <a href="#" class="item-link"><i class="fa fa-users" aria-hidden="true"></i>3rd Level #3</a>
+                <ul class="hbk-mega-menu--items__sub">
+                  <li class="item">
+                    <a href="#" class="item-link"><i class="fa fa-paper-plane" aria-hidden="true"></i>4th Level #1</a>
                   </li>
-                  <li>
-                    <a href="#"><i class="fa fa-print" aria-hidden="true"></i>4th Level #2</a>
+                  <li class="item">
+                    <a href="#" class="item-link"><i class="fa fa-print" aria-hidden="true"></i>4th Level #2</a>
                   </li>
-                  <li>
-                    <a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i>4th Level #3</a>
+                  <li class="item">
+                    <a href="#" class="item-link"><i class="fa fa-shopping-bag" aria-hidden="true"></i>4th Level #3</a>
                   </li>
                 </ul>
+                <svg
+                  class="svg-arrow js-open-close"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  version="1.1"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 100 80"
+                  xml:space="preserve"
+                >
+                  <path
+                    d="M 90 24.25 c 0 -0.896 -0.342 -1.792 -1.025 -2.475 c -1.366 -1.367 -3.583 -1.367 -4.949 0 L 45 60.8 L 5.975 21.775 c -1.367 -1.367 -3.583 -1.367 -4.95 0 c -1.366 1.367 -1.366 3.583 0 4.95 l 41.5 41.5 c 1.366 1.367 3.583 1.367 4.949 0 l 41.5 -41.5 C 89.658 26.042 90 25.146 90 24.25 z"
+                  ></path>
+                </svg>
               </li>
             </ul>
+            <svg
+              class="svg-arrow js-open-close"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              version="1.1"
+              width="20px"
+              height="20px"
+              viewBox="0 0 100 80"
+              xml:space="preserve"
+            >
+              <path
+                d="M 90 24.25 c 0 -0.896 -0.342 -1.792 -1.025 -2.475 c -1.366 -1.367 -3.583 -1.367 -4.949 0 L 45 60.8 L 5.975 21.775 c -1.367 -1.367 -3.583 -1.367 -4.95 0 c -1.366 1.367 -1.366 3.583 0 4.95 l 41.5 41.5 c 1.366 1.367 3.583 1.367 4.949 0 l 41.5 -41.5 C 89.658 26.042 90 25.146 90 24.25 z"
+              ></path>
+            </svg>
           </li>
           <li class="item open-to-left">
-            <a href="#">2nd Level #4</a>
-            <ul>
-              <li><a href="#">3rd Level #1</a></li>
-              <li><a href="#">3rd Level #2</a></li>
-              <li><a href="#">3rd Level #3</a></li>
+            <a href="#" class="item-link">2nd Level #4</a>
+            <ul class="hbk-mega-menu--items__sub">
+              <li class="item"><a href="#" class="item-link">3rd Level #1</a></li>
+              <li class="item"><a href="#" class="item-link">3rd Level #2</a></li>
+              <li class="item"><a href="#" class="item-link">3rd Level #3</a></li>
             </ul>
           </li>
-          <li><a href="#">2nd Level #5</a></li>
-          <li><a href="#">2nd Level #6</a></li>
-          <li><a href="#">2nd Level #7</a></li>
+          <li class="item"><a href="#" class="item-link">2nd Level #5</a></li>
+          <li class="item"><a href="#" class="item-link">2nd Level #6</a></li>
+          <li class="item"><a href="#" class="item-link">2nd Level #7</a></li>
         </ul>
+        <svg
+          class="svg-arrow js-open-close"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          version="1.1"
+          width="20px"
+          height="20px"
+          viewBox="0 0 100 80"
+          xml:space="preserve"
+        >
+          <path
+            d="M 90 24.25 c 0 -0.896 -0.342 -1.792 -1.025 -2.475 c -1.366 -1.367 -3.583 -1.367 -4.949 0 L 45 60.8 L 5.975 21.775 c -1.367 -1.367 -3.583 -1.367 -4.95 0 c -1.366 1.367 -1.366 3.583 0 4.95 l 41.5 41.5 c 1.366 1.367 3.583 1.367 4.949 0 l 41.5 -41.5 C 89.658 26.042 90 25.146 90 24.25 z"
+          ></path>
+        </svg>
       </li>
-      <li class="ruby-menu-mega">
-        <a href="#"> Mega </a>
+      <li class="item">
+        <a href="#" class="item-link"> Mega Classic </a>
         <div class="ruby-grid ruby-grid-lined">
           <div class="ruby-row">
             <div class="ruby-col-2">
               <h3 class="ruby-list-heading">Normal List</h3>
               <ul>
-                <li><a href="#">Menu Item #1</a></li>
-                <li><a href="#">Menu Item #2</a></li>
-                <li><a href="#">Menu Item #3</a></li>
-                <li><a href="#">Menu Item #4</a></li>
-                <li><a href="#">Menu Item #5</a></li>
+                <li class="item"><a href="#" class="item-link">Menu Item #1</a></li>
+                <li class="item"><a href="#" class="item-link">Menu Item #2</a></li>
+                <li class="item"><a href="#" class="item-link">Menu Item #3</a></li>
+                <li class="item"><a href="#" class="item-link">Menu Item #4</a></li>
+                <li class="item"><a href="#" class="item-link">Menu Item #5</a></li>
               </ul>
             </div>
             <div class="ruby-col-2 hidden-md">
               <h3 class="ruby-list-heading">List with Icons</h3>
               <ul>
-                <li>
+                <li class="item">
                   <a href="#"><i class="fa fa-motorcycle" aria-hidden="true"></i>Menu Item #1</a>
                 </li>
-                <li>
+                <li class="item">
                   <a href="#"><i class="fa fa-music" aria-hidden="true"></i>Menu Item #2</a>
                 </li>
-                <li>
+                <li class="item">
                   <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Menu Item #3</a>
                 </li>
-                <li>
+                <li class="item">
                   <a href="#"><i class="fa fa-sliders" aria-hidden="true"></i>Menu Item #4</a>
                 </li>
-                <li>
+                <li class="item">
                   <a href="#"><i class="fa fa-search" aria-hidden="true"></i>Menu Item #5</a>
                 </li>
               </ul>
@@ -107,13 +149,13 @@
             <div class="ruby-col-3 ruby-col-4-md">
               <h3 class="ruby-list-heading">List with Images + Desc</h3>
               <ul class="ruby-list-with-images">
-                <li>
+                <li class="item">
                   <a href="#"><img src="img/c-1.png" />Menu Item #1</a><span class="ruby-list-desc">Lorem ipsum dolor sit</span>
                 </li>
-                <li>
+                <li class="item">
                   <a href="#"><img src="img/c-2.png" />Menu Item #2</a><span class="ruby-list-desc">Lorem ipsum dolor sit</span>
                 </li>
-                <li>
+                <li class="item">
                   <a href="#"><img src="img/c-3.png" />Menu Item #3</a><span class="ruby-list-desc">Lorem ipsum dolor sit</span>
                 </li>
               </ul>
@@ -123,57 +165,57 @@
               <div class="ruby-row">
                 <div class="ruby-col-4 ruby-col-6-md">
                   <ul>
-                    <li>
+                    <li class="item">
                       <a href="#"><i class="fa fa-star" aria-hidden="true"></i>Menu Item</a>
                     </li>
-                    <li>
+                    <li class="item">
                       <a href="#"><i class="fa fa-signal" aria-hidden="true"></i>Menu Item</a>
                     </li>
-                    <li>
+                    <li class="item">
                       <a href="#"><i class="fa fa-send" aria-hidden="true"></i>Menu Item</a>
                     </li>
-                    <li>
+                    <li class="item">
                       <a href="#"><i class="fa fa-user" aria-hidden="true"></i>Menu Item</a>
                     </li>
-                    <li>
+                    <li class="item">
                       <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Menu Item</a>
                     </li>
                   </ul>
                 </div>
                 <div class="ruby-col-4 ruby-col-6-md" style="padding-left: 10px">
                   <ul>
-                    <li>
+                    <li class="item">
                       <a href="#"><i class="fa fa-rocket" aria-hidden="true"></i>Menu Item</a>
                     </li>
-                    <li>
+                    <li class="item">
                       <a href="#"><i class="fa fa-warning" aria-hidden="true"></i>Menu Item</a>
                     </li>
-                    <li>
+                    <li class="item">
                       <a href="#"><i class="fa fa-upload" aria-hidden="true"></i>Menu Item</a>
                     </li>
-                    <li>
+                    <li class="item">
                       <a href="#"><i class="fa fa-umbrella" aria-hidden="true"></i>Menu Item</a>
                     </li>
-                    <li>
+                    <li class="item">
                       <a href="#"><i class="fa fa-trophy" aria-hidden="true"></i>Menu Item</a>
                     </li>
                   </ul>
                 </div>
                 <div class="ruby-col-4 hidden-md" style="padding-left: 15px">
                   <ul>
-                    <li>
+                    <li class="item">
                       <a href="#"><i class="fa fa-map-o" aria-hidden="true"></i>Menu Item</a>
                     </li>
-                    <li>
+                    <li class="item">
                       <a href="#"><i class="fa fa-image" aria-hidden="true"></i>Menu Item</a>
                     </li>
-                    <li>
+                    <li class="item">
                       <a href="#"><i class="fa fa-legal" aria-hidden="true"></i>Menu Item</a>
                     </li>
-                    <li>
+                    <li class="item">
                       <a href="#"><i class="fa fa-paint-brush" aria-hidden="true"></i>Menu Item</a>
                     </li>
-                    <li>
+                    <li class="item">
                       <a href="#"><i class="fa fa-heart" aria-hidden="true"></i>Menu Item</a>
                     </li>
                   </ul>
@@ -183,8 +225,8 @@
           </div>
         </div>
       </li>
-      <li class="ruby-menu-mega-blog">
-        <a href="#">Blog</a>
+      <li class="item">
+        <a href="#" class="item-link">Mega vertical</a>
         <div class="">
           <ul class="ruby-menu-mega-blog-nav">
             <li class="ruby-active-menu-item">
@@ -303,7 +345,7 @@
               <span class="ruby-dropdown-toggle"></span>
             </li>
 
-            <li>
+            <li class="item">
               <a href="#">Blog-2-Column</a>
               <div class="ruby-grid ruby-grid-lined">
                 <div class="ruby-row">
@@ -378,7 +420,7 @@
               <span class="ruby-dropdown-toggle"></span>
             </li>
 
-            <li>
+            <li class="item">
               <a href="#">Blog-Article-List</a>
               <div class="ruby-grid ruby-grid-lined">
                 <div class="ruby-row">
@@ -443,8 +485,8 @@
           </ul>
         </div>
       </li>
-      <li class="ruby-menu-mega-shop">
-        <a href="#">Shop</a>
+      <li class="item">
+        <a href="#" class="item-link">Mega horizontal</a>
         <div class="">
           <ul>
             <li class="ruby-active-menu-item">
@@ -454,11 +496,11 @@
                   <div class="ruby-col-2">
                     <h3 class="ruby-list-heading">TOPS</h3>
                     <ul>
-                      <li><a href="#">Menu Item #1</a></li>
-                      <li><a href="#">Menu Item #2</a></li>
-                      <li><a href="#">Menu Item #3</a></li>
-                      <li><a href="#">Menu Item #4</a></li>
-                      <li><a href="#">Menu Item #5</a></li>
+                      <li class="item"><a href="#">Menu Item #1</a></li>
+                      <li class="item"><a href="#">Menu Item #2</a></li>
+                      <li class="item"><a href="#">Menu Item #3</a></li>
+                      <li class="item"><a href="#">Menu Item #4</a></li>
+                      <li class="item"><a href="#">Menu Item #5</a></li>
                     </ul>
                   </div>
                   <div class="ruby-col-2">
@@ -467,21 +509,21 @@
                   <div class="ruby-col-2">
                     <h3 class="ruby-list-heading">BOTTOM</h3>
                     <ul>
-                      <li><a href="#">Menu Item #1</a></li>
-                      <li><a href="#">Menu Item #2</a></li>
-                      <li><a href="#">Menu Item #3</a></li>
-                      <li><a href="#">Menu Item #4</a></li>
-                      <li><a href="#">Menu Item #5</a></li>
+                      <li class="item"><a href="#">Menu Item #1</a></li>
+                      <li class="item"><a href="#">Menu Item #2</a></li>
+                      <li class="item"><a href="#">Menu Item #3</a></li>
+                      <li class="item"><a href="#">Menu Item #4</a></li>
+                      <li class="item"><a href="#">Menu Item #5</a></li>
                     </ul>
                   </div>
                   <div class="ruby-col-2">
                     <h3 class="ruby-list-heading">NIGHTWEAR</h3>
                     <ul>
-                      <li><a href="#">Menu Item #1</a></li>
-                      <li><a href="#">Menu Item #2</a></li>
-                      <li><a href="#">Menu Item #3</a></li>
-                      <li><a href="#">Menu Item #4</a></li>
-                      <li><a href="#">Menu Item #5</a></li>
+                      <li class="item"><a href="#">Menu Item #1</a></li>
+                      <li class="item"><a href="#">Menu Item #2</a></li>
+                      <li class="item"><a href="#">Menu Item #3</a></li>
+                      <li class="item"><a href="#">Menu Item #4</a></li>
+                      <li class="item"><a href="#">Menu Item #5</a></li>
                     </ul>
                   </div>
                   <div class="ruby-col-2">
@@ -490,18 +532,18 @@
                   <div class="ruby-col-2">
                     <h3 class="ruby-list-heading">SWIMWEAR</h3>
                     <ul>
-                      <li><a href="#">Menu Item #1</a></li>
-                      <li><a href="#">Menu Item #2</a></li>
-                      <li><a href="#">Menu Item #3</a></li>
-                      <li><a href="#">Menu Item #4</a></li>
-                      <li><a href="#">Menu Item #5</a></li>
+                      <li class="item"><a href="#">Menu Item #1</a></li>
+                      <li class="item"><a href="#">Menu Item #2</a></li>
+                      <li class="item"><a href="#">Menu Item #3</a></li>
+                      <li class="item"><a href="#">Menu Item #4</a></li>
+                      <li class="item"><a href="#">Menu Item #5</a></li>
                     </ul>
                   </div>
                 </div>
               </div>
               <span class="ruby-dropdown-toggle"></span>
             </li>
-            <li>
+            <li class="item">
               <a href="#">Outerwear</a>
               <div class="ruby-grid ruby-grid-lined">
                 <div class="ruby-row">
@@ -511,44 +553,44 @@
                   <div class="ruby-col-3">
                     <h3 class="ruby-list-heading">COATS</h3>
                     <ul>
-                      <li><a href="#">Menu Item #1</a></li>
-                      <li><a href="#">Menu Item #2</a></li>
-                      <li><a href="#">Menu Item #3</a></li>
-                      <li><a href="#">Menu Item #4</a></li>
-                      <li><a href="#">Menu Item #5</a></li>
-                      <li><a href="#">Menu Item #6</a></li>
-                      <li><a href="#">Menu Item #7</a></li>
+                      <li class="item"><a href="#">Menu Item #1</a></li>
+                      <li class="item"><a href="#">Menu Item #2</a></li>
+                      <li class="item"><a href="#">Menu Item #3</a></li>
+                      <li class="item"><a href="#">Menu Item #4</a></li>
+                      <li class="item"><a href="#">Menu Item #5</a></li>
+                      <li class="item"><a href="#">Menu Item #6</a></li>
+                      <li class="item"><a href="#">Menu Item #7</a></li>
                     </ul>
                   </div>
                   <div class="ruby-col-3">
                     <h3 class="ruby-list-heading">JACKETS</h3>
                     <ul>
-                      <li><a href="#">Menu Item #1</a></li>
-                      <li><a href="#">Menu Item #2</a></li>
-                      <li><a href="#">Menu Item #3</a></li>
-                      <li><a href="#">Menu Item #4</a></li>
-                      <li><a href="#">Menu Item #5</a></li>
-                      <li><a href="#">Menu Item #6</a></li>
-                      <li><a href="#">Menu Item #7</a></li>
+                      <li class="item"><a href="#">Menu Item #1</a></li>
+                      <li class="item"><a href="#">Menu Item #2</a></li>
+                      <li class="item"><a href="#">Menu Item #3</a></li>
+                      <li class="item"><a href="#">Menu Item #4</a></li>
+                      <li class="item"><a href="#">Menu Item #5</a></li>
+                      <li class="item"><a href="#">Menu Item #6</a></li>
+                      <li class="item"><a href="#">Menu Item #7</a></li>
                     </ul>
                   </div>
                   <div class="ruby-col-3">
                     <h3 class="ruby-list-heading">LEATHER</h3>
                     <ul>
-                      <li><a href="#">Menu Item #1</a></li>
-                      <li><a href="#">Menu Item #2</a></li>
-                      <li><a href="#">Menu Item #3</a></li>
-                      <li><a href="#">Menu Item #4</a></li>
-                      <li><a href="#">Menu Item #5</a></li>
-                      <li><a href="#">Menu Item #6</a></li>
-                      <li><a href="#">Menu Item #7</a></li>
+                      <li class="item"><a href="#">Menu Item #1</a></li>
+                      <li class="item"><a href="#">Menu Item #2</a></li>
+                      <li class="item"><a href="#">Menu Item #3</a></li>
+                      <li class="item"><a href="#">Menu Item #4</a></li>
+                      <li class="item"><a href="#">Menu Item #5</a></li>
+                      <li class="item"><a href="#">Menu Item #6</a></li>
+                      <li class="item"><a href="#">Menu Item #7</a></li>
                     </ul>
                   </div>
                 </div>
               </div>
               <span class="ruby-dropdown-toggle"></span>
             </li>
-            <li>
+            <li class="item">
               <a href="#">Bags &amp; Shoes</a>
               <div class="ruby-grid ruby-grid-lined">
                 <div class="ruby-row">
@@ -558,21 +600,21 @@
                   <div class="ruby-col-3">
                     <h3 class="ruby-list-heading">BAGS</h3>
                     <ul>
-                      <li><a href="#">Menu Item #1</a></li>
-                      <li><a href="#">Menu Item #2</a></li>
-                      <li><a href="#">Menu Item #3</a></li>
-                      <li><a href="#">Menu Item #4</a></li>
-                      <li><a href="#">Menu Item #5</a></li>
+                      <li class="item"><a href="#">Menu Item #1</a></li>
+                      <li class="item"><a href="#">Menu Item #2</a></li>
+                      <li class="item"><a href="#">Menu Item #3</a></li>
+                      <li class="item"><a href="#">Menu Item #4</a></li>
+                      <li class="item"><a href="#">Menu Item #5</a></li>
                     </ul>
                   </div>
                   <div class="ruby-col-3">
                     <h3 class="ruby-list-heading">SHOES</h3>
                     <ul>
-                      <li><a href="#">Menu Item #1</a></li>
-                      <li><a href="#">Menu Item #2</a></li>
-                      <li><a href="#">Menu Item #3</a></li>
-                      <li><a href="#">Menu Item #4</a></li>
-                      <li><a href="#">Menu Item #5</a></li>
+                      <li class="item"><a href="#">Menu Item #1</a></li>
+                      <li class="item"><a href="#">Menu Item #2</a></li>
+                      <li class="item"><a href="#">Menu Item #3</a></li>
+                      <li class="item"><a href="#">Menu Item #4</a></li>
+                      <li class="item"><a href="#">Menu Item #5</a></li>
                     </ul>
                   </div>
                   <div class="ruby-col-3">
@@ -582,7 +624,7 @@
               </div>
               <span class="ruby-dropdown-toggle"></span>
             </li>
-            <li>
+            <li class="item">
               <a href="#">Accessories</a>
               <div class="ruby-grid ruby-grid-lined">
                 <div class="ruby-row">
@@ -590,47 +632,47 @@
                     <img src="img/eyewear.jpg" />
                     <h3 class="ruby-list-heading" style="margin-top: 16px">EYEWEAR</h3>
                     <ul>
-                      <li><a href="#">Menu Item #1</a></li>
-                      <li><a href="#">Menu Item #2</a></li>
-                      <li><a href="#">Menu Item #3</a></li>
-                      <li><a href="#">Menu Item #4</a></li>
+                      <li class="item"><a href="#">Menu Item #1</a></li>
+                      <li class="item"><a href="#">Menu Item #2</a></li>
+                      <li class="item"><a href="#">Menu Item #3</a></li>
+                      <li class="item"><a href="#">Menu Item #4</a></li>
                     </ul>
                   </div>
                   <div class="ruby-col-3">
                     <img src="img/jewellery.jpg" />
                     <h3 class="ruby-list-heading" style="margin-top: 16px">JEWELLERY</h3>
                     <ul>
-                      <li><a href="#">Menu Item #1</a></li>
-                      <li><a href="#">Menu Item #2</a></li>
-                      <li><a href="#">Menu Item #3</a></li>
-                      <li><a href="#">Menu Item #4</a></li>
+                      <li class="item"><a href="#">Menu Item #1</a></li>
+                      <li class="item"><a href="#">Menu Item #2</a></li>
+                      <li class="item"><a href="#">Menu Item #3</a></li>
+                      <li class="item"><a href="#">Menu Item #4</a></li>
                     </ul>
                   </div>
                   <div class="ruby-col-3">
                     <img src="img/watches.jpg" />
                     <h3 class="ruby-list-heading" style="margin-top: 16px">WATCHES</h3>
                     <ul>
-                      <li><a href="#">Menu Item #1</a></li>
-                      <li><a href="#">Menu Item #2</a></li>
-                      <li><a href="#">Menu Item #3</a></li>
-                      <li><a href="#">Menu Item #4</a></li>
+                      <li class="item"><a href="#">Menu Item #1</a></li>
+                      <li class="item"><a href="#">Menu Item #2</a></li>
+                      <li class="item"><a href="#">Menu Item #3</a></li>
+                      <li class="item"><a href="#">Menu Item #4</a></li>
                     </ul>
                   </div>
                   <div class="ruby-col-3">
                     <img src="img/textile.jpg" />
                     <h3 class="ruby-list-heading" style="margin-top: 16px">OTHERS</h3>
                     <ul>
-                      <li><a href="#">Menu Item #1</a></li>
-                      <li><a href="#">Menu Item #2</a></li>
-                      <li><a href="#">Menu Item #3</a></li>
-                      <li><a href="#">Menu Item #4</a></li>
+                      <li class="item"><a href="#">Menu Item #1</a></li>
+                      <li class="item"><a href="#">Menu Item #2</a></li>
+                      <li class="item"><a href="#">Menu Item #3</a></li>
+                      <li class="item"><a href="#">Menu Item #4</a></li>
                     </ul>
                   </div>
                 </div>
               </div>
               <span class="ruby-dropdown-toggle"></span>
             </li>
-            <li>
+            <li class="item">
               <a href="#">Collections</a>
               <div class="ruby-grid ruby-grid-lined">
                 <div class="ruby-row">

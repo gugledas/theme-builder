@@ -11,8 +11,15 @@
 
 // style bootstrap 4
 .pagination-round {
-  padding: 1rem 8rem;
+  padding: 1rem;
+  @include media-min(mobile) {
+    padding: 1rem 3rem;
+  }
+  @include media-min(tablet) {
+    padding: 1rem 8rem;
+  }
   border-radius: 30px;
+  flex-wrap: wrap;
   .page-link {
     border-radius: 25px !important;
     margin-right: 2rem;
