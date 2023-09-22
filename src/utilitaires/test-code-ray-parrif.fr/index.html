@@ -1,0 +1,164 @@
+<details-modal class="header__search">
+  <details open="true">
+    <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="Recherche" role="button">
+      <span>
+        <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false">
+          <use href="#icon-search"></use>
+        </svg>
+        <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false">
+          <use href="#icon-close"></use>
+        </svg>
+      </span>
+    </summary>
+    <div class="search-modal modal__content gradient" role="dialog" aria-modal="true" aria-label="Recherche">
+      <div class="modal-overlay"></div>
+      <div class="search-modal__content search-modal__content-bottom" tabindex="-1" style="background: #fcc">
+        <predictive-search class="search-modal__form" data-loading-text="Chargement en cours..." results="true" open="true"
+          ><form action="/search" method="get" role="search" class="search search-modal__form">
+            <div class="field">
+              <input
+                class="search__input field__input"
+                id="Search-In-Modal"
+                type="search"
+                name="q"
+                value=""
+                placeholder="Recherche"
+                role="combobox"
+                aria-expanded="true"
+                aria-owns="predictive-search-results"
+                aria-controls="predictive-search-results"
+                aria-haspopup="listbox"
+                aria-autocomplete="list"
+                autocorrect="off"
+                autocomplete="off"
+                autocapitalize="off"
+                spellcheck="false"
+              />
+              <label class="field__label" for="Search-In-Modal">Recherche</label>
+              <input type="hidden" name="options[prefix]" value="last" />
+              <button type="reset" class="reset__button field__button" aria-label="Effacer le terme de recherche">
+                <svg class="icon icon-close" aria-hidden="true" focusable="false">
+                  <use xlink:href="#icon-reset"></use>
+                </svg>
+              </button>
+              <button class="search__button field__button" aria-label="Recherche">
+                <svg class="icon icon-search" aria-hidden="true" focusable="false">
+                  <use href="#icon-search"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search="" style="max-height: 904px">
+              <div id="predictive-search-results" role="listbox">
+                <div id="predictive-search-results-groups-wrapper" class="predictive-search__results-groups-wrapper predictive-search__results-groups-wrapper--no-suggestions">
+                  <div class="predictive-search__result-group">
+                    <div>
+                      <h2 id="predictive-search-products" class="predictive-search__heading text-body caption-with-letter-spacing">Produits</h2>
+                      <ul
+                        id="predictive-search-results-products-list"
+                        class="predictive-search__results-list list-unstyled"
+                        role="group"
+                        aria-labelledby="predictive-search-products"
+                      >
+                        <li id="predictive-search-option-product-1" class="predictive-search__list-item" role="option" aria-selected="false">
+                          <a
+                            href="/products/perruque-une-coiffe-iconique?_pos=1&amp;_psq=pe&amp;_ss=e&amp;_v=1.0"
+                            class="predictive-search__item predictive-search__item--link-with-thumbnail link link--text"
+                            tabindex="-1"
+                            ><img
+                              class="predictive-search__image"
+                              src="//cdn.shopify.com/s/files/1/0756/7166/7018/files/Evanescence_Perruque.jpg?v=1691001195&amp;width=150"
+                              alt="EVANESCENCE  - Perruque"
+                              width="50"
+                              height="50.0"
+                            />
+                            <div class="predictive-search__item-content predictive-search__item-content--centered">
+                              <p class="predictive-search__item-heading h5">EVANESCENCE - Perruque</p>
+                            </div>
+                          </a>
+                        </li>
+                        <li id="predictive-search-option-product-2" class="predictive-search__list-item" role="option" aria-selected="false">
+                          <a
+                            href="/products/lotus?_pos=2&amp;_psq=pe&amp;_ss=e&amp;_v=1.0"
+                            class="predictive-search__item predictive-search__item--link-with-thumbnail link link--text"
+                            tabindex="-1"
+                            ><img
+                              class="predictive-search__image"
+                              src="//cdn.shopify.com/s/files/1/0756/7166/7018/files/Lotus-BO-puce-pendante-v1_e1d64fbc-240a-40cd-86b2-e41d0f5dd0e6.jpg?v=1690236927&amp;width=150"
+                              alt="Petit lotus"
+                              width="50"
+                              height="50.0"
+                            />
+                            <div class="predictive-search__item-content predictive-search__item-content--centered">
+                              <p class="predictive-search__item-heading h5">Petit lotus</p>
+                            </div>
+                          </a>
+                        </li>
+                        <li id="predictive-search-option-product-3" class="predictive-search__list-item" role="option" aria-selected="false">
+                          <a
+                            href="/products/copie-de-lotus?_pos=3&amp;_psq=pe&amp;_ss=e&amp;_v=1.0"
+                            class="predictive-search__item predictive-search__item--link-with-thumbnail link link--text"
+                            tabindex="-1"
+                            ><img
+                              class="predictive-search__image"
+                              src="//cdn.shopify.com/s/files/1/0756/7166/7018/files/Lotus-BO-pendante-v1_e30cc8c2-db37-484e-8cad-005b13560329.jpg?v=1690236950&amp;width=150"
+                              alt="Lotus"
+                              width="50"
+                              height="50.0"
+                            />
+                            <div class="predictive-search__item-content predictive-search__item-content--centered"><p class="predictive-search__item-heading h5">Lotus</p></div>
+                          </a>
+                        </li>
+                        <li id="predictive-search-option-product-4" class="predictive-search__list-item" role="option" aria-selected="false">
+                          <a
+                            href="/products/fleur?_pos=4&amp;_psq=pe&amp;_ss=e&amp;_v=1.0"
+                            class="predictive-search__item predictive-search__item--link-with-thumbnail link link--text"
+                            tabindex="-1"
+                            ><img
+                              class="predictive-search__image"
+                              src="//cdn.shopify.com/s/files/1/0756/7166/7018/files/Fleur-BO-chaine-v1_871aaf24-0fd6-4426-8dde-c535d6008fc0.jpg?v=1690236907&amp;width=150"
+                              alt="Fleur"
+                              width="50"
+                              height="50.0"
+                            />
+                            <div class="predictive-search__item-content predictive-search__item-content--centered"><p class="predictive-search__item-heading h5">Fleur</p></div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="predictive-search__loading-state" aria-hidden="true">
+                  <svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                  </svg>
+                </div>
+
+                <div id="predictive-search-option-search-keywords" class="predictive-search__search-for-button">
+                  <button class="predictive-search__item predictive-search__item--term link link--text h5 animate-arrow" tabindex="-1" role="option" aria-selected="false">
+                    <span data-predictive-search-search-for-text="">Rechercher «&nbsp;pe&nbsp;»</span>
+                    <svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <span class="hidden" data-predictive-search-live-region-count-value=""> 4&nbsp;résultats: Produits 4 </span>
+            </div>
+
+            <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"> 4&nbsp;résultats: Produits 4 </span>
+          </form></predictive-search
+        ><button type="button" class="search-modal__close-button modal__close-button link link--text focus-inset" aria-label="Fermer">
+          <svg class="icon icon-close" aria-hidden="true" focusable="false">
+            <use href="#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </details>
+</details-modal>

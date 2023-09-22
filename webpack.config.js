@@ -19,8 +19,8 @@ const plugins = [];
 /**
  * Selectionner le theme à afficher lors de la commande npm run serve.
  */
-//const CurrentThemeName = "themeholy-driver";
-const CurrentThemeName = "aerolome";
+const CurrentThemeName = "utilitaires";
+//const CurrentThemeName = "aerolome";
 
 plugins.push(
   new MiniCssExtractPlugin({
@@ -33,8 +33,7 @@ plugins.push(
     templateContent: async () => {
       console.log(" reload HtmlWebpackPlugin ");
       let html = "<html>";
-      html +=
-        '<head> <meta name="viewport" content="width=device-width, initial-scale=1.0"> </head>';
+      html += '<head> <meta name="viewport" content="width=device-width, initial-scale=1.0"> </head>';
       html += "<body>";
       html += await MIH.getContents();
       html += "</body>";
